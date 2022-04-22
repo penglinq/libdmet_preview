@@ -19,7 +19,6 @@ from libdmet.lo.iao import reference_mol
 from libdmet.utils import logger as log
 import libdmet.dmet.Hubbard as dmet
 
-lib.param.TMPDIR = "/scratch/global/zhcui"
 log.verbose = "DEBUG2"
 np.set_printoptions(4, linewidth=1000, suppress=True)
 
