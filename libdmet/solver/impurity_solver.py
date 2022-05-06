@@ -14,6 +14,7 @@ from libdmet.system import integral
 from libdmet.utils import logger as log
 import numpy as np
 import scipy.linalg as la
+from libdmet.solver.mixin import SolverMixin
 
 from libdmet.solver import scf, casscf, bcs_dmrgscf
 from libdmet.solver.dmrgci import CASCI, DmrgCI, get_orbs
@@ -30,7 +31,7 @@ try:
 except ImportError:
     log.info("ImportError in SHCI solver, settings.py should be set in pyscf")
 
-class Block(object):
+class Block(SolverMixin):
     def __init__(self, nproc, nnode=1, TmpDir="./tmp", SharedDir=None, 
                  reorder=False, minM=250, maxM=None, tol=1e-6, spinAdapted=False, 
                  bcs=False, ghf=False, maxiter_initial=35, maxiter_restart=15, 
@@ -155,7 +156,7 @@ class Block2(StackBlock):
         self.maxiter_initial = maxiter_initial
         self.maxiter_restart = maxiter_restart
 
-class CASSCF(object):
+class CASSCF(SolverMixin):
 
     settings = {
         "max_stepsize": 0.04,

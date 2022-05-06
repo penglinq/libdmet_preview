@@ -332,6 +332,8 @@ def __embHam2e(lattice, basis, vcor, local, int_bath=True, last_aabb=True, **kwa
                     basis[1, 0], basis[1, 0])
             H2[2] = transform_4idx(Lat_H2, basis[0, 0], basis[0, 0], \
                     basis[1, 0], basis[1, 0])
+    elif getattr(lattice, "is_mol", None) and lattice.is_mol: 
+        raise NotImplementedError
     else: # ab initio system
         cell = lattice.cell
         mydf = lattice.df
@@ -1417,7 +1419,10 @@ def get_veff_from_rdm1_emb(lattice, rdm1_emb, basis, kmf=None, C_ao_lo=None,
     np.save("rdm1_glob_lo_k.npy", rdm1_glob)
     rdm1_veff = make_basis.transform_rdm1_to_ao(rdm1_glob, C_ao_lo)
     #veff_ao = kmf.get_veff(dm_kpts=rdm1_veff)
-    vj, vk = kmf.get_jk(dm_kpts=rdm1_veff)
+    if getattr(lattice, "is_mol", None) and lattice.is_mol: 
+        raise NotImplementedError
+    else:
+        vj, vk = kmf.get_jk(dm_kpts=rdm1_veff)
     if spin == 1:
         veff_ao = vj - (vk * 0.5)
     else:

@@ -1,7 +1,7 @@
 """A periodic density matrix embedding theory library for correlated materials."""
 
 # Add imports here
-from .libdmet import *
+from .default import *
 
 # Handle versioneer
 from ._version import get_versions

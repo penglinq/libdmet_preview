@@ -171,7 +171,7 @@ class UICCSD(cc.uccsd.UCCSD):
 class UICCD(UCCD):
     ao2mo = ao2mo_uhf
 
-class CCSD(object):
+class CCSD(SolverMixin):
     def __init__(self, nproc=1, nnode=1, TmpDir="./tmp", SharedDir=None, 
                  restricted=False, Sz=0, bcs=False, ghf=False, tol=1e-9, 
                  tol_normt=1e-6, max_cycle=200, level_shift=0.0, frozen=0, 
@@ -199,7 +199,7 @@ class CCSD(object):
 
         self.optimized = False
     
-    def run(self, Ham=None, nelec=None, guess=None, restart=False, \
+    def run(self, Ham, nelec=None, guess=None, restart=False, \
             dump_tl=False, fcc_name="fcc.h5", calc_rdm2=False, \
             **kwargs):
         """

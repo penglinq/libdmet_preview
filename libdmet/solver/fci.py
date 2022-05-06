@@ -16,8 +16,9 @@ from libdmet.solver import scf
 from libdmet.solver.scf import ao2mo_Ham, restore_Ham
 from libdmet.basis_transform.make_basis import transform_rdm1_to_ao_mol, transform_rdm2_to_ao_mol 
 from libdmet.utils.misc import mdot
+from libdmet.solver.mixin import SolverMixin
 
-class FCI(object):
+class FCI(SolverMixin):
     def __init__(self, nproc=1, nnode=1, TmpDir="./tmp", SharedDir=None, \
             restricted=False, Sz=0, bcs=False, tol=1e-10, max_cycle=200, \
             max_memory=40000, compact_rdm2=False, scf_newton=True, ghf=False):
@@ -213,7 +214,7 @@ class FCI(object):
     def cleanup(self):
         pass
 
-class FCI_AO(object):
+class FCI_AO(SolverMixin):
     def __init__(self, nproc=1, nnode=1, TmpDir="./tmp", SharedDir=None, \
             restricted=False, Sz=0, bcs=False, ghf=False, tol=1e-10, max_cycle=200):
         """

@@ -32,6 +32,7 @@ class DMET():
         self.minao = 'minao'
         self.max_memory = lat.cell.max_memory
         self.ncell_sc = 1 # TODO may be better as an attribute of lattice
+        self.C_ao_lo = None
         
         # DMET SCF control
         self.MaxIter = 100
@@ -76,18 +77,6 @@ class DMET():
         self.dc = Hubbard.FDiisContext(self.adiis.space)
         return kernel(self, kmf, Lat, solver)
 
-    def construct_imp_ham():
-        return 
-
-    def solveImpHam_with_fitting():
-        return
-
-    def transform_results():
-        return
-
-    def fit_vcor():
-        return
-        
     def make_rdm1():
         return
 
@@ -101,6 +90,11 @@ class DMET():
 
 
 def kernel(mydmet, kmf=None, Lat=None, solver=None): 
+    '''
+        Lat could be either a lattice object or a molecule object. 
+        For a molecule object, Lat.is_mol == True.
+        solver can be an instance of any subclass of SolverMixin. 'FCI' or 'CCSD' will initialize a default instance.
+    '''
     if kmf is None:
         kmf = mydmet._scf
     if Lat is None:
@@ -122,15 +116,18 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
     ### ************************************************************
     
     log.section("\nPre-process, orbital localization and subspace partition\n")
-    # IAO
+    # Localize orbital
     S_ao_ao = kmf.get_ovlp()
-    C_ao_iao, C_ao_iao_val, C_ao_iao_virt = make_basis.get_C_ao_lo_iao(Lat, kmf, minao=mydmet.minao, full_return=True)
-    
-    assert(Lat.nval == C_ao_iao_val.shape[-1])
+    if mydmet.C_ao_lo is None:
+        # By default use IAO to localize orbitals
+        C_ao_iao, C_ao_iao_val, C_ao_iao_virt = make_basis.get_C_ao_lo_iao(Lat, kmf, minao=mydmet.minao, full_return=True)
+        assert(Lat.nval == C_ao_iao_val.shape[-1])
+        assert(Lat.nvirt == C_ao_iao_virt.shape[-1])
+        C_ao_lo = C_ao_iao
+    else:
+        # Pass in predetermined LO, e.g. Wannier orbitals
+        C_ao_lo = mydmet.C_ao_lo
     C_ao_mo = np.asarray(kmf.mo_coeff)
-    
-    # use IAO
-    C_ao_lo = C_ao_iao
     Lat.set_Ham(kmf, kmf.with_df, C_ao_lo, eri_symmetry=4)
     
     ### ************************************************************
