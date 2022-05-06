@@ -23,6 +23,7 @@ from libdmet.basis_transform.make_basis import \
         transform_rdm1_to_ao_mol, transform_rdm2_to_ao_mol, rotate_emb_basis, \
         find_closest_mo, trans_mo, get_mo_ovlp
 from libdmet.utils.misc import mdot, max_abs, take_eri
+from libdmet.solver.mixin import SolverMixin
 
 from pyscf.scf import hf
 from pyscf import cc
