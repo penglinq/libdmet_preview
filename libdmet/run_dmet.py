@@ -33,6 +33,7 @@ class DMET():
         self.max_memory = lat.cell.max_memory
         self.ncell_sc = 1 # TODO may be better as an attribute of lattice
         self.C_ao_lo = None
+        self.udpate_ham = True
         
         # DMET SCF control
         self.MaxIter = 100
@@ -150,7 +151,8 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
         log.result("Vcor =\n%s", vcor.get())
         log.result("Mu (guess) = %20.12f", Mu)
         rho, Mu, res = Hubbard.RHartreeFock(Lat, vcor, Filling, Mu, beta=mydmet.beta, ires=True)
-        Lat.update_Ham(rho*2.0, rdm1_lo_k=res["rho_k"]*2.0)   # TODO add an option
+        if mydmet.update_ham:
+            Lat.update_Ham(rho*2.0, rdm1_lo_k=res["rho_k"]*2.0) 
     
         log.section("\nconstructing impurity problem\n")
         ImpHam, H1e, basis = Hubbard.ConstructImpHam(Lat, rho, vcor, matching=True, int_bath=mydmet.int_bath,\
@@ -161,12 +163,13 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
         
         log.section("\nsolving impurity problem\n")
         solver_args = {"restart": mydmet.restart, "nelec": mydmet.nelecas, \
-                "dm0": Hubbard.foldRho_k(res["rho_k"], basis_k)*2.0}  # TODO User input
+                "dm0": Hubbard.foldRho_k(res["rho_k"], basis_k)*2.0} 
+        #solver.update(solver_args)
     
         rhoEmb, EnergyEmb, ImpHam, dmu = \
             Hubbard.SolveImpHam_with_fitting(Lat, Filling, ImpHam, basis, solver, \
             solver_args=solver_args, thrnelec=mydmet.nelec_tol, \
-            delta=mydmet.delta, step=mydmet.step)
+            delta=mydmet.delta, step=mydmet.step) # TODO remove solver_args 
         Hubbard.SolveImpHam_with_fitting.save("./frecord")
         last_dmu += dmu
         rhoImp, EnergyImp, nelecImp = \
@@ -184,7 +187,7 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
         log.section("\nfitting correlation potential\n")
         vcor_new, err = Hubbard.FitVcor(rhoEmb, Lat, basis, \
                 vcor, mydmet.beta, Filling, MaxIter1=mydmet.emb_fit_iter, MaxIter2=mydmet.full_fit_iter, method='CG', \
-                imp_fit=mydmet.imp_fit, ytol=mydmet.ytol, gtol=mydmet.gtol, CG_check=mydmet.CG_check)
+                imp_fit=mydmet.imp_fit, ytol=mydmet.ytol, gtol=mydmet.gtol, CG_check=mydmet.CG_check) 
     
         if iter >= mydmet.trace_start:
             # to avoid spiral increase of vcor and mu
