@@ -10,6 +10,7 @@ from libdmet.system import lattice
 from libdmet.basis_transform import make_basis
 from libdmet.lo.iao import reference_mol
 import libdmet.dmet.Hubbard as Hubbard
+from libdmet.solver import impurity_solver
 
 from libdmet.utils import logger as log
 
@@ -31,9 +32,8 @@ class DMET():
         self.beta = np.inf
         self.minao = 'minao'
         self.max_memory = lat.cell.max_memory
-        self.ncell_sc = 1 # TODO may be better as an attribute of lattice
         self.C_ao_lo = None
-        self.udpate_ham = True
+        self.update_ham = True
         
         # DMET SCF control
         self.MaxIter = 100
@@ -94,7 +94,8 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
     '''
         Lat could be either a lattice object or a molecule object. 
         For a molecule object, Lat.is_mol == True.
-        solver can be an instance of any subclass of SolverMixin. 'FCI' or 'CCSD' will initialize a default instance.
+        solver can be an instance of any subclass of SolverMixin. 
+        'FCI' or 'CCSD' will initialize a default instance of the corresponding solver class. 
     '''
     if kmf is None:
         kmf = mydmet._scf
@@ -107,9 +108,9 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
     if solver is None:
         solver = mydmet.solver
     if solver == "FCI": # Use pyscf FCI with libDMET wrapper
-        solver = Hubbard.impurity_solver.FCI(restricted=mydmet.restricted, tol=1e-11)
+        solver = impurity_solver.FCI(restricted=mydmet.restricted, tol=1e-11)
     elif solver == "CCSD": # Use pyscf CCSD with libDMET wrapper
-        solver = Hubbard.impurity_solver.CCSD(restricted=mydmet.restricted, tol=1e-9, \
+        solver = impurity_solver.CCSD(restricted=mydmet.restricted, tol=1e-9, \
                 tol_normt=1e-6, max_memory=mydmet.max_memory)
     
     ### ************************************************************
@@ -176,7 +177,7 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
             Hubbard.transformResults(rhoEmb, EnergyEmb, basis, ImpHam, H1e, \
             lattice=Lat, last_dmu=last_dmu, int_bath=mydmet.int_bath, \
             solver=solver, solver_args=solver_args)
-        E_DMET_per_cell = EnergyImp*Lat.nscsites / mydmet.ncell_sc
+        E_DMET_per_cell = EnergyImp*Lat.nscsites / Lat.ncell_sc
         log.result("last_dmu = %20.12f", last_dmu)
         log.result("E(DMET) = %20.12f", E_DMET_per_cell)
         
@@ -248,12 +249,12 @@ if __name__ == "__main__":
                basis='gth-dzv',
                precision = 1e-12)
     cell_mesh = [1, 1, 1]
-    ncell_sc = np.prod(cell_mesh)
     cell = tools.pbc.super_cell(cell, cell_mesh)
     natom_sc = cell.natm
     
     kmesh = [3, 3, 1]
     Lat = lattice.Lattice(cell, kmesh)
+    Lat.ncell_sc = np.prod(cell_mesh)
     kpts = Lat.kpts
     nao = Lat.nao
     nkpts = Lat.nkpts
@@ -308,12 +309,11 @@ if __name__ == "__main__":
 
     cc_etol = cell.natm * 1e-9
     cc_ttol = cell.natm * 1e-6
-    solver = Hubbard.impurity_solver.CCSD(restricted=True, tol=cc_etol, \
+    solver = impurity_solver.CCSD(restricted=True, tol=cc_etol, \
         tol_normt=cc_ttol, max_memory=max_memory) ## add direct ref to solver
     mydmet = DMET(kmf, Lat, solver)
     mydmet.minao = 'gth-szv'
     mydmet.max_memory = max_memory
-    mydmet.ncell_sc = ncell_sc
     e_dmet, conv = mydmet.kernel() # e_dmet = energy per cell
 
 

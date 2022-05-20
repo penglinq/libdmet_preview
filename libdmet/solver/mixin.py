@@ -4,8 +4,7 @@
 Wrapper to all impurity solvers.
 
 Author:
-    Bo-Xiao Zheng
-    Zhi-Hao Cui
+    Linqing Peng
 """
 
 from libdmet.solver import block
@@ -28,9 +27,10 @@ class SolverMixin(object):
     tmpdir = getattr(__config__, 'TMPDIR', '.')
     verbose = getattr(__config__, 'VERBOSE', 3)
     max_memory = getattr(__config__, 'MAX_MEMORY', 4000)
+    # suggest optional functions
 
     def __init__(self):
-        self.conv_tol = 1e-9
+        self.conv_tol = 1e-9  # Add a general warning TODO
         self.max_cycle = 100
         self.converged = None
         self.onepdm = None
@@ -42,11 +42,10 @@ class SolverMixin(object):
     def e_tot(self):
         raise NotImplementedError
 
-    @property
-    def twopdm(self):
-        return self.make_rdm2(ao_repr=True)
-
     def make_rdm1(self, ao_repr=False):
+        '''
+            Need to provide ao_repr 
+        '''
         raise NotImplementedError
 
     def make_rdm2(self, ao_repr=False):
@@ -59,6 +58,7 @@ class SolverMixin(object):
         """
         Run scaled DMET Hamiltonian.
         Assume Ham in MO and symmetry=1
+        Need to be modified to accommodate different Ham.
         """
         log.info("Solver Mixin Run DMET Hamiltonian.")
         log.debug(0, "ao2mo for DMET Hamiltonian.")

@@ -18,7 +18,7 @@ from libdmet.basis_transform.make_basis import transform_rdm1_to_ao_mol, transfo
 from libdmet.utils.misc import mdot
 from libdmet.solver.mixin import SolverMixin
 
-class FCI(SolverMixin):
+class FCI(SolverMixin): # DMETsolverMixin
     def __init__(self, nproc=1, nnode=1, TmpDir="./tmp", SharedDir=None, \
             restricted=False, Sz=0, bcs=False, tol=1e-10, max_cycle=200, \
             max_memory=40000, compact_rdm2=False, scf_newton=True, ghf=False):

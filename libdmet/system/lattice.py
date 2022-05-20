@@ -34,6 +34,7 @@ class Lattice(object):
         self.mol = self.cell = self.supercell = cell
         self.kmesh = kmesh
         self.nscsites = self.nao = self.supercell.nsites = int(self.cell.nao_nr())
+        self.ncell_sc = 1
         names, coords = zip(*cell._atom)
         self.names, self.coords = np.asarray(names), np.asarray(coords)
          
