@@ -56,7 +56,7 @@ cell.build(unit = 'angstrom',
 cell_mesh = [1, 1, 1] 
 cell = tools.pbc.super_cell(cell, cell_mesh)
 
-# Create the lattice 
+# Create the lattice ### another example for more complicated use (of lattice) 
 kmesh = [3, 3, 1]
 lat = lattice.Lattice(cell, kmesh) 
 lat.ncell_sc = np.prod(cell_mesh)  # Only change energy evaluation
@@ -83,7 +83,7 @@ kmf_max_cycle = 300
 gdf_fname = 'BN331_gdf_ints.h5'
 chkfname = 'BN331.chk'
 
-# Run HF with Gaussian density fitting
+# Run kHF with Gaussian density fitting
 # This may take a while depending on the lattice size
 gdf = df.GDF(cell, kpts)
 gdf._cderi_to_save = gdf_fname
