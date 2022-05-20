@@ -23,7 +23,7 @@ from libdmet.basis_transform.make_basis import \
         transform_rdm1_to_ao_mol, transform_rdm2_to_ao_mol, rotate_emb_basis, \
         find_closest_mo, trans_mo, get_mo_ovlp
 from libdmet.utils.misc import mdot, max_abs, take_eri
-from libdmet.solver.mixin import SolverMixin
+from libdmet.solver.mixin import DMETSolverMixin
 
 from pyscf.scf import hf
 from pyscf import cc
@@ -172,7 +172,7 @@ class UICCSD(cc.uccsd.UCCSD):
 class UICCD(UCCD):
     ao2mo = ao2mo_uhf
 
-class CCSD(SolverMixin):
+class CCSD(DMETSolverMixin):
     def __init__(self, nproc=1, nnode=1, TmpDir="./tmp", SharedDir=None, 
                  restricted=False, Sz=0, bcs=False, ghf=False, tol=1e-9, 
                  tol_normt=1e-6, max_cycle=200, level_shift=0.0, frozen=0, 

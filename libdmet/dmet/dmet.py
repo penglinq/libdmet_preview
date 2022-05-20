@@ -66,7 +66,21 @@ class DMET():
         self.gtol = 1e-4 
         self.CG_check = False
         self.vcor = None
-        
+
+        # properties
+        self.e_elec = None  # Impurity energy per cell 
+        self.e_hf = kmf.e_tot / lat.ncell_sc  # HF energy per cell
+        self.one_pdm = None  # Local density matrix of impurity
+        self.nelec = None  # nelec per cell in impurity
+
+    @property
+    def e_tot(self):
+        return self.e_elec + self._scf.energy_nuc() / self.lat.ncell_sc
+
+    @property
+    def e_dmet(self):
+        return self.e_elec
+
     def kernel(self, kmf=None, Lat=None, solver=None):
         # vcor initialization
         if Lat is None:
@@ -78,16 +92,41 @@ class DMET():
         self.dc = Hubbard.FDiisContext(self.adiis.space)
         return kernel(self, kmf, Lat, solver)
 
-    def make_rdm1():
-        return
+    def make_rdm1(self, AO_repr=False):
+        '''
+            1-particle reduced density matrix in LO basis.
+
+            rdm1[p,q] = <q^\dagger p> 
+
+            The convention of 1-pdm is based on McWeeney's book, Eq (5.4.20).
+            The contraction between 1-particle Hamiltonian and rdm1 is
+            E = einsum('pq,qp', h1, rdm1)
+        '''
+        if self.one_pdm is None:
+            log.warning("Need to first run DMET with .kernel() to obtain one_pdm!")
+            return None
+        if AO_repr:
+            one_pdm_AO = make_basis.transform_rdm1_to_ao(self.one_pdm, self.C_ao_lo)
+            return one_pdm_AO
+        else:
+            return self.one_pdm
 
     def make_rdm2():
-        return
+        '''
+            2-particle reduced density matrix in LO basis.
+
+            rdm2[p,q,r,s] = <p^\dagger r^\dagger s q> 
+            The contraction between ERIs (in Chemist's notation) and rdm2 is
+            E = einsum('pqrs,pqrs', eri, rdm2)
+        '''
+        raise NotImplementedError
 
     def energy():
         """Return erergy per cell"""
-        return
+        return self.e_elec
 
+    def dump_flags(self, verbose=None):
+        raise NotImplementedError
 
 
 def kernel(mydmet, kmf=None, Lat=None, solver=None): 
@@ -180,6 +219,9 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
         E_DMET_per_cell = EnergyImp*Lat.nscsites / Lat.ncell_sc
         log.result("last_dmu = %20.12f", last_dmu)
         log.result("E(DMET) = %20.12f", E_DMET_per_cell)
+        mydmet.one_pdm = rhoImp # Local density matrix of impurity
+        mydmet.nelec = nelecImp * Lat.nscsites / Lat.ncell_sc # nelec per cell in impurity
+        mydmet.e_elec = E_DMET_per_cell # Impurity energy per cell 
         
         # DUMP results:
         dump_res_iter = np.array([Mu, last_dmu, vcor.param, rhoEmb, basis, rhoImp, C_ao_lo], dtype=object)
@@ -301,7 +343,7 @@ if __name__ == "__main__":
         kmf.kernel()
         assert(kmf.converged)
     
-    log.result("kmf electronic energy: %20.12f", (kmf.energy_tot()-kmf.energy_nuc())/ncell_sc)
+    log.result("kmf electronic energy: %20.12f", (kmf.e_tot - kmf.energy_nuc()) / Lat.ncell_sc)
 
     ### ************************************************************
     ### DMET embedding calculatiun

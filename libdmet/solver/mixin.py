@@ -23,7 +23,7 @@ try:
 except ImportError:
     log.info("ImportError in SHCI solver, settings.py should be set in pyscf")
 
-class SolverMixin(object):
+class DMETSolverMixin(object):
     tmpdir = getattr(__config__, 'TMPDIR', '.')
     verbose = getattr(__config__, 'VERBOSE', 3)
     max_memory = getattr(__config__, 'MAX_MEMORY', 4000)

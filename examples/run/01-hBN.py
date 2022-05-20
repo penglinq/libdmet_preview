@@ -109,7 +109,7 @@ else:
     assert(kmf.converged)
 
 log.result("kmf electronic energy per unit cell: %20.12f", 
-        (kmf.energy_tot()-kmf.energy_nuc())/lat.ncell_sc)
+        (kmf.e_tot - kmf.energy_nuc()) / lat.ncell_sc)
 
 ### ************************************************************
 ### DMET embedding calculatiun
@@ -142,7 +142,7 @@ solver.max_memory = max_memory
 
 # Run DMET
 mydmet = dmet.DMET(kmf, lat, solver)
-mydmet.minao = 'gth-szv' # to construct IAO localization 
+mydmet.minao = minao # to construct IAO localization 
 e_dmet, conv = mydmet.kernel() # e_dmet = energy per cell
 
 
