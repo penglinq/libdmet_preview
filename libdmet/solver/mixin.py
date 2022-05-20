@@ -30,7 +30,15 @@ class DMETSolverMixin(object):
     # suggest optional functions
 
     def __init__(self):
-        self.conv_tol = 1e-9  # Add a general warning TODO
+        '''
+            Note: Conv_tol of the solver and max_cycle should be set to a smaller threshold
+            than the DMET convergence tolenrence. Otherwise, the new correlation 
+            potential obtained by matching the high-level density matrix of this solver 
+            and the low-level density matrix may be inaccurate and negatively impact 
+            the following DMET iterations.
+            Common setting for CCSD solver is conv_tol = 1e-9 and max_cycle = 100.
+        '''
+        self.conv_tol = 1e-9
         self.max_cycle = 100
         self.converged = None
         self.onepdm = None
