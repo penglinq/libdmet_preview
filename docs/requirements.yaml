@@ -1,0 +1,18 @@
+name: docs
+channels:
+dependencies:
+    # Base depends
+  - python
+  - pip
+
+
+  # Pip-only installs
+  - pip:
+    - pyscf
+    - sphinx
+    - ablog
+    - sphinx-material
+    - sphinxcontrib-bibtex
+    - nbsphinx
+    - Pygments
+
