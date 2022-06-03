@@ -1,9 +1,6 @@
 About
 =====
 
-The development of PySCF began in 2014. Since then, it has changed from being a single-group code to one relied on daily by over 100 research teams in academia and industry across the world. 
-For more details, see its extensive `list of features <features.html>`_, `version history <version.html>`_, and example `benchmark data <benchmark.html>`_.
-
 People
 --------
 
@@ -31,8 +28,3 @@ How to cite
 - `PySCF: the Python-based simulations of chemistry framework <https://doi.org/10.1002/wcms.1340>`_, Q. Sun, T. C. Berkelbach, N. S. Blunt, G. H. Booth, S. Guo, Z. Li, J. Liu, J. McClain, S. Sharma, S. Wouters, and G. K.-L. Chan, WIREs Comput. Mol. Sci. **8**, e1340 (2018)
 
 - `Libcint: An efficient general integral library for Gaussian basis functions <https://doi.org/10.1002/jcc.23981>`_, Q. Sun, J. Comp. Chem. 36, 1664 (2015)
-
-Funding
--------
-
-The development of PySCF has been and continues to be generously supported by a number of funding agencies. Most of the molecular quantum chemistry software infrastructure was developed with support from the US National Science Foundation, through grants CHE-1650436 and ACI-1657286. The periodic mean-field infrastructure was developed with support from ACI-1657286. The excited-state periodic coupled cluster methods were developed with support from the US Department of Energy, Office of Science, through the grants DE-SC0010530 and DE-SC0008624. Additional support for the extended-system methods has been provided by the Simons Foundation through the Flatiron Institute, the Simons Collaboration on the Many Electron Problem, a Simons Investigatorship in Theoretical Physics, the Princeton Center for Theoretical Science, and startup funds from Princeton University and the California Institute of Technology.
