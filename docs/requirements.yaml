@@ -7,5 +7,5 @@ dependencies:
 
 
   # Pip-only installs
-  - pip: sphinx-material
+  - pip:
 
