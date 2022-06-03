@@ -630,8 +630,8 @@ for a HF calculation of the <span class="math notranslate nohighlight">\(\rm Cr\
 </pre></div>
 </div>
 <p>More examples can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/15-initial_guess.py">examples/scf/15-initial_guess.py</a>, and
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/31-cr_atom_rohf_tune_init_guess.py">examples/scf/31-cr_atom_rohf_tune_init_guess.py</a>.</p>
+<a href="#id9"><span class="problematic" id="id10">:source:`examples/scf/15-initial_guess.py`</span></a>, and
+<a href="#id11"><span class="problematic" id="id12">:source:`examples/scf/31-cr_atom_rohf_tune_init_guess.py`</span></a>.</p>
 <section id="restart-from-an-old-calculation">
 <h3 id="restart-from-an-old-calculation">Restart from an old calculation<a class="headerlink" href="#restart-from-an-old-calculation" title="Permalink to this headline">¶</a></h3>
 <p>Although alike many other quantum chemistry codes, there is no
@@ -654,7 +654,7 @@ stage (e.g. for an eventual restart or use as an initial guess for a
 larger calculation), the <code class="xref py py-attr docutils literal notranslate"><span class="pre">chkfile</span></code> attribute should be set
 explicitly as the chkfile might otherwise be deleted upon successful
 completion of the calculation, see comments in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/14-restart.py">examples/scf/14-restart.py</a>.
+<a href="#id13"><span class="problematic" id="id14">:source:`examples/scf/14-restart.py`</span></a>.
 By setting <code class="xref py py-attr docutils literal notranslate"><span class="pre">chkfile</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">init_guess</span></code>, the
 SCF module can read the molecular orbitals from the given
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">chkfile</span></code> and rotate them to representation of the required
@@ -691,11 +691,11 @@ second-order SCF (SOSCF).</p>
 Fock matrices from the previous iterations, by minimizing the norm
 of the commutator <span class="math notranslate nohighlight">\([\mathbf{F},\mathbf{PS}]\)</span> where
 <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> is the density matrix
-<span id="id9">[]</span>.  Two variants of DIIS
-are implemented in PySCF, namely, EDIIS <span id="id10">[]</span>
-and ADIIS <span id="id11">[]</span>.  Examples of selecting
+<span id="id15">[]</span>.  Two variants of DIIS
+are implemented in PySCF, namely, EDIIS <span id="id16">[]</span>
+and ADIIS <span id="id17">[]</span>.  Examples of selecting
 different DIIS schemes can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/24-tune_diis.py">examples/scf/24-tune_diis.py</a>.</p>
+<a href="#id18"><span class="problematic" id="id19">:source:`examples/scf/24-tune_diis.py`</span></a>.</p>
 </div></blockquote>
 </li>
 <li><p>SOSCF</p>
@@ -703,13 +703,13 @@ different DIIS schemes can be found in
 <div><p>To achieve quadratic convergence in the orbital optimization,
 PySCF implements a general second-order solver called the
 co-iterative augmented hessian (CIAH) method
-<span id="id12">[]</span>. This method can be invoked by
+<span id="id20">[]</span>. This method can be invoked by
 decorating the SCF objects with the <code class="xref py py-func docutils literal notranslate"><span class="pre">newton()</span></code> method:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mf</span> <span class="o">=</span> <span class="n">scf</span><span class="o">.</span><span class="n">RHF</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span><span class="o">.</span><span class="n">newton</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>More examples can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/22-newton.py">examples/scf/22-newton.py</a>.</p>
+<a href="#id21"><span class="problematic" id="id22">:source:`examples/scf/22-newton.py`</span></a>.</p>
 </div></blockquote>
 </li>
 <li><p>Damping</p>
@@ -732,44 +732,44 @@ orbitals, thereby slowing down and stabilizing the orbital update.
 A level shift can help to converge SCF in the case of systems with
 small HOMO-LUMO gaps. Level shifting is invoked by setting the
 attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">level_shift</span></code>.  See examples in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/03-level_shift.py">examples/scf/03-level_shift.py</a>, and
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/52-dynamically_control_level_shift.py">examples/scf/52-dynamically_control_level_shift.py</a>.</p>
+<a href="#id23"><span class="problematic" id="id24">:source:`examples/scf/03-level_shift.py`</span></a>, and
+<a href="#id25"><span class="problematic" id="id26">:source:`examples/scf/52-dynamically_control_level_shift.py`</span></a>.</p>
 </div></blockquote>
 </li>
 <li><p>Fractional occupations</p>
 <blockquote>
 <div><p>Fractional occupations can also be invoked to help the SCF
 converge for small gap systems.  See the example in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/54-fractional_occupancy.py">examples/scf/54-fractional_occupancy.py</a>.</p>
+<a href="#id27"><span class="problematic" id="id28">:source:`examples/scf/54-fractional_occupancy.py`</span></a>.</p>
 </div></blockquote>
 </li>
 <li><p>Smearing</p>
 <blockquote>
 <div><p>Smearing sets fractional occupancies according to a temperature
-function. See the example <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/pbc/23-smearing.py">examples/pbc/23-smearing.py</a>.</p>
+function. See the example <a href="#id29"><span class="problematic" id="id30">:source:`examples/pbc/23-smearing.py`</span></a>.</p>
 </div></blockquote>
 </li>
 </ul>
 </section>
 <section id="stability-analysis">
-<span id="id13"></span><h2 id="stability-analysis">Stability analysis<a class="headerlink" href="#stability-analysis" title="Permalink to this headline">¶</a></h2>
+<span id="id31"></span><h2 id="stability-analysis">Stability analysis<a class="headerlink" href="#stability-analysis" title="Permalink to this headline">¶</a></h2>
 <p>Even when the SCF converges, the wave function that is found may not
 correspond to a local minimum; calculations can sometimes also
 converge onto saddle points. Since saddle points are also extrema of
 the energy functional, the orbital gradient vanishes and the SCF
 equation <span class="math notranslate nohighlight">\(\mathbf{F C}=\mathbf{S C E}\)</span> is satisfied
-<span id="id14">[]</span>. However, in such cases the energy can be
+<span id="id32">[]</span>. However, in such cases the energy can be
 decreased by perturbing the orbitals away from the saddle point, which
 means that the wave function is unstable.</p>
 <p>Instabilities in the wave function are conventionally classified as
-either internal or external <span id="id15">[]</span>. External
+either internal or external <span id="id33">[]</span>. External
 instabilities mean that the energy can be decreased by loosening some
 constraints on the wave function, such as allowing restricted
 Hartree-Fock orbitals to transform into unrestricted Hartree-Fock,
 whereas internal instabilities mean that the SCF has converged onto an
 excited state instead of the ground state. PySCF allows detecting both
 internal and external instabilities for a given SCF calculation; see
-the examples in <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/17-stability.py">examples/scf/17-stability.py</a>.</p>
+the examples in <a href="#id34"><span class="problematic" id="id35">:source:`examples/scf/17-stability.py`</span></a>.</p>
 </section>
 <section id="property-calculations">
 <h2 id="property-calculations">Property calculations<a class="headerlink" href="#property-calculations" title="Permalink to this headline">¶</a></h2>
@@ -794,7 +794,7 @@ functions, for example,</p>
 </li>
 </ul>
 <p>Also several response properties are available in PySCF, see the
-examples in <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/prop/17-stability.py">examples/prop/17-stability.py</a>.</p>
+examples in <a href="#id36"><span class="problematic" id="id37">:source:`examples/prop/17-stability.py`</span></a>.</p>
 </section>
 <section id="spin-restricted-spin-unrestricted-restricted-open-shell-and-generalized-calculations">
 <h2 id="spin-restricted-spin-unrestricted-restricted-open-shell-and-generalized-calculations">Spin-restricted, spin-unrestricted, restricted open-shell, and generalized calculations<a class="headerlink" href="#spin-restricted-spin-unrestricted-restricted-open-shell-and-generalized-calculations" title="Permalink to this headline">¶</a></h2>
@@ -837,10 +837,10 @@ with <span class="math notranslate nohighlight">\(S_z=S\)</span>.</p>
 <li><p>Generalized (GHF/GKS)</p>
 <p>The general form of the spin-orbital <span class="math notranslate nohighlight">\(\psi\)</span> is used. GHF/GKS
 is useful when none of the previous methods provide stable solutions
-(see <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/17-stability.py">examples/scf/17-stability.py</a>), or when the
+(see <a href="#id38"><span class="problematic" id="id39">:source:`examples/scf/17-stability.py`</span></a>), or when the
 Hamiltonian does not commute with <span class="math notranslate nohighlight">\(\hat{S}_z\)</span> (e.g. in the
 presence of spin-orbit coupling, see
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/44-soc_ecp.py">examples/scf/44-soc_ecp.py</a>).</p>
+<a href="#id40"><span class="problematic" id="id41">:source:`examples/scf/44-soc_ecp.py`</span></a>).</p>
 </li>
 </ul>
 <p>Calculations with these methods can be invoked by creating an instance
@@ -856,10 +856,10 @@ of the corresponding class:</p>
 </pre></div>
 </div>
 <p>More examples can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/00-simple_hf.py">examples/scf/00-simple_hf.py</a>,
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/01-h2o.py">examples/scf/01-h2o.py</a>,
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/02-rohf_uhf.py">examples/scf/02-rohf_uhf.py</a>, and
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/02-ghf.py">examples/scf/02-ghf.py</a>.</p>
+<a href="#id42"><span class="problematic" id="id43">:source:`examples/scf/00-simple_hf.py`</span></a>,
+<a href="#id44"><span class="problematic" id="id45">:source:`examples/scf/01-h2o.py`</span></a>,
+<a href="#id46"><span class="problematic" id="id47">:source:`examples/scf/02-rohf_uhf.py`</span></a>, and
+<a href="#id48"><span class="problematic" id="id49">:source:`examples/scf/02-ghf.py`</span></a>.</p>
 </section>
 <section id="linear-dependencies">
 <h2 id="linear-dependencies">Linear dependencies<a class="headerlink" href="#linear-dependencies" title="Permalink to this headline">¶</a></h2>
@@ -876,10 +876,10 @@ orbitals in terms of the half-inverse overlap matrix, the generalized
 eigenproblem <span class="math notranslate nohighlight">\(\mathbf{F} \mathbf{C} = \mathbf{S} \mathbf{C}
 \mathbf{E}\)</span> can be rewritten as a regular eigenproblem
 <span class="math notranslate nohighlight">\(\tilde{\mathbf{F}} \tilde{\mathbf{C}} = \tilde{\mathbf{C}}
-\mathbf{E}\)</span> <span id="id16">[]</span>.</p>
+\mathbf{E}\)</span> <span id="id50">[]</span>.</p>
 <p>Moreover, as the half-inverse overlap matrix <span class="math notranslate nohighlight">\(\mathbf{S}^{-1/2}\)</span>
 is typically formed by the canonical orthonormalization procedure
-<span id="id17">[]</span> in which eigenvectors of the overlap matrix
+<span id="id51">[]</span> in which eigenvectors of the overlap matrix
 with small eigenvalues are thrown out, this procedure typically
 results in a better-conditioned basis since linearly dependent
 combinations of the basis functions are excluded by the procedure.</p>
@@ -896,7 +896,7 @@ basis sets, and at extreme molecular geometries where two nuclei are
 close to each other, also canonical orthonormalization fails.
 However, the addons module also implements the partial Cholesky
 orthonormalization technique
-<span id="id18">[]</span>, which has been
+<span id="id52">[]</span>, which has been
 shown to work reliably even in the presence of such truly pathological
 linear dependencies.</p>
 </section>
@@ -904,7 +904,7 @@ linear dependencies.</p>
 <span id="user-x2c"></span><h2 id="scalar-relativistic-correction">Scalar relativistic correction<a class="headerlink" href="#scalar-relativistic-correction" title="Permalink to this headline">¶</a></h2>
 <p>Scalar relativistic effects can be applied on the one-body operators
 through spin-free eXact-2-component (SFX2C) Hamiltonian
-<span id="id19">[]</span>.  The SFX2C Hamiltonian can be invoked by
+<span id="id53">[]</span>.  The SFX2C Hamiltonian can be invoked by
 decorating the SCF objects with the <code class="xref py py-func docutils literal notranslate"><span class="pre">x2c()</span></code> method, three other
 equivalent function names are also listed below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mf</span> <span class="o">=</span> <span class="n">scf</span><span class="o">.</span><span class="n">RHF</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span><span class="o">.</span><span class="n">x2c</span><span class="p">()</span>
@@ -923,11 +923,11 @@ To turn it off explicitly, one can do:</p>
 </pre></div>
 </div>
 <p>More examples can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/scf/21-x2c.py">examples/scf/21-x2c.py</a>.</p>
+<a href="#id54"><span class="problematic" id="id55">:source:`examples/scf/21-x2c.py`</span></a>.</p>
 </section>
 <section id="references">
 <h2 id="references">References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id20"></span></section>
+<span class="target" id="id56"></span></section>
 </section>
 
 

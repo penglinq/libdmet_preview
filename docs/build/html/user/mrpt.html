@@ -472,7 +472,7 @@ using the strongly contracted (SC) internal contraction scheme, <span id="id2">[
 SC-NEVPT2 can be applied to CASCI/CASSCF wave functions produced by the FCI or DMRG solvers. <span id="id3">[]</span>
 The number of the CI root needs to be specified for state-specific NEVPT2 calculations with <code class="docutils literal notranslate"><span class="pre">mrpt.NEVPT(mc,root=Root_ID)</span></code>.
 By default, the NEVPT2 calculation is performed for the lowest root, <cite>Root_ID=0</cite>.</p>
-<p>A simple example of SC-NEVPT2 calculations with the FCI and DMRG solvers is given in <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mrpt/03-dmrg_nevpt2.py">examples/mrpt/03-dmrg_nevpt2.py</a></p>
+<p>A simple example of SC-NEVPT2 calculations with the FCI and DMRG solvers is given in <a href="#id4"><span class="problematic" id="id5">:source:`examples/mrpt/03-dmrg_nevpt2.py`</span></a></p>
 <p>which outputs</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FCI</span> <span class="n">NEVPT</span> <span class="n">correlation</span> <span class="n">E</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.0655576579894365</span> <span class="o">-</span><span class="mf">0.0913916717329482</span>
 <span class="n">MPS</span> <span class="n">NEVPT</span> <span class="n">correlation</span> <span class="n">E</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.0655570680554582</span> <span class="o">-</span><span class="mf">0.0913913618723217</span>
@@ -488,11 +488,11 @@ where up to the 4-particle reduced density matrix (4-RDM) appears.
 In DMRG-SC-NEVPT2, this evaluation is done with the compressed bond dimension (M’) which is smaller than
 the bond dimension in the DMRG energy optimization to avoid the bottleneck.
 It can be specified by <code class="docutils literal notranslate"><span class="pre">mrpt.NEVPT(mc,root=Root_ID).compress_approx(maxM=M')</span></code>.</p>
-<p>More information can be found in Reference <span id="id4">[]</span></p>
+<p>More information can be found in Reference <span id="id6">[]</span></p>
 </section>
 <section id="references">
 <h2 id="references">References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id5"></span></section>
+<span class="target" id="id7"></span></section>
 </section>
 
 

@@ -565,11 +565,11 @@ This includes many commonly used AO basis sets in electronic structure calculati
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mf</span><span class="o">.</span><span class="n">with_df</span><span class="o">.</span><span class="n">auxmol</span><span class="o">.</span><span class="n">basis</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>More examples on using customized auxiliary basis can be found in <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/01-auxbasis.py">examples/df/01-auxbasis.py</a>.</p>
+<p>More examples on using customized auxiliary basis can be found in <a href="#id5"><span class="problematic" id="id6">:source:`examples/df/01-auxbasis.py`</span></a>.</p>
 </section>
 <section id="special-considerations-for-dft">
 <h3 id="special-considerations-for-dft">Special considerations for DFT<a class="headerlink" href="#special-considerations-for-dft" title="Permalink to this headline">¶</a></h3>
-<p>For DFT calculations with pure exchange-correlation functionals (i.e., LDA and GGA), the default auxiliary basis, which is designed for fitting both the Coulomb and the Hartree-Fock exchange integrals, may be unnecessarily large. We recommend using the <code class="docutils literal notranslate"><span class="pre">def2-universal-jfit</span></code> basis <span id="id5">[]</span> for a more cost-effective choice as shown in the following example:</p>
+<p>For DFT calculations with pure exchange-correlation functionals (i.e., LDA and GGA), the default auxiliary basis, which is designed for fitting both the Coulomb and the Hartree-Fock exchange integrals, may be unnecessarily large. We recommend using the <code class="docutils literal notranslate"><span class="pre">def2-universal-jfit</span></code> basis <span id="id7">[]</span> for a more cost-effective choice as shown in the following example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyscf</span> <span class="kn">import</span> <span class="n">gto</span><span class="p">,</span> <span class="n">dft</span>
 <span class="n">mol</span> <span class="o">=</span> <span class="n">gto</span><span class="o">.</span><span class="n">M</span><span class="p">(</span><span class="n">atom</span><span class="o">=</span><span class="s1">'N 0 0 0; N 0 0 1.2'</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span><span class="s1">'def2-tzvpp'</span><span class="p">)</span>
 <span class="n">mf</span> <span class="o">=</span> <span class="n">dft</span><span class="o">.</span><span class="n">RKS</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">xc</span><span class="o">=</span><span class="s2">"pbe"</span><span class="p">)</span><span class="o">.</span><span class="n">density_fit</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span> <span class="c1"># -109.432329411505</span>
@@ -608,21 +608,21 @@ By default, the 3-index tensor defining the CDERIs is discarded once the calcula
 <span class="n">mf</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>More examples on saving and using DF integrals and tensors can be found in <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/10-access_df_integrals.py">examples/df/10-access_df_integrals.py</a>, <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/11-access_df_tensor.py">examples/df/11-access_df_tensor.py</a>, and <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/40-precompute_df_integrals.py">examples/df/40-precompute_df_integrals.py</a>.</p>
+<p>More examples on saving and using DF integrals and tensors can be found in <a href="#id8"><span class="problematic" id="id9">:source:`examples/df/10-access_df_integrals.py`</span></a>, <a href="#id10"><span class="problematic" id="id11">:source:`examples/df/11-access_df_tensor.py`</span></a>, and <a href="#id12"><span class="problematic" id="id13">:source:`examples/df/40-precompute_df_integrals.py`</span></a>.</p>
 </section>
 <section id="advanced-examples">
 <h2 id="advanced-examples">Advanced examples<a class="headerlink" href="#advanced-examples" title="Permalink to this headline">¶</a></h2>
 <p>More advanced examples of using the <a class="reference internal" href="#module-df" title="df: Density fitting and RI approximation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">df</span></code></a> module include</p>
 <ul class="simple">
-<li><p>Computing the <span class="math notranslate nohighlight">\(\mathbf{J}\)</span>-matrix of DFT in an I/O-free manner: <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/11-get_j_io_free.py">examples/df/11-get_j_io_free.py</a>.</p></li>
-<li><p>Using DF integrals to define the Hamiltonian of a CASSCF calculation: <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/40-custom_df_hamiltonian.py">examples/df/40-custom_df_hamiltonian.py</a>.</p></li>
-<li><p>Generating analytical gradients for DF integrals: <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/41-df_integrals_gradients.py">examples/df/41-df_integrals_gradients.py</a>.</p></li>
-<li><p>Customizing the <code class="xref py py-func docutils literal notranslate"><span class="pre">get_jk()</span></code> method of a SCF class using DF: <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/df/42-overwrite_get_jk.py">examples/df/42-overwrite_get_jk.py</a>.</p></li>
+<li><p>Computing the <span class="math notranslate nohighlight">\(\mathbf{J}\)</span>-matrix of DFT in an I/O-free manner: <a href="#id14"><span class="problematic" id="id15">:source:`examples/df/11-get_j_io_free.py`</span></a>.</p></li>
+<li><p>Using DF integrals to define the Hamiltonian of a CASSCF calculation: <a href="#id16"><span class="problematic" id="id17">:source:`examples/df/40-custom_df_hamiltonian.py`</span></a>.</p></li>
+<li><p>Generating analytical gradients for DF integrals: <a href="#id18"><span class="problematic" id="id19">:source:`examples/df/41-df_integrals_gradients.py`</span></a>.</p></li>
+<li><p>Customizing the <code class="xref py py-func docutils literal notranslate"><span class="pre">get_jk()</span></code> method of a SCF class using DF: <a href="#id20"><span class="problematic" id="id21">:source:`examples/df/42-overwrite_get_jk.py`</span></a>.</p></li>
 </ul>
 </section>
 <section id="references">
 <h2 id="references">References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id6"></span></section>
+<span class="target" id="id22"></span></section>
 </section>
 
 

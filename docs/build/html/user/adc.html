@@ -539,15 +539,15 @@ default value of <code class="docutils literal notranslate"><span class="pre">nr
 </pre></div>
 </div>
 <p>More examples can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/adc/01-closed_shell.py">examples/adc/01-closed_shell.py</a>,
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/adc/03-closed_shell_different_setup.py">examples/adc/03-closed_shell_different_setup.py</a>.</p>
+<a href="#id3"><span class="problematic" id="id4">:source:`examples/adc/01-closed_shell.py`</span></a>,
+<a href="#id5"><span class="problematic" id="id6">:source:`examples/adc/03-closed_shell_different_setup.py`</span></a>.</p>
 </section>
 <section id="spin-restricted-and-spin-unrestricted-calculations">
 <h2 id="spin-restricted-and-spin-unrestricted-calculations">Spin-restricted and spin-unrestricted calculations<a class="headerlink" href="#spin-restricted-and-spin-unrestricted-calculations" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>adc</cite> module can be used to perform calculations of IP’s and EA’s of closed- and
 open-shell molecules starting with the RHF and UHF reference
 wavefunctions, leading to the RADC(n) and UADC(n) methods, respectively.
-<span id="id3">[]</span>
+<span id="id7">[]</span>
 See <a class="reference internal" href="scf.html#user-scf"><span class="std std-ref">Self-consistent field (SCF) methods</span></a> to learn more about the different reference wavefunctions.</p>
 <p>Shown below is an example of the IP- and EA-UADC(2) calculations for the
 open-shell OH radical:</p>
@@ -563,13 +563,13 @@ open-shell OH radical:</p>
 </pre></div>
 </div>
 <p>More examples can be found in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/adc/ 02-open_shell.py">examples/adc/ 02-open_shell.py</a>,
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/adc/`04-open_shell_different_setup.py">examples/adc/`04-open_shell_different_setup.py</a>.</p>
+<a href="#id8"><span class="problematic" id="id9">:source:`examples/adc/ 02-open_shell.py`</span></a>,
+<a href="#id10"><span class="problematic" id="id11">:source:`examples/adc/`04-open_shell_different_setup.py`</span></a>.</p>
 </section>
 <section id="spectroscopic-properties">
 <h2 id="spectroscopic-properties">Spectroscopic properties<a class="headerlink" href="#spectroscopic-properties" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>adc</cite> module supports calculation of the spectroscopic factors, which provide
-information about probabilities of transitions in the photoelectron spectra. <span id="id4">[]</span>
+information about probabilities of transitions in the photoelectron spectra. <span id="id12">[]</span>
 Computation of spectroscopic factors is performed by default and can be switched
 off by setting <code class="docutils literal notranslate"><span class="pre">compute_properties</span> <span class="pre">=</span> <span class="pre">False</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myadc</span><span class="o">.</span><span class="n">compute_properties</span> <span class="o">=</span> <span class="kc">False</span>
@@ -579,7 +579,7 @@ off by setting <code class="docutils literal notranslate"><span class="pre">comp
 </pre></div>
 </div>
 <p>After the ADC calculation is performed, the <cite>adc</cite> module can be used to compute
-the Dyson orbitals <span id="id5">[]</span> corresponding to ionized and electron-attached states:</p>
+the Dyson orbitals <span id="id13">[]</span> corresponding to ionized and electron-attached states:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dyson_orb</span> <span class="o">=</span> <span class="n">myadc</span><span class="o">.</span><span class="n">compute_dyson_mo</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -641,7 +641,7 @@ sufficient memory is available.</p>
 <li><p>Out-of-core</p>
 <p>Use of disk to store the expensive tensors.
 This algorithm is invoked by setting <code class="docutils literal notranslate"><span class="pre">max_memory</span></code> to a small value.
-See <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/adc/05-outcore.py">examples/adc/05-outcore.py</a></p>
+See <a href="#id14"><span class="problematic" id="id15">:source:`examples/adc/05-outcore.py`</span></a></p>
 </li>
 <li><p>Density-fitted (DF) algorithm</p></li>
 </ul>
@@ -659,11 +659,11 @@ DF-ADC(2) calculation is:</p>
 </div>
 </div></blockquote>
 <p>More examples can be found in:
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/adc/06-dfadc.py">examples/adc/06-dfadc.py</a>.</p>
+<a href="#id16"><span class="problematic" id="id17">:source:`examples/adc/06-dfadc.py`</span></a>.</p>
 </section>
 <section id="references">
 <h2 id="references">References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id6"></span></section>
+<span class="target" id="id18"></span></section>
 </section>
 
 

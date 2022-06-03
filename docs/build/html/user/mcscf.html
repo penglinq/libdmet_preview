@@ -569,10 +569,10 @@ This means performing multiple CASCI steps followed by updates to the molecular 
 </pre></div>
 </div>
 <p>Like many other modules in PySCF, <code class="xref py py-mod docutils literal notranslate"><span class="pre">mcscf</span></code> works with density-fitting (<a class="reference internal" href="df.html#user-df"><span class="std std-ref">Density fitting (DF)</span></a>) and x2c (<a class="reference internal" href="scf.html#user-x2c"><span class="std std-ref">Scalar relativistic correction</span></a>).
-It can also be used in its unrestricted formulation, please see <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/60-uhf_based_ucasscf.py">examples/mcscf/60-uhf_based_ucasscf.py</a> for an example.
+It can also be used in its unrestricted formulation, please see <a href="#id4"><span class="problematic" id="id5">:source:`examples/mcscf/60-uhf_based_ucasscf.py`</span></a> for an example.
 An important feature of <code class="xref py py-mod docutils literal notranslate"><span class="pre">mcscf</span></code> is that it can interface with external CI solver such as DMRG, FCIQMC, or selected CI methods, see the external projects for more details.
 You can even use MP2 or CC methods as solvers!
-Check out <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master//examples/cc/42-as_casci_fcisolver.py">/examples/cc/42-as_casci_fcisolver.py</a> for a working example.</p>
+Check out <a href="#id6"><span class="problematic" id="id7">:source:`/examples/cc/42-as_casci_fcisolver.py`</span></a> for a working example.</p>
 </section>
 </section>
 <section id="picking-an-active-space">
@@ -586,7 +586,7 @@ There are several strategies and they all contain two main components:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We always advise users to visualize their chosen active orbitals before starting large/expensive calculations.
-This involves dumping the MO coefficients to a <code class="docutils literal notranslate"><span class="pre">molden</span></code> file (see example <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/tools/02-molden.py">examples/tools/02-molden.py</a>) and visualizing with your chosen program.
+This involves dumping the MO coefficients to a <code class="docutils literal notranslate"><span class="pre">molden</span></code> file (see example <a href="#id8"><span class="problematic" id="id9">:source:`examples/tools/02-molden.py`</span></a>) and visualizing with your chosen program.
 While there are many great softwares available to visualize orbitals, <a class="reference external" href="http://jmol.sourceforge.net/">JMol</a> is one of the easiest to use and is recommended for less experienced users.</p>
 </div>
 <p>Below is a list of several general strategies one could employ to pick active space orbitals:</p>
@@ -613,7 +613,7 @@ This is often useful combined with a visual analysis of localized orbitals (see 
 </ol>
 <blockquote>
 <div><p>The user can select the MO orbital indices “manually” and pass them to the <code class="docutils literal notranslate"><span class="pre">sort_mo</span></code> function. NB! The orbitals are numbered from 1, not 0.
-See <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/10-define_cas_space.py">examples/mcscf/10-define_cas_space.py</a> and <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/34-init_guess_localization.py">examples/mcscf/34-init_guess_localization.py</a> for more details.</p>
+See <a href="#id10"><span class="problematic" id="id11">:source:`examples/mcscf/10-define_cas_space.py`</span></a> and <a href="#id12"><span class="problematic" id="id13">:source:`examples/mcscf/34-init_guess_localization.py`</span></a> for more details.</p>
 </div></blockquote>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mycas</span> <span class="o">=</span> <span class="n">mcscf</span><span class="o">.</span><span class="n">CASSCF</span><span class="p">(</span><span class="n">myhf</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="c1"># Note sort_mo by default take the 1-based orbital indices.</span>
@@ -644,7 +644,7 @@ Natural orbitals with occupations close to 2 are strongly occupied, and can be f
 Natural orbitals with small occupation numbers can likewise be omitted from the active space.</p>
 </div>
 <p>4) Use automated strategies (<code class="docutils literal notranslate"><span class="pre">avas</span></code> and <code class="docutils literal notranslate"><span class="pre">dmet_cas</span></code>) to pick an active space based on AO orbitals you’re targeting.
-For more details, see <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/43-avas.py">examples/mcscf/43-avas.py</a> and <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/43-dmet_cas.py">examples/mcscf/43-dmet_cas.py</a>.</p>
+For more details, see <a href="#id14"><span class="problematic" id="id15">:source:`examples/mcscf/43-avas.py`</span></a> and <a href="#id16"><span class="problematic" id="id17">:source:`examples/mcscf/43-dmet_cas.py`</span></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyscf.mcscf</span> <span class="kn">import</span> <span class="n">avas</span>
 <span class="n">ao_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Fe 3d'</span><span class="p">,</span> <span class="s1">'Fe 4d'</span><span class="p">,</span> <span class="s1">'C 2pz'</span><span class="p">]</span>
 <span class="n">ncas</span><span class="p">,</span> <span class="n">nelecas</span><span class="p">,</span> <span class="n">orbs</span> <span class="o">=</span> <span class="n">avas</span><span class="o">.</span><span class="n">avas</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="n">ao_labels</span><span class="p">)</span>
@@ -676,7 +676,7 @@ These may be occupied, virtual, or active orbitals.</p>
 <span class="n">mycas</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/19-frozen_orbital.py">examples/mcscf/19-frozen_orbital.py</a> for a complete example.</p>
+<p>See <a href="#id18"><span class="problematic" id="id19">:source:`examples/mcscf/19-frozen_orbital.py`</span></a> for a complete example.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <cite>frozen</cite> keyword of the CASSCF optimizer should not be confused with the <cite>frozen</cite> keyword of the FCI solver, which controls the number of orbitals that are constrained to be doubly occupied.</p>
@@ -729,8 +729,8 @@ by biasing the calculation towards the wanted state.</p>
 <p><code class="xref py py-func docutils literal notranslate"><span class="pre">fix_spin_()</span></code> is an energy-penalty method. It may affect the efficiency and
 accuracy of the CASCI and CASSCF algorithms. It should not be used unless
 the MCSCF program has difficulties in finding the wanted spin state.</p>
-<p>In example <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/02-cas_space_spin.py">examples/mcscf/02-cas_space_spin.py</a> and
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/18-spatial_spin_symmetry.py.py">examples/mcscf/18-spatial_spin_symmetry.py.py</a>, you can find the
+<p>In example <a href="#id20"><span class="problematic" id="id21">:source:`examples/mcscf/02-cas_space_spin.py`</span></a> and
+<a href="#id22"><span class="problematic" id="id23">:source:`examples/mcscf/18-spatial_spin_symmetry.py.py`</span></a>, you can find the
 complete scripts to tune spin states of the CASCI/CASSCF wavefunctions.</p>
 </section>
 <section id="state-averaged-calculations">
@@ -739,13 +739,13 @@ complete scripts to tune spin states of the CASCI/CASSCF wavefunctions.</p>
 In such cases it is often helpful to optimize the orbitals for a state average.
 The <code class="docutils literal notranslate"><span class="pre">state_average_</span></code> function (note the hanging underscore) is a member function of <code class="docutils literal notranslate"><span class="pre">CASCI</span></code>/<code class="docutils literal notranslate"><span class="pre">CASSCF</span></code> objects and takes the weights of the states as input.
 The weights can be any normalized and non-negative array of values, but equal weights are typically used.
-See Section 12.7.2 in Ref. <span id="id4">[]</span> for more details.</p>
+See Section 12.7.2 in Ref. <span id="id24">[]</span> for more details.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_states</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n_states</span><span class="p">)</span><span class="o">/</span><span class="n">n_states</span>
 <span class="n">mycas</span> <span class="o">=</span> <span class="n">mcscf</span><span class="o">.</span><span class="n">CASSCF</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">state_average_</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/15-state_average.py">examples/mcscf/15-state_average.py</a> for a complete example.</p>
+<p>See <a href="#id25"><span class="problematic" id="id26">:source:`examples/mcscf/15-state_average.py`</span></a> for a complete example.</p>
 <p>By default, only a single spin and/or point group symmetry is targeted, but it is possible to target a mixture of both:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.5</span><span class="p">]</span>
 <span class="n">solver1</span> <span class="o">=</span> <span class="n">fci</span><span class="o">.</span><span class="n">direct_spin1_symm</span><span class="o">.</span><span class="n">FCI</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
@@ -760,7 +760,7 @@ See Section 12.7.2 in Ref. <span id="id4">[]</span> for more details.</p>
 <span class="n">mycas</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/41-state_average.py">examples/mcscf/41-state_average.py</a> for a complete example.</p>
+<p>See <a href="#id27"><span class="problematic" id="id28">:source:`examples/mcscf/41-state_average.py`</span></a> for a complete example.</p>
 </section>
 <section id="job-control">
 <h2 id="job-control">Job Control<a class="headerlink" href="#job-control" title="Permalink to this headline">¶</a></h2>
@@ -785,11 +785,11 @@ See Section 12.7.2 in Ref. <span id="id4">[]</span> for more details.</p>
 <p>CI coefficients from a previous calculation can also be passed as an initial guess to expedite the calculation:</p>
 <p>Examples:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/14-project_init_guess.py">examples/mcscf/14-project_init_guess.py</a></p></li>
-<li><p><a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/31-cr2_scan/cr2-scan.py">examples/mcscf/31-cr2_scan/cr2-scan.py</a></p></li>
-<li><p><a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/34-init_guess_localization.py">examples/mcscf/34-init_guess_localization.py</a></p></li>
-<li><p><a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/43-avas.py">examples/mcscf/43-avas.py</a></p></li>
-<li><p><a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/43-dmet_cas.py">examples/mcscf/43-dmet_cas.py</a></p></li>
+<li><p><a href="#id29"><span class="problematic" id="id30">:source:`examples/mcscf/14-project_init_guess.py`</span></a></p></li>
+<li><p><a href="#id31"><span class="problematic" id="id32">:source:`examples/mcscf/31-cr2_scan/cr2-scan.py`</span></a></p></li>
+<li><p><a href="#id33"><span class="problematic" id="id34">:source:`examples/mcscf/34-init_guess_localization.py`</span></a></p></li>
+<li><p><a href="#id35"><span class="problematic" id="id36">:source:`examples/mcscf/43-avas.py`</span></a></p></li>
+<li><p><a href="#id37"><span class="problematic" id="id38">:source:`examples/mcscf/43-dmet_cas.py`</span></a></p></li>
 </ul>
 </section>
 <section id="restarting">
@@ -810,7 +810,7 @@ See Section 12.7.2 in Ref. <span id="id4">[]</span> for more details.</p>
 <span class="n">mycas</span><span class="o">.</span><span class="n">kernel</span><span class="p">(</span><span class="n">mo</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mcscf/13-restart.py">examples/mcscf/13-restart.py</a> for a complete example.</p>
+<p>See <a href="#id39"><span class="problematic" id="id40">:source:`examples/mcscf/13-restart.py`</span></a> for a complete example.</p>
 <p>Restarting calculations can be also be useful when using results from a smaller active space to speed up calculations on a larger one.</p>
 </section>
 </section>
@@ -855,7 +855,7 @@ The user may request the active orbitals to be transformed to the so-called natu
 </section>
 <section id="references">
 <h2 id="references">References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id5"></span></section>
+<span class="target" id="id41"></span></section>
 </section>
 
 

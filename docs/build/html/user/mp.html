@@ -520,7 +520,7 @@ density fitting, depending on the initial SCF calculation.</p>
 <p>Note also the existence of a <a class="reference internal" href="#dfmp2"><span class="std std-ref">native DF-MP2 implementation</span></a>, which does
 not depend on the integral approximation in SCF, and which is significantly faster than the
 default implementation of MP2 with density fitting.</p>
-<p>A simple example (see <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mp/00-simple_mp2.py">examples/mp/00-simple_mp2.py</a>) of running
+<p>A simple example (see <a href="#id2"><span class="problematic" id="id3">:source:`examples/mp/00-simple_mp2.py`</span></a>) of running
 an MP2 calculation is</p>
 <p>which outputs</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">converged</span> <span class="n">SCF</span> <span class="n">energy</span> <span class="o">=</span> <span class="o">-</span><span class="mf">99.9873974403487</span>
@@ -576,7 +576,7 @@ They are returned in the MO basis:</p>
 <span class="n">dm2</span> <span class="o">=</span> <span class="n">mymp</span><span class="o">.</span><span class="n">make_rdm2</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Analytical nuclear gradients can be calculated <span id="id2">[]</span></p>
+<p>Analytical nuclear gradients can be calculated <span id="id4">[]</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mygrad</span> <span class="o">=</span> <span class="n">mymp</span><span class="o">.</span><span class="n">nuc_grad_method</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -641,7 +641,7 @@ be imported from the respective modules <code class="docutils literal notranslat
 </pre></div>
 </div>
 <p>Both modules also make the respective classes available under the alias <code class="docutils literal notranslate"><span class="pre">DFMP2</span></code>. The file
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mp/10-dfmp2.py">examples/mp/10-dfmp2.py</a> contains a simple example for a DF-MP2 energy calculation.</p>
+<a href="#id5"><span class="problematic" id="id6">:source:`examples/mp/10-dfmp2.py`</span></a> contains a simple example for a DF-MP2 energy calculation.</p>
 <p>There is also an older variant of DF-MP2 implemented in <code class="docutils literal notranslate"><span class="pre">mp.dfmp2</span></code>, which does not exploit the
 advantages of density fitting fully, and may therefore have much higher memory demands for larger
 molecules. Please note that the <code class="docutils literal notranslate"><span class="pre">density_fit()</span></code> method of the conventional <code class="docutils literal notranslate"><span class="pre">mp.mp2.MP2</span></code> class
@@ -674,7 +674,7 @@ implementation. The points below provide some advice on choosing the correct typ
 <li><p>The relaxed density should be used to calculate properties if the MP2 method is well-behaved for
 the system in question. Properties calculated thereby correspond to the correct derivative of the
 MP2 energy with respect to an appropriate external perturbation. This is illustrated in
-<a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mp/11-dfmp2-density.py">examples/mp/11-dfmp2-density.py</a>, where the dipole moment of chloromethane is calculated
+<a href="#id7"><span class="problematic" id="id8">:source:`examples/mp/11-dfmp2-density.py`</span></a>, where the dipole moment of chloromethane is calculated
 much more accurately with the relaxed density than with the unrelaxed one. To calculate the
 relaxed density, a set of CP-SCF type equations needs to be solved in one of the steps. In
 ill-behaved systems, for example if there is multi-reference character, the MP2 natural occupation
@@ -682,7 +682,7 @@ numbers can be substantially larger than two or smaller than zero.</p></li>
 <li><p>A typical use case for the unrelaxed density is to calculate starting orbitals for a CASSCF
 calculation, which can be used despite the system being described poorly at MP2 level otherwise.
 In contrast to the relaxed density, the natural occupation numbers of the unrelaxed density are
-always between two and zero. <a class="reference external" href="https://github.com/pyscf/pyscf/tree/master/examples/mp/12-dfump2-natorbs.py">examples/mp/12-dfump2-natorbs.py</a> shows how to calculate
+always between two and zero. <a href="#id9"><span class="problematic" id="id10">:source:`examples/mp/12-dfump2-natorbs.py`</span></a> shows how to calculate
 natural orbitals for the allyl radical, which has a significantly spin-contaminated UHF wave
 function. On the other hand, the unrelaxed density will often give very poor results for
 properties (such as electrostatic moments).</p></li>
@@ -702,7 +702,7 @@ inside the respective modules. The default scaling factors can be changed to arb
 </section>
 <section id="references">
 <h2 id="references">References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id3"></span></section>
+<span class="target" id="id11"></span></section>
 </section>
 
 

@@ -1,24 +1,13 @@
 About
 =====
 
+
 People
 --------
 
-Board of directors
-""""""""""""""""""
-- `Timothy Berkelbach <https://berkelbach.chem.columbia.edu/>`_, Columbia and Flatiron Institute
-- `Garnet Chan <http://www.chan-lab.caltech.edu/>`_, Caltech
-- `Sandeep Sharma <https://www.colorado.edu/lab/sharmagroup/>`_, UC Boulder
-- `Alexander Sokolov <https://research.cbc.osu.edu/sokolov.8/>`_, Ohio State
-- `Qiming Sun <http://www.sunqm.net/>`_, Axiomquant LLC
-  
-Maintainers
-"""""""""""
-- Zhihao Cui, Caltech
-- Yang Gao, Caltech
-- Iliya Sabzevari, UC Boulder
-- James Smith, Flatiron Institute
-- Xiao Wang, Flatiron Institute
+Linqing Peng
+Zhihao Cui
+
 
 How to cite
 -----------
