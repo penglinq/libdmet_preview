@@ -4,12 +4,13 @@ Quickstart
 
 This quickstart provides a brief introduction to the use of libDMET in common periodic embedding calculations from a PySCF style user interface. Completed DMET examples with detailed guidance can be found within the dedicated `run <https://github.com/penglinq/libdmet_preview/tree/cookiecutter/examples/run>`_ directory. For more advanced usage, please see the detailed user documentation. 
 Running a general DMET calculation can be divided into the following steps:
+
 1. Define a lattice object that includes a unit cell and kmesh and that defines valence, virtual, and core orbitals.
 2. Perform a low-level calculation, e.g. HF here, on the same cell and k-points.
 3. Select a high-level solver and, along with the lattice and low-level calculation, instantiate a DMET object.
 4. Use .kernel() to run DMET. 
-5. Obtain properties e.g. density matrices and energies can be obtained by the 
-   corresponing method following PySCF's standard, e.g. .make_rdm1(), .energy_cell().
+5. Obtain properties e.g. density matrices and energies can be obtained by the corresponing method following PySCF's standard, e.g. .make_rdm1(), .energy_cell().
+
 The following sections provide more detailed explanation on each step.
 
 
