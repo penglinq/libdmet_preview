@@ -460,18 +460,18 @@ We need to assume the attributes for results
 will be used as default inputs or environments for other objects in the rest
 parts of the program.
 The results attributes should be immutable, once they were generated
-and stored (after calling the <a class="reference internal" href="develop/ao2mo_developer.html#kernel" title="kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code></a> method) in a particular object.</p></li>
+and stored (after calling the <code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code> method) in a particular object.</p></li>
 <li><p>In __init__ function, initialize/define the problem size. The
 problem size parameters (like num_orbitals etc) can be considered as
 environments. They should be immutable.</p></li>
 <li><p>Kernel functions:
-Classes for QC models should provide a method <a class="reference internal" href="develop/ao2mo_developer.html#kernel" title="kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code></a> as the entrance/main function.
-The <a class="reference internal" href="develop/ao2mo_developer.html#kernel" title="kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code></a> function then call other code to finish the calculation.
+Classes for QC models should provide a method <code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code> as the entrance/main function.
+The <code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code> function then call other code to finish the calculation.
 Although not required, it is recommended to let the kernel function return certain key results.
 If your class is inherited from the <code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.lib.StreamObject</span></code>,
-the class has a method <code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code> which will call the <a class="reference internal" href="develop/ao2mo_developer.html#kernel" title="kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code></a>
+the class has a method <code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code> which will call the <code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code>
 function and return the object itself. One can simply call the
-<a class="reference internal" href="develop/ao2mo_developer.html#kernel" title="kernel"><code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code></a> method or <code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code> method to start the flow of a QC method.</p></li>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">kernel()</span></code> method or <code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code> method to start the flow of a QC method.</p></li>
 </ul>
 </li>
 <li><p>Function arguments</p>
