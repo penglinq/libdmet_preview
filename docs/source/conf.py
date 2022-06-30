@@ -180,6 +180,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinxcontrib.bibtex",
     "nbsphinx",
+    "pyscfdocext",
     # "ablog",
 ]
 bibtex_bibfiles = []

@@ -16,3 +16,6 @@ echo "pyscf.org" >> docs/CNAME
 
 echo -e "Adding google verification to docs"
 echo "google-site-verification: google356b16cacc76b077.html" >> docs/google356b16cacc76b077.html
+
+rm -r ../build
+mv docs ../build
