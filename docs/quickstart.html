@@ -60,7 +60,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="User Guide" href="user.html" />
+    <link rel="next" title="About" href="about.html" />
     <link rel="prev" title="Installation" href="install.html" />
   
    
@@ -254,7 +254,7 @@
         </li>
         <li class="md-nav__item"><a href="#localization" class="md-nav__link">Localization</a><nav class="md-nav">
               <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#default-intrinsic-atomic-orbitals-iao" class="md-nav__link">Default Intrinsic Atomic Orbitals (IAO)</a>
+        <li class="md-nav__item"><a href="#built-in-localization" class="md-nav__link">Built-in localization</a>
         </li></ul>
             </nav>
         </li></ul>
@@ -306,27 +306,6 @@
     <li class="md-nav__item">
     
     
-      <a href="user.html" class="md-nav__link">User Guide</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="develop.html" class="md-nav__link">Developer Guide</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="pyscf_api_docs/pyscf.html" class="md-nav__link">API</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
       <a href="about.html" class="md-nav__link">About</a>
       
     
@@ -357,7 +336,7 @@
         </li>
         <li class="md-nav__item"><a href="#localization" class="md-nav__link">Localization</a><nav class="md-nav">
               <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#default-intrinsic-atomic-orbitals-iao" class="md-nav__link">Default Intrinsic Atomic Orbitals (IAO)</a>
+        <li class="md-nav__item"><a href="#built-in-localization" class="md-nav__link">Built-in localization</a>
         </li></ul>
             </nav>
         </li></ul>
@@ -443,20 +422,11 @@ previously defined low-level calculation, lattice, and high-level solver and the
 </section>
 <section id="localization">
 <span id="local"></span><h2 id="localization">Localization<a class="headerlink" href="#localization" title="Permalink to this heading">¶</a></h2>
-<p>By default DMET uses Intrinsic Atomic Orbital (IAO) to localize atomic orbitals. One can specify the minimal basis for IAO construction by setting mydmet.minao or directly input a predetermined set of localized orbitals (LO) by setting mydmet.C_ao_lo to be the basis transformation matrix from AO to LO.</p>
-<section id="default-intrinsic-atomic-orbitals-iao">
-<span id="loc"></span><h3 id="default-intrinsic-atomic-orbitals-iao">Default Intrinsic Atomic Orbitals (IAO)<a class="headerlink" href="#default-intrinsic-atomic-orbitals-iao" title="Permalink to this heading">¶</a></h3>
-<p>libDMET by default uses Intrinsic Atomic Orbitals (IAO) from PySCF to localize atomic orbitals. (cf. <a class="reference external" href="https://github.com/pyscf/pyscf/blob/master/examples/local_orb/03-split_localization.py">local_orb/03-split_localization.py</a>):</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyscf</span> <span class="kn">import</span> <span class="n">lo</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">occ_orbs</span> <span class="o">=</span> <span class="n">rhf_h2o</span><span class="o">.</span><span class="n">mo_coeff</span><span class="p">[:,</span> <span class="n">rhf_h2o</span><span class="o">.</span><span class="n">mo_occ</span> <span class="o">&gt;</span> <span class="mf">0.</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fb_h2o</span> <span class="o">=</span> <span class="n">lo</span><span class="o">.</span><span class="n">Boys</span><span class="p">(</span><span class="n">mol_h2o</span><span class="p">,</span> <span class="n">occ_orbs</span><span class="p">,</span> <span class="n">rhf_h2o</span><span class="p">)</span> <span class="c1"># Foster-Boys</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">loc_occ_orbs</span> <span class="o">=</span> <span class="n">fb</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">virt_orbs</span> <span class="o">=</span> <span class="n">rhf_h2o</span><span class="o">.</span><span class="n">mo_coeff</span><span class="p">[:,</span> <span class="n">rhf_h2o</span><span class="o">.</span><span class="n">mo_occ</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pm_h2o</span> <span class="o">=</span> <span class="n">lo</span><span class="o">.</span><span class="n">PM</span><span class="p">(</span><span class="n">mol_h2o</span><span class="p">,</span> <span class="n">virt_orbs</span><span class="p">,</span> <span class="n">rhf_h2o</span><span class="p">)</span> <span class="c1"># Pipek-Mezey</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">loc_virt_orbs</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>One can use other customized localized orbitals by directly passing in the basis transformation matrix C_ao_lo.</p>
+<p>By default DMET uses Intrinsic Atomic Orbital (IAO) to localize atomic orbitals. One can specify the minimal basis for IAO construction by setting mydmet.minao. For localization scheme other than IAO, input a predetermined set of localized orbitals (LO) by setting mydmet.C_ao_lo to be the basis transformation matrix from AO to LO.</p>
+<section id="built-in-localization">
+<span id="loc"></span><h3 id="built-in-localization">Built-in localization<a class="headerlink" href="#built-in-localization" title="Permalink to this heading">¶</a></h3>
+<p>libDMET by default uses Intrinsic Atomic Orbitals (IAO) from PySCF to localize the core and valence atomic orbitals. (cf. <a class="reference external" href="https://github.com/pyscf/pyscf/blob/master/examples/local_orb/03-split_localization.py">local_orb/03-split_localization.py</a>) Projected Atomic Orbitals (PAO) are used to generate localized virtual orbitals.
+Another commonly used localization scheme is the Maximal Localized Wannier functions. One can generate Wannier functions using built-in interface as below and directly passing in the basis transformation matrix through attribute C_ao_lo.</p>
 <p>Wannier orbitals can be computed as (cf. <a class="reference external" href="https://github.com/pyscf/pyscf/blob/master/examples/local_orb/04-ibo_benzene_cubegen.py">local_orb/04-ibo_benzene_cubegen.py</a>):</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">iao</span> <span class="o">=</span> <span class="n">lo</span><span class="o">.</span><span class="n">wannier</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">occ_orbs</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">iao</span> <span class="o">=</span> <span class="n">lo</span><span class="o">.</span><span class="n">vec_lowdin</span><span class="p">(</span><span class="n">iao</span><span class="p">,</span> <span class="n">rhf_h2o</span><span class="o">.</span><span class="n">get_ovlp</span><span class="p">())</span>
@@ -491,12 +461,12 @@ previously defined low-level calculation, lattice, and high-level solver and the
             </a>
           
           
-            <a href="user.html" title="User Guide"
+            <a href="about.html" title="About"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> User Guide </span>
+                class="md-footer-nav__direction"> Next </span> About </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>

@@ -69,24 +69,15 @@ previously defined low-level calculation, lattice, and high-level solver and the
 
 Localization
 =================
-By default DMET uses Intrinsic Atomic Orbital (IAO) to localize atomic orbitals. One can specify the minimal basis for IAO construction by setting mydmet.minao or directly input a predetermined set of localized orbitals (LO) by setting mydmet.C_ao_lo to be the basis transformation matrix from AO to LO.
+By default DMET uses Intrinsic Atomic Orbital (IAO) to localize atomic orbitals. One can specify the minimal basis for IAO construction by setting mydmet.minao. For localization scheme other than IAO, input a predetermined set of localized orbitals (LO) by setting mydmet.C_ao_lo to be the basis transformation matrix from AO to LO.
 
 .. _LOC:
 
-Default Intrinsic Atomic Orbitals (IAO)
+Built-in localization
 --------------------------------------
 
-libDMET by default uses Intrinsic Atomic Orbitals (IAO) from PySCF to localize atomic orbitals. (cf. `local_orb/03-split_localization.py <https://github.com/pyscf/pyscf/blob/master/examples/local_orb/03-split_localization.py>`_):
-
-  >>> from pyscf import lo
-  >>> occ_orbs = rhf_h2o.mo_coeff[:, rhf_h2o.mo_occ > 0.]
-  >>> fb_h2o = lo.Boys(mol_h2o, occ_orbs, rhf_h2o) # Foster-Boys
-  >>> loc_occ_orbs = fb.kernel()
-  >>> virt_orbs = rhf_h2o.mo_coeff[:, rhf_h2o.mo_occ == 0.]
-  >>> pm_h2o = lo.PM(mol_h2o, virt_orbs, rhf_h2o) # Pipek-Mezey
-  >>> loc_virt_orbs = pm.kernel()
-  
-One can use other customized localized orbitals by directly passing in the basis transformation matrix C_ao_lo. 
+libDMET by default uses Intrinsic Atomic Orbitals (IAO) from PySCF to localize the core and valence atomic orbitals. (cf. `local_orb/03-split_localization.py <https://github.com/pyscf/pyscf/blob/master/examples/local_orb/03-split_localization.py>`_) Projected Atomic Orbitals (PAO) are used to generate localized virtual orbitals.
+Another commonly used localization scheme is the Maximal Localized Wannier functions. One can generate Wannier functions using built-in interface as below and directly passing in the basis transformation matrix through attribute C_ao_lo. 
 
 Wannier orbitals can be computed as (cf. `local_orb/04-ibo_benzene_cubegen.py <https://github.com/pyscf/pyscf/blob/master/examples/local_orb/04-ibo_benzene_cubegen.py>`_):
 

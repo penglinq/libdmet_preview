@@ -1,21 +1,6 @@
-.. _interface:
 
-Interfaces
+Solver Interface
 **********
 
-Interfacing PySCF with other software packages further extends its capabilities.
-The programs listed in this chapter are not necessary for running PySCF and may require 
-special requirements for installations, additional licences, *etc*. 
+libDMET can be used as a general embedding framework to speed up a molecular correlated wavefunction solver as the high-level solver. This page explains how to interfacing libDMET with high-level solvers not implemented in the libDMET package. 
 
-
-.. toctree::
-   :maxdepth: 1
-
-   interface/dftd3.rst
-   interface/geomopt.rst
-   interface/dmrgscf.rst
-   interface/fciqmcscf.rst
-   interface/cornell_shci.rst
-   interface/shciscf.rst
-   interface/icmpspt.rst
-   interface/nao.rst
