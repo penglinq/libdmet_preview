@@ -2,6 +2,8 @@ pyscf
 sphinx
 ablog
 sphinx-material
-sphinxcontrib-bibtex
+sphinxcontrib-bibtex==1.0.0
 nbsphinx
-Pygments
+Pygments==2.7.4
+# MarkupSafe 2.1.1 breaks Jinja2 2.10.1
+MarkupSafe==2.0.1
