@@ -381,17 +381,14 @@
 <h1 id="quickstart--page-root">Quickstart<a class="headerlink" href="#quickstart--page-root" title="Permalink to this heading">¶</a></h1>
 <p>This quickstart provides a brief introduction to the use of libDMET in common periodic embedding calculations from a PySCF style user interface. Completed DMET examples with detailed guidance can be found within the dedicated <a class="reference external" href="https://github.com/penglinq/libdmet_preview/tree/cookiecutter/examples/run">run</a> directory. For more advanced usage, please see the detailed user documentation.
 Running a general DMET calculation can be divided into the following steps:
-1. Define a lattice object that includes a unit cell and kmesh and that</p>
+1. Define a lattice object that includes a unit cell and kmesh and that defines valence, virtual, and core orbitals.
+2. Perform a low-level calculation, e.g. HF here, on the same cell and k-points.
+3. Select a high-level solver and, along with the lattice and low-level calculation, instantiate a DMET object.
+4. Use .kernel() to run DMET.
+5. Obtain properties e.g. density matrices and energies can be obtained by the</p>
 <blockquote>
-<div><p>defines valence, virtual, and core orbitals.</p>
+<div><p>corresponing method following PySCF’s standard, e.g. .make_rdm1(), .energy_cell().</p>
 </div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>Perform a low-level calculation, e.g. HF here, on the same cell and k-points.</p></li>
-<li><p>Select a high-level solver and, along with the lattice and low-level calculation, instantiate a DMET object.</p></li>
-<li><p>Use .kernel() to run DMET.</p></li>
-<li><p>Obtain properties e.g. density matrices and energies can be obtained by the
-corresponing method following PySCF’s standard, e.g. .make_rdm1(), .energy_cell().</p></li>
-</ol>
 <p>The following sections provide more detailed explanation on each step.</p>
 <section id="input-lattice">
 <span id="input"></span><h2 id="input-lattice">Input: Lattice<a class="headerlink" href="#input-lattice" title="Permalink to this heading">¶</a></h2>
@@ -412,8 +409,7 @@ The Lattice is instantiated from a PySCF cell object that defines the unit cell 
 </section>
 <section id="input-low-level-calculation">
 <h2 id="input-low-level-calculation">Input: Low-level calculation<a class="headerlink" href="#input-low-level-calculation" title="Permalink to this heading">¶</a></h2>
-<dl>
-<dt>A low-level calculation obtains an approximated wave function of the whole lattice using an economic solver such as kHF,</dt><dd><p>kDFT. Only mean-field methods in PySCF are supported by the current bath construction methods.</p>
+<p>A low-level calculation obtains an approximated wave function of the whole lattice using an economic solver such as kHF, kDFT. Only mean-field methods in PySCF are supported by the current bath construction methods.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">GDF</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">kpts</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gdf</span><span class="o">.</span><span class="n">_cderi_to_save</span> <span class="o">=</span> <span class="n">gdf_fname</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gdf</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
@@ -423,8 +419,6 @@ The Lattice is instantiated from a PySCF cell object that defines the unit cell 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">kmf</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span>
 </pre></div>
 </div>
-</dd>
-</dl>
 </section>
 <section id="input-high-level-solver">
 <h2 id="input-high-level-solver">Input: High-level solver<a class="headerlink" href="#input-high-level-solver" title="Permalink to this heading">¶</a></h2>
@@ -443,8 +437,10 @@ Here, the solver could be an object of the built-in solver under the sovler fold
 <h2 id="run-dmet-calculation">Run DMET calculation<a class="headerlink" href="#run-dmet-calculation" title="Permalink to this heading">¶</a></h2>
 <p>Similar to a solver call in PySCF, a DMET calculation can be performed by first instantiating a dmet object with
 previously defined low-level calculation, lattice, and high-level solver and then running with .kernel().</p>
-<p>mydmet = dmet.dmet(kmf, lat, solver)
-e_dmet, conv = mydmet.kernel() # e_dmet = energy per cell</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mydmet</span> <span class="o">=</span> <span class="n">dmet</span><span class="o">.</span><span class="n">dmet</span><span class="p">(</span><span class="n">kmf</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">solver</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e_dmet</span><span class="p">,</span> <span class="n">conv</span> <span class="o">=</span> <span class="n">mydmet</span><span class="o">.</span><span class="n">kernel</span><span class="p">()</span> <span class="c1"># e_dmet = energy per cell</span>
+</pre></div>
+</div>
 </section>
 <section id="localization">
 <span id="local"></span><h2 id="localization">Localization<a class="headerlink" href="#localization" title="Permalink to this heading">¶</a></h2>
