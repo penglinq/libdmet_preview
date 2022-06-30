@@ -4,8 +4,7 @@ Quickstart
 
 This quickstart provides a brief introduction to the use of libDMET in common periodic embedding calculations from a PySCF style user interface. Completed DMET examples with detailed guidance can be found within the dedicated `run <https://github.com/penglinq/libdmet_preview/tree/cookiecutter/examples/run>`_ directory. For more advanced usage, please see the detailed user documentation. 
 Running a general DMET calculation can be divided into the following steps:
-1. Define a lattice object that includes a unit cell and kmesh and that 
-   defines valence, virtual, and core orbitals.
+1. Define a lattice object that includes a unit cell and kmesh and that defines valence, virtual, and core orbitals.
 2. Perform a low-level calculation, e.g. HF here, on the same cell and k-points.
 3. Select a high-level solver and, along with the lattice and low-level calculation, instantiate a DMET object.
 4. Use .kernel() to run DMET. 
@@ -35,8 +34,7 @@ The Lattice is instantiated from a PySCF cell object that defines the unit cell 
 
 Input: Low-level calculation
 =============
-A low-level calculation obtains an approximated wave function of the whole lattice using an economic solver such as kHF,
-  kDFT. Only mean-field methods in PySCF are supported by the current bath construction methods. 
+A low-level calculation obtains an approximated wave function of the whole lattice using an economic solver such as kHF, kDFT. Only mean-field methods in PySCF are supported by the current bath construction methods. 
 
   >>> gdf = df.GDF(cell, kpts)
   >>> gdf._cderi_to_save = gdf_fname
@@ -63,8 +61,8 @@ Run DMET calculation
 Similar to a solver call in PySCF, a DMET calculation can be performed by first instantiating a dmet object with
 previously defined low-level calculation, lattice, and high-level solver and then running with .kernel(). 
 
-mydmet = dmet.dmet(kmf, lat, solver)
-e_dmet, conv = mydmet.kernel() # e_dmet = energy per cell
+  >>> mydmet = dmet.dmet(kmf, lat, solver)
+  >>> e_dmet, conv = mydmet.kernel() # e_dmet = energy per cell
 
 .. _LOCAL:
 
