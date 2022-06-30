@@ -16,6 +16,7 @@ jobs:
           cd docs
           make html_full || cat _build.log; cat _build_err.log
           make gh_pages_setup
+          cd ..
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
