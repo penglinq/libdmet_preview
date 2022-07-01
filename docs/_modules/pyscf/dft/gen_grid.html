@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -470,7 +470,7 @@
 <span class="c1"># Stratmann, Scuseria, Frisch. CPL, 257, 213 (1996), eq.11</span>
 <div class="viewcode-block" id="stratmann"><a class="viewcode-back" href="../../../pyscf_api_docs/pyscf.dft.html#pyscf.dft.gen_grid.stratmann">[docs]</a><span class="k">def</span> <span class="nf">stratmann</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">'''Stratmann, Scuseria, Frisch. CPL, 257, 213 (1996); DOI:10.1016/0009-2614(96)00600-8'''</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mf">.64</span>  <span class="c1"># for eq. 14</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="o">.</span><span class="mi">64</span>  <span class="c1"># for eq. 14</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
     <span class="n">ma</span> <span class="o">=</span> <span class="n">g</span><span class="o">/</span><span class="n">a</span>
     <span class="n">ma2</span> <span class="o">=</span> <span class="n">ma</span> <span class="o">*</span> <span class="n">ma</span>
@@ -604,8 +604,8 @@
                     <span class="k">if</span> <span class="n">f_radii_adjust</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                         <span class="n">g</span> <span class="o">=</span> <span class="n">f_radii_adjust</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">g</span><span class="p">)</span>
                     <span class="n">g</span> <span class="o">=</span> <span class="n">becke_scheme</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-                    <span class="n">pbecke</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">.5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">g</span><span class="p">)</span>
-                    <span class="n">pbecke</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">.5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">g</span><span class="p">)</span>
+                    <span class="n">pbecke</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="o">.</span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">g</span><span class="p">)</span>
+                    <span class="n">pbecke</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*=</span> <span class="o">.</span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">g</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">pbecke</span>
 
     <span class="n">coords_all</span> <span class="o">=</span> <span class="p">[]</span>
@@ -939,7 +939,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

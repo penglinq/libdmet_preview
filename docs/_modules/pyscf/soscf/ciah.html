@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -303,7 +303,7 @@
 <div class="viewcode-block" id="CIAHOptimizer"><a class="viewcode-back" href="../../../pyscf_api_docs/pyscf.soscf.html#pyscf.soscf.ciah.CIAHOptimizer">[docs]</a><span class="k">class</span> <span class="nc">CIAHOptimizer</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">StreamObject</span><span class="p">):</span>
 
     <span class="n">conv_tol_grad</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">__config__</span><span class="p">,</span> <span class="s1">'soscf_ciah_CIAHOptimizer_conv_tol_grad'</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">)</span>
-    <span class="n">max_stepsize</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">__config__</span><span class="p">,</span> <span class="s1">'soscf_ciah_CIAHOptimizer_max_stepsize'</span><span class="p">,</span> <span class="mf">.05</span><span class="p">)</span>
+    <span class="n">max_stepsize</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">__config__</span><span class="p">,</span> <span class="s1">'soscf_ciah_CIAHOptimizer_max_stepsize'</span><span class="p">,</span> <span class="o">.</span><span class="mi">05</span><span class="p">)</span>
     <span class="n">max_iters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">__config__</span><span class="p">,</span> <span class="s1">'soscf_ciah_CIAHOptimizer_max_iters'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
     <span class="n">kf_interval</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">__config__</span><span class="p">,</span> <span class="s1">'soscf_ciah_CIAHOptimizer_kf_interval'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
     <span class="n">kf_trust_region</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">__config__</span><span class="p">,</span> <span class="s1">'soscf_ciah_CIAHOptimizer_kf_trust_region'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -430,7 +430,7 @@
                     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">'|g| &gt;&gt; keyframe, Restore previouse step'</span><span class="p">)</span>
                     <span class="k">break</span>
 
-                <span class="k">elif</span> <span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">imic</span> <span class="o">&gt;=</span> <span class="n">max_cycle</span> <span class="ow">or</span> <span class="n">norm_gorb</span> <span class="o">&lt;</span> <span class="n">conv_tol_grad</span><span class="o">*</span><span class="mf">.2</span><span class="p">):</span>
+                <span class="k">elif</span> <span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">imic</span> <span class="o">&gt;=</span> <span class="n">max_cycle</span> <span class="ow">or</span> <span class="n">norm_gorb</span> <span class="o">&lt;</span> <span class="n">conv_tol_grad</span><span class="o">*.</span><span class="mi">2</span><span class="p">):</span>
                     <span class="k">break</span>
 
                 <span class="k">elif</span> <span class="p">(</span><span class="n">ikf</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="c1"># avoid frequent keyframe</span>
@@ -608,7 +608,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

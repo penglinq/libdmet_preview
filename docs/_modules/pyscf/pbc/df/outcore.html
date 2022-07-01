@@ -53,9 +53,9 @@
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../../about.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -488,7 +488,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">dtype</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">complex128</span>
 
-    <span class="n">buflen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_memory</span><span class="o">*</span><span class="mf">.47e6</span><span class="o">/</span><span class="mi">16</span><span class="o">/</span><span class="p">(</span><span class="n">nkptij</span><span class="o">*</span><span class="n">ni</span><span class="o">*</span><span class="n">nj</span><span class="o">*</span><span class="n">comp</span><span class="p">)))</span>
+    <span class="n">buflen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_memory</span><span class="o">*.</span><span class="mf">47e6</span><span class="o">/</span><span class="mi">16</span><span class="o">/</span><span class="p">(</span><span class="n">nkptij</span><span class="o">*</span><span class="n">ni</span><span class="o">*</span><span class="n">nj</span><span class="o">*</span><span class="n">comp</span><span class="p">)))</span>
     <span class="n">auxdims</span> <span class="o">=</span> <span class="n">aux_loc</span><span class="p">[</span><span class="n">shls_slice</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">shls_slice</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">aux_loc</span><span class="p">[</span><span class="n">shls_slice</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span><span class="n">shls_slice</span><span class="p">[</span><span class="mi">5</span><span class="p">]]</span>
     <span class="n">auxranges</span> <span class="o">=</span> <span class="n">balance_segs</span><span class="p">(</span><span class="n">auxdims</span><span class="p">,</span> <span class="n">buflen</span><span class="p">)</span>
     <span class="n">buflen</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">auxranges</span><span class="p">])</span>
@@ -559,7 +559,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

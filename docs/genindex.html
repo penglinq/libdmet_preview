@@ -53,9 +53,9 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
@@ -456,8 +456,6 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.symm.html#pyscf.symm.geom.alias_axes">alias_axes() (in module pyscf.symm.geom)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.allgather">allgather() (in module pyscf.pbc.mpitools.mpi)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.pbc.lib.html#pyscf.pbc.lib.arnoldi.Arnoldi.allocateVecs">allocateVecs() (pyscf.pbc.lib.arnoldi.Arnoldi method)</a>
 
       <ul>
@@ -465,14 +463,8 @@
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.mpi_helper.allreduce">allreduce() (in module pyscf.agf2.mpi_helper)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.allreduce">(in module pyscf.pbc.mpitools.mpi)</a>
 </li>
-      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.mpi_helper.allreduce_safe_inplace">allreduce_safe_inplace() (in module pyscf.agf2.mpi_helper)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.alltoall">alltoall() (in module pyscf.pbc.mpitools.mpi)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gccsd.GCCSD.amplitudes_from_ccsd">amplitudes_from_ccsd() (pyscf.cc.gccsd.GCCSD method)</a>
 </li>
@@ -907,8 +899,6 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.misc.StreamObject.apply">(pyscf.lib.misc.StreamObject method)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_pool.MPIPool.apply">(pyscf.pbc.mpitools.mpi_pool.MPIPool method)</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.SCF.apply">(pyscf.scf.hf.SCF method)</a>
 </li>
       </ul></li>
@@ -1183,11 +1173,7 @@
       <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.dfmp2_native.BatchSizeError">BatchSizeError</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.mpi_helper.bcast">bcast() (in module pyscf.agf2.mpi_helper)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.bcast">(in module pyscf.pbc.mpitools.mpi)</a>
 </li>
-      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.mpi_helper.bcast_dict">bcast_dict() (in module pyscf.agf2.mpi_helper)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.radi.becke">becke() (in module pyscf.dft.radi)</a>
@@ -1348,12 +1334,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.dft.html#pyscf.pbc.dft.numint.NumInt.cache_xc_kernel">(pyscf.pbc.dft.numint.NumInt method)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.PySCFEngine.calc_new">calc_new() (pyscf.geomopt.geometric_solver.PySCFEngine method)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.PySCFEngine.calc_new">(pyscf.pbc.geomopt.geometric_solver.PySCFEngine method)</a>
-</li>
-      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.adc.html#pyscf.adc.radc_ao2mo.calculate_chunk_size">calculate_chunk_size() (in module pyscf.adc.radc_ao2mo)</a>
 
       <ul>
@@ -1493,6 +1473,10 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.ucasci.CASCI">(in module pyscf.mcscf.ucasci)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.CASCI">(pyscf.scf.uhf.UHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf_symm.SymAdaptedUHF.CASCI">(pyscf.scf.uhf_symm.SymAdaptedUHF attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.CASCI">CASCI() (in module pyscf.mcscf)</a>
 </li>
@@ -1508,6 +1492,16 @@
         <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.umc1step.UCASSCF.casci">(pyscf.mcscf.umc1step.UCASSCF method)</a>
 </li>
       </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.CASCI">CASCI() (pyscf.scf.hf.RHF method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf_symm.SymAdaptedRHF.CASCI">(pyscf.scf.hf_symm.SymAdaptedRHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf_symm.SymAdaptedROHF.CASCI">(pyscf.scf.hf_symm.SymAdaptedROHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.CASCI">(pyscf.scf.rohf.ROHF method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.addons.caslst_by_irrep">caslst_by_irrep() (in module pyscf.mcscf.addons)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.mc1step.CASSCF">CASSCF (class in pyscf.mcscf.mc1step)</a>
@@ -1521,9 +1515,23 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.umc1step.CASSCF">(in module pyscf.mcscf.umc1step)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.CASSCF">(pyscf.scf.uhf.UHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf_symm.SymAdaptedUHF.CASSCF">(pyscf.scf.uhf_symm.SymAdaptedUHF attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.CASSCF">CASSCF() (in module pyscf.mcscf)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.CASSCF">(pyscf.scf.hf.RHF method)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf_symm.SymAdaptedRHF.CASSCF">(pyscf.scf.hf_symm.SymAdaptedRHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf_symm.SymAdaptedROHF.CASSCF">(pyscf.scf.hf_symm.SymAdaptedROHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.CASSCF">(pyscf.scf.rohf.ROHF method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.ccsd.CC">CC (in module pyscf.cc.ccsd)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.ccsd.CCSD.cc2">cc2 (pyscf.cc.ccsd.CCSD attribute)</a>
@@ -1541,8 +1549,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.cc_Foo">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Foo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.cc_Fov">cc_Fov() (in module pyscf.cc.gintermediates)</a>
 
@@ -1556,8 +1562,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.cc_Fov">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.cc_Fov">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Fov">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.cc_Fvv">cc_Fvv() (in module pyscf.cc.gintermediates)</a>
@@ -1573,11 +1577,7 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.cc_Fvv">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Fvv">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_tau1">cc_tau1() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.cc_Woooo">cc_Woooo() (in module pyscf.cc.gintermediates)</a>
 
       <ul>
@@ -1591,11 +1591,7 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.cc_Woooo">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Woooo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Wovov">cc_Wovov() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.cc_Wovvo">cc_Wovvo() (in module pyscf.cc.gintermediates)</a>
 
       <ul>
@@ -1613,15 +1609,11 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.cc_Wvoov">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Wvoov">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.rintermediates.cc_Wvovo">cc_Wvovo() (in module pyscf.cc.rintermediates)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.cc_Wvovo">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Wvovo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.cc_Wvvvv">cc_Wvvvv() (in module pyscf.cc.gintermediates)</a>
@@ -1637,8 +1629,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.cc_Wvvvv">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.cc_Wvvvv">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.cc_Wvvvv_half">cc_Wvvvv_half() (in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
@@ -1652,6 +1642,10 @@
         <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.uccsd.CCSD">(in module pyscf.cc.uccsd)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kccsd.CCSD">(in module pyscf.pbc.cc.kccsd)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.krohf.KROHF.CCSD">(pyscf.pbc.scf.krohf.KROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.rohf.ROHF.CCSD">(pyscf.pbc.scf.rohf.ROHF attribute)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.CCSD">CCSD() (in module pyscf.cc)</a>
@@ -1682,6 +1676,22 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kccsd.GCCSD.ccsd">(pyscf.pbc.cc.kccsd.GCCSD method)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kccsd_rhf.RCCSD.ccsd">(pyscf.pbc.cc.kccsd_rhf.RCCSD method)</a>
+</li>
+      </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.ghf.GHF.CCSD">CCSD() (pyscf.pbc.scf.ghf.GHF method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.hf.RHF.CCSD">(pyscf.pbc.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kghf.KGHF.CCSD">(pyscf.pbc.scf.kghf.KGHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.khf.KRHF.CCSD">(pyscf.pbc.scf.khf.KRHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kuhf.KUHF.CCSD">(pyscf.pbc.scf.kuhf.KUHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.uhf.UHF.CCSD">(pyscf.pbc.scf.uhf.UHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.SCF.CCSD">(pyscf.scf.hf.SCF method)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.eom_uccsd.EOMEA.ccsd_star_contract">ccsd_star_contract (pyscf.cc.eom_uccsd.EOMEA attribute)</a>
@@ -1729,8 +1739,6 @@
       <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.diis.CDIIS">CDIIS (class in pyscf.scf.diis)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.gto.html#pyscf.pbc.gto.cell.Cell">Cell (class in pyscf.pbc.gto.cell)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer.cell">cell (pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer property)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.tools.html#pyscf.pbc.tools.pbc.cell_plus_imgs">cell_plus_imgs() (in module pyscf.pbc.tools.pbc)</a>
 </li>
@@ -1838,6 +1846,8 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.soscf.html#pyscf.soscf.ciah.CIAHOptimizer">CIAHOptimizer (class in pyscf.soscf.ciah)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.pbc.tdscf.html#pyscf.pbc.tdscf.krhf.CIS">CIS (in module pyscf.pbc.tdscf.krhf)</a>
 
       <ul>
@@ -1852,8 +1862,6 @@
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uhf.CIS">(in module pyscf.tdscf.uhf)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.pbc.ci.html#pyscf.pbc.ci.CIS">CIS() (in module pyscf.pbc.ci)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.eom_kccsd_rhf.EOMEESinglet.cis">cis() (pyscf.pbc.cc.eom_kccsd_rhf.EOMEESinglet method)</a>
@@ -1873,6 +1881,10 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.ci.html#pyscf.ci.ucisd.CISD">(in module pyscf.ci.ucisd)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.rohf.ROHF.CISD">(pyscf.pbc.scf.rohf.ROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.CISD">(pyscf.scf.rohf.ROHF attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.ci.html#pyscf.ci.CISD">CISD() (in module pyscf.ci)</a>
 
@@ -1882,6 +1894,20 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.ci.html#pyscf.ci.cisd.CISD.cisd">cisd() (pyscf.ci.cisd.CISD method)</a>
 </li>
+      <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.ghf.GHF.CISD">CISD() (pyscf.pbc.scf.ghf.GHF method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.hf.RHF.CISD">(pyscf.pbc.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.uhf.UHF.CISD">(pyscf.pbc.scf.uhf.UHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.ghf.GHF.CISD">(pyscf.scf.ghf.GHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.CISD">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.CISD">(pyscf.scf.uhf.UHF method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.ci.html#pyscf.ci.cisd.cisdvec_to_amplitudes">cisdvec_to_amplitudes() (in module pyscf.ci.cisd)</a>
 
       <ul>
@@ -1899,8 +1925,6 @@
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.misc.class_as_method">class_as_method() (in module pyscf.lib.misc)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.gto.html#pyscf.pbc.gto.cell.classify_ecp_pseudo">classify_ecp_pseudo() (in module pyscf.pbc.gto.cell)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_pool.MPIPool.close">close() (pyscf.pbc.mpitools.mpi_pool.MPIPool method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.symm.html#pyscf.symm.geom.closest_axes">closest_axes() (in module pyscf.symm.geom)</a>
 </li>
@@ -2418,6 +2442,10 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.ddCOSMO">ddCOSMO() (in module pyscf.solvent)</a>
 </li>
+      <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rhf.TDMixin.DDCOSMO">DDCOSMO() (pyscf.tdscf.rhf.TDMixin method)</a>
+</li>
+      <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rhf.TDMixin.ddCOSMO">ddCOSMO() (pyscf.tdscf.rhf.TDMixin method)</a>
+</li>
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.ddcosmo.ddcosmo_for_casci">ddcosmo_for_casci() (in module pyscf.solvent.ddcosmo)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.ddcosmo.ddcosmo_for_casscf">ddcosmo_for_casscf() (in module pyscf.solvent.ddcosmo)</a>
@@ -2435,6 +2463,10 @@
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.DDPCM">DDPCM() (in module pyscf.solvent)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.ddPCM">ddPCM() (in module pyscf.solvent)</a>
+</li>
+      <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rhf.TDMixin.DDPCM">DDPCM() (pyscf.tdscf.rhf.TDMixin method)</a>
+</li>
+      <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rhf.TDMixin.ddPCM">ddPCM() (pyscf.tdscf.rhf.TDMixin method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.ddpcm.ddpcm_for_casci">ddpcm_for_casci() (in module pyscf.solvent.ddpcm)</a>
 </li>
@@ -2498,8 +2530,6 @@
         <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.KohnShamDFT.define_xc_">(pyscf.dft.rks.KohnShamDFT method)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.del_registry">del_registry() (in module pyscf.pbc.mpitools.mpi)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.dfmp2_native.DFRMP2.delete">delete() (pyscf.mp.dfmp2_native.DFRMP2 method)</a>
 
       <ul>
@@ -2635,7 +2665,13 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.dfump2_native.DFMP2">(in module pyscf.mp.dfump2_native)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.DFMP2">(pyscf.scf.rohf.ROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.DFMP2">(pyscf.scf.uhf.UHF attribute)</a>
+</li>
       </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.DFMP2">DFMP2() (pyscf.scf.hf.RHF method)</a>
+</li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.dfragf2.DFRAGF2">DFRAGF2 (class in pyscf.agf2.dfragf2)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.dfmp2_native.DFRMP2">DFRMP2 (class in pyscf.mp.dfmp2_native)</a>
@@ -2793,9 +2829,23 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.dRPA">(class in pyscf.tdscf.uks)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.dRPA">(pyscf.dft.rks_symm.SymAdaptedROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.dRPA">(pyscf.dft.roks.ROKS attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.dRPA">dRPA() (in module pyscf.tdscf)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.dRPA">(pyscf.dft.rks.RKS method)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.dRPA">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.dRPA">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.dRPA">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.linalg_helper.dsolve">dsolve() (in module pyscf.lib.linalg_helper)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.linalg_helper.dsyev">dsyev() (in module pyscf.lib.linalg_helper)</a>
@@ -2805,9 +2855,23 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.dTDA">(class in pyscf.tdscf.uks)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.dTDA">(pyscf.dft.rks_symm.SymAdaptedROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.dTDA">(pyscf.dft.roks.ROKS attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.dTDA">dTDA() (in module pyscf.tdscf)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.dTDA">(pyscf.dft.rks.RKS method)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.dTDA">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.dTDA">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.dTDA">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.chkfile.dump">dump() (in module pyscf.lib.chkfile)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.chkfile.dump_agf2">dump_agf2() (in module pyscf.agf2.chkfile)</a>
@@ -3652,8 +3716,6 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.gw.html#pyscf.gw.gw_slow.AbstractIMDS.entire_space">entire_space() (pyscf.gw.gw_slow.AbstractIMDS method)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.enum">enum() (in module pyscf.pbc.mpitools.mpi_load_balancer)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.eom_rccsd.EOM">EOM (class in pyscf.cc.eom_rccsd)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.eom_gccsd.EOMEA">EOMEA (class in pyscf.cc.eom_gccsd)</a>
@@ -4342,6 +4404,8 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.selected_ci.from_fci">from_fci() (in module pyscf.fci.selected_ci)</a>
 </li>
+      <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.SCF.from_fcidump">from_fcidump() (pyscf.scf.hf.SCF method)</a>
+</li>
       <li><a href="pyscf_api_docs/pyscf.ci.html#pyscf.ci.cisd.from_fcivec">from_fcivec() (in module pyscf.ci.cisd)</a>
 
       <ul>
@@ -4461,8 +4525,6 @@
       <li><a href="pyscf_api_docs/pyscf.data.html#pyscf.data.nucprop.g_factor_to_gyromagnetic_ratio">g_factor_to_gyromagnetic_ratio() (in module pyscf.data.nucprop)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.lib.html#pyscf.pbc.lib.kpts_helper.gamma_point">gamma_point() (in module pyscf.pbc.lib.kpts_helper)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.gather">gather() (in module pyscf.pbc.mpitools.mpi)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.radi.gauss_chebyshev">gauss_chebyshev() (in module pyscf.dft.radi)</a>
 </li>
@@ -4657,6 +4719,14 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kuhf.KUHF.gen_response">(pyscf.pbc.scf.kuhf.KUHF method)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.dhf.DHF.gen_response">(pyscf.scf.dhf.DHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.ghf.GHF.gen_response">(pyscf.scf.ghf.GHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.gen_response">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.gen_response">(pyscf.scf.rohf.ROHF method)</a>
+</li>
         <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.gen_response">(pyscf.scf.uhf.UHF method)</a>
 </li>
       </ul></li>
@@ -4768,22 +4838,10 @@
         <li><a href="pyscf_api_docs/pyscf.ao2mo.html#pyscf.ao2mo.r_outcore.general_iofree">(in module pyscf.ao2mo.r_outcore)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_helper.generate_max_task_list">generate_max_task_list() (in module pyscf.pbc.mpitools.mpi_helper)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_helper.generate_task_list">generate_task_list() (in module pyscf.pbc.mpitools.mpi_helper)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.pbc.lib.html#pyscf.pbc.lib.linalg_helper.DavidsonZL.genMatrix">genMatrix() (pyscf.pbc.lib.linalg_helper.DavidsonZL method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.lib.html#pyscf.pbc.lib.linalg_helper.DavidsonZL.genV0">genV0() (pyscf.pbc.lib.linalg_helper.DavidsonZL method)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.GeometryOptimizer">GeometryOptimizer (class in pyscf.geomopt.berny_solver)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.GeometryOptimizer">(class in pyscf.geomopt.geometric_solver)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer">(class in pyscf.pbc.geomopt.geometric_solver)</a>
-</li>
-      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.misc.ProcessWithReturnValue.get">get() (pyscf.lib.misc.ProcessWithReturnValue method)</a>
 
       <ul>
@@ -4899,8 +4957,6 @@
       <li><a href="pyscf_api_docs/pyscf.pbc.dft.html#pyscf.pbc.dft.gen_grid.get_becke_grids">get_becke_grids() (in module pyscf.pbc.dft.gen_grid)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.tdscf.html#pyscf.pbc.tdscf.krhf_slow.get_block_k_ix">get_block_k_ix() (in module pyscf.pbc.tdscf.krhf_slow)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.get_blocks_from_data">get_blocks_from_data() (pyscf.pbc.mpitools.mpi_load_balancer.load_balancer method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.pbc.gto.html#pyscf.pbc.gto.cell.get_bounding_sphere">get_bounding_sphere() (in module pyscf.pbc.gto.cell)</a>
 
@@ -5722,8 +5778,6 @@
         <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.sacasscf.Gradients.get_lagrange_callback">(pyscf.grad.sacasscf.Gradients method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.lagrange.Gradients.get_lagrange_precond">get_lagrange_precond() (pyscf.grad.lagrange.Gradients method)</a>
 
       <ul>
@@ -5742,8 +5796,6 @@
         <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.sacasscf.Gradients.get_LdotJnuc">(pyscf.grad.sacasscf.Gradients method)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_blksize.get_max_blocksize_from_mem">get_max_blocksize_from_mem() (in module pyscf.pbc.mpitools.mpi_blksize)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.ao2mo.html#pyscf.ao2mo.get_mo_eri">get_mo_eri() (in module pyscf.ao2mo)</a>
 
       <ul>
@@ -5760,6 +5812,8 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.df.html#pyscf.pbc.df.mdf.MDF.get_mo_eri">(pyscf.pbc.df.mdf.MDF method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.pbc.df.html#pyscf.pbc.df.aft.AFTDF.get_mo_pairs">get_mo_pairs() (pyscf.pbc.df.aft.AFTDF method)</a>
 
       <ul>
@@ -6900,6 +6954,54 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.grad.html#pyscf.pbc.grad.kuks.Gradients">(class in pyscf.pbc.grad.kuks)</a>
 </li>
       </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.Gradients">Gradients() (pyscf.dft.rks.RKS method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.Gradients">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.Gradients">(pyscf.dft.rks_symm.SymAdaptedROKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.Gradients">(pyscf.dft.roks.ROKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.Gradients">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.Gradients">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.addons.StateAverageMCSCFSolver.Gradients">(pyscf.mcscf.addons.StateAverageMCSCFSolver method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.casci.CASCI.Gradients">(pyscf.mcscf.casci.CASCI method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.mc1step.CASSCF.Gradients">(pyscf.mcscf.mc1step.CASSCF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.mp2.MP2.Gradients">(pyscf.mp.mp2.MP2 method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.ump2.UMP2.Gradients">(pyscf.mp.ump2.UMP2 method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.dhf.DHF.Gradients">(pyscf.scf.dhf.DHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.Gradients">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.Gradients">(pyscf.scf.rohf.ROHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.Gradients">(pyscf.scf.uhf.UHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rhf.TDA.Gradients">(pyscf.tdscf.rhf.TDA method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rhf.TDHF.Gradients">(pyscf.tdscf.rhf.TDHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rks.TDA.Gradients">(pyscf.tdscf.rks.TDA method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rks.TDDFT.Gradients">(pyscf.tdscf.rks.TDDFT method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uhf.TDA.Gradients">(pyscf.tdscf.uhf.TDA method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uhf.TDHF.Gradients">(pyscf.tdscf.uhf.TDHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.TDA.Gradients">(pyscf.tdscf.uks.TDA method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.TDDFT.Gradients">(pyscf.tdscf.uks.TDDFT method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.dhf.GradientsMixin">GradientsMixin (class in pyscf.grad.dhf)</a>
 
       <ul>
@@ -7070,14 +7172,14 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.tools.html#pyscf.tools.molden.header">header() (in module pyscf.tools.molden)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.numpy_helper.hermi_sum">hermi_sum() (in module pyscf.lib.numpy_helper)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.numpy_helper.hermi_triu">hermi_triu() (in module pyscf.lib.numpy_helper)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.hessian.html#pyscf.hessian.rhf.Hessian.hess">hess() (pyscf.hessian.rhf.Hessian method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.hessian.html#pyscf.hessian.rhf.hess_elec">hess_elec() (in module pyscf.hessian.rhf)</a>
 
       <ul>
@@ -7110,6 +7212,20 @@
         <li><a href="pyscf_api_docs/pyscf.hessian.html#pyscf.hessian.uhf.Hessian">(class in pyscf.hessian.uhf)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.hessian.html#pyscf.hessian.uks.Hessian">(class in pyscf.hessian.uks)</a>
+</li>
+      </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.Hessian">Hessian() (pyscf.dft.rks.RKS method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.Hessian">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.Hessian">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.Hessian">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.Hessian">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.Hessian">(pyscf.scf.uhf.UHF method)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.HF">HF() (in module pyscf.pbc.scf)</a>
@@ -7642,8 +7758,6 @@
         <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.xcfun.is_lda">(in module pyscf.dft.xcfun)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_pool.MPIPool.is_master">is_master() (pyscf.pbc.mpitools.mpi_pool.MPIPool method)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.libxc.is_meta_gga">is_meta_gga() (in module pyscf.dft.libxc)</a>
 
       <ul>
@@ -7809,10 +7923,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.selected_ci_symm.kernel">(in module pyscf.fci.selected_ci_symm)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.kernel">(in module pyscf.geomopt.berny_solver)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.kernel">(in module pyscf.geomopt.geometric_solver)</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.ccsd_slow.kernel">(in module pyscf.grad.ccsd_slow)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.gw.html#pyscf.gw.gw_ac.kernel">(in module pyscf.gw.gw_ac)</a>
@@ -7868,8 +7978,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.ci.html#pyscf.pbc.ci.kcis_rhf.kernel">(in module pyscf.pbc.ci.kcis_rhf)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.eph.html#pyscf.pbc.eph.eph_fd.kernel">(in module pyscf.pbc.eph.eph_fd)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.kernel">(in module pyscf.pbc.geomopt.geometric_solver)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.gw.html#pyscf.pbc.gw.krgw_ac.kernel">(in module pyscf.pbc.gw.krgw_ac)</a>
 </li>
@@ -7977,10 +8085,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.selected_ci_symm.SelectedCI.kernel">(pyscf.fci.selected_ci_symm.SelectedCI method)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.GeometryOptimizer.kernel">(pyscf.geomopt.berny_solver.GeometryOptimizer method)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.GeometryOptimizer.kernel">(pyscf.geomopt.geometric_solver.GeometryOptimizer method)</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.casci.Gradients.kernel">(pyscf.grad.casci.Gradients method)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.casscf.Gradients.kernel">(pyscf.grad.casscf.Gradients method)</a>
@@ -8058,8 +8162,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.ci.html#pyscf.pbc.ci.kcis_rhf.KCIS.kernel">(pyscf.pbc.ci.kcis_rhf.KCIS method)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.dft.html#pyscf.pbc.dft.gen_grid.UniformGrids.kernel">(pyscf.pbc.dft.gen_grid.UniformGrids method)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer.kernel">(pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer method)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.grad.html#pyscf.pbc.grad.krhf.Gradients.kernel">(pyscf.pbc.grad.krhf.Gradients method)</a>
 </li>
@@ -8434,8 +8536,6 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.chkfile.load_agf2">load_agf2() (in module pyscf.agf2.chkfile)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer">load_balancer (class in pyscf.pbc.mpitools.mpi_load_balancer)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.pbc.lib.html#pyscf.pbc.lib.chkfile.load_cell">load_cell() (in module pyscf.pbc.lib.chkfile)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.chkfile.load_chkfile_key">load_chkfile_key() (in module pyscf.lib.chkfile)</a>
@@ -8497,8 +8597,6 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Loo">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Loo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.df.html#pyscf.df.df.DF.loop">loop() (pyscf.df.df.DF method)</a>
 
@@ -8530,8 +8628,6 @@
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Lvv">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Lvv">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -9278,8 +9374,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.eom_kccsd_uhf.mask_frozen_ip">(in module pyscf.pbc.cc.eom_kccsd_uhf)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.master">master() (pyscf.pbc.mpitools.mpi_load_balancer.load_balancer method)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.adc.html#pyscf.adc.radc.RADCEA.matvec">matvec() (pyscf.adc.radc.RADCEA method)</a>
 
       <ul>
@@ -9816,10 +9910,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.geomopt.html#module-pyscf.geomopt.addons">pyscf.geomopt.addons</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#module-pyscf.geomopt.berny_solver">pyscf.geomopt.berny_solver</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#module-pyscf.geomopt.geometric_solver">pyscf.geomopt.geometric_solver</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.grad.html#module-pyscf.grad">pyscf.grad</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.grad.html#module-pyscf.grad.casci">pyscf.grad.casci</a>
@@ -10144,8 +10234,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#module-pyscf.pbc.geomopt">pyscf.pbc.geomopt</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#module-pyscf.pbc.geomopt.geometric_solver">pyscf.pbc.geomopt.geometric_solver</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.pbc.grad.html#module-pyscf.pbc.grad">pyscf.pbc.grad</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.grad.html#module-pyscf.pbc.grad.krhf">pyscf.pbc.grad.krhf</a>
@@ -10218,21 +10306,9 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#module-pyscf.pbc.mpicc">pyscf.pbc.mpicc</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#module-pyscf.pbc.mpicc.kintermediates_rhf">pyscf.pbc.mpicc.kintermediates_rhf</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#module-pyscf.pbc.mpicc.mpi_kpoint_helper">pyscf.pbc.mpicc.mpi_kpoint_helper</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools">pyscf.pbc.mpitools</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi">pyscf.pbc.mpitools.mpi</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_blksize">pyscf.pbc.mpitools.mpi_blksize</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_helper">pyscf.pbc.mpitools.mpi_helper</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_load_balancer">pyscf.pbc.mpitools.mpi_load_balancer</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_pool">pyscf.pbc.mpitools.mpi_pool</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#module-pyscf.pbc.scf">pyscf.pbc.scf</a>
 </li>
@@ -10447,12 +10523,6 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.GeometryOptimizer.mol">mol (pyscf.geomopt.berny_solver.GeometryOptimizer property)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.GeometryOptimizer.mol">(pyscf.geomopt.geometric_solver.GeometryOptimizer property)</a>
-</li>
-      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.tools.html#pyscf.tools.chkfile_util.molden">molden() (in module pyscf.tools.chkfile_util)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.Mole">Mole (class in pyscf.gto.mole)</a>
@@ -10486,17 +10556,37 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.ump2.MP2">(in module pyscf.mp.ump2)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kghf.KGHF.MP2">(pyscf.pbc.scf.kghf.KGHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.krohf.KROHF.MP2">(pyscf.pbc.scf.krohf.KROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.rohf.ROHF.MP2">(pyscf.pbc.scf.rohf.ROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.MP2">(pyscf.scf.rohf.ROHF attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.MP2">MP2() (in module pyscf.mp)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.mp.html#pyscf.pbc.mp.MP2">(in module pyscf.pbc.mp)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.ghf.GHF.MP2">(pyscf.pbc.scf.ghf.GHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.hf.RHF.MP2">(pyscf.pbc.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.khf.KRHF.MP2">(pyscf.pbc.scf.khf.KRHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kuhf.KUHF.MP2">(pyscf.pbc.scf.kuhf.KUHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.uhf.UHF.MP2">(pyscf.pbc.scf.uhf.UHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.ghf.GHF.MP2">(pyscf.scf.ghf.GHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.MP2">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.MP2">(pyscf.scf.uhf.UHF method)</a>
+</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_pool.MPIPool">MPIPool (class in pyscf.pbc.mpitools.mpi_pool)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_pool.MPIPoolException">MPIPoolException</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.Mole.ms">ms (pyscf.gto.mole.Mole property)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.common_slow.VindTracker.msize">msize (pyscf.tdscf.common_slow.VindTracker property)</a>
@@ -10849,8 +10939,6 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.hf.normalize_dm_">normalize_dm_() (in module pyscf.pbc.scf.hf)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.NotConvergedError">NotConvergedError</a>, <a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.NotConvergedError">[1]</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.logger.note">note() (in module pyscf.lib.logger)</a>
 
       <ul>
@@ -11138,19 +11226,7 @@
       <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.optimize">optimize() (in module pyscf.geomopt)</a>
 
       <ul>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.optimize">(in module pyscf.geomopt.berny_solver)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.optimize">(in module pyscf.geomopt.geometric_solver)</a>
-</li>
         <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.optimize">(in module pyscf.pbc.geomopt)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.optimize">(in module pyscf.pbc.geomopt.geometric_solver)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.GeometryOptimizer.optimize">(pyscf.geomopt.berny_solver.GeometryOptimizer method)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.GeometryOptimizer.optimize">(pyscf.geomopt.geometric_solver.GeometryOptimizer method)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer.optimize">(pyscf.pbc.geomopt.geometric_solver.GeometryOptimizer method)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.gto.basis.html#pyscf.gto.basis.parse_nwchem.optimize_contraction">optimize_contraction() (in module pyscf.gto.basis.parse_nwchem)</a>
@@ -11163,8 +11239,6 @@
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.proxy.orb2ov">(in module pyscf.tdscf.proxy)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.gw.html#pyscf.gw.gw_slow.AbstractIMDS.orb_dims">orb_dims (pyscf.gw.gw_slow.AbstractIMDS attribute)</a>
 
       <ul>
@@ -11173,6 +11247,8 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.grad.html#pyscf.grad.sacasscf.SACASLagPrec.orb_prec">orb_prec() (pyscf.grad.sacasscf.SACASLagPrec method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.mp.html#pyscf.mp.dfmp2_native.orbgrad_from_Gamma">orbgrad_from_Gamma() (in module pyscf.mp.dfmp2_native)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.tools.html#pyscf.tools.chgcar.orbital">orbital() (in module pyscf.tools.chgcar)</a>
@@ -12570,20 +12646,6 @@
 </li>
       </ul></li>
       <li>
-    pyscf.geomopt.berny_solver
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#module-pyscf.geomopt.berny_solver">module</a>
-</li>
-      </ul></li>
-      <li>
-    pyscf.geomopt.geometric_solver
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.geomopt.html#module-pyscf.geomopt.geometric_solver">module</a>
-</li>
-      </ul></li>
-      <li>
     pyscf.grad
 
       <ul>
@@ -12884,6 +12946,8 @@
         <li><a href="pyscf_api_docs/pyscf.gto.html#module-pyscf.gto.mole">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     pyscf.gto.moleintor
 
@@ -12905,8 +12969,6 @@
         <li><a href="pyscf_api_docs/pyscf.gw.html#module-pyscf.gw">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     pyscf.gw.gw_ac
 
@@ -13720,13 +13782,6 @@
 </li>
       </ul></li>
       <li>
-    pyscf.pbc.geomopt.geometric_solver
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#module-pyscf.pbc.geomopt.geometric_solver">module</a>
-</li>
-      </ul></li>
-      <li>
     pyscf.pbc.grad
 
       <ul>
@@ -13979,13 +14034,6 @@
 </li>
       </ul></li>
       <li>
-    pyscf.pbc.mpicc.kintermediates_rhf
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#module-pyscf.pbc.mpicc.kintermediates_rhf">module</a>
-</li>
-      </ul></li>
-      <li>
     pyscf.pbc.mpicc.mpi_kpoint_helper
 
       <ul>
@@ -13997,41 +14045,6 @@
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools">module</a>
-</li>
-      </ul></li>
-      <li>
-    pyscf.pbc.mpitools.mpi
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi">module</a>
-</li>
-      </ul></li>
-      <li>
-    pyscf.pbc.mpitools.mpi_blksize
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_blksize">module</a>
-</li>
-      </ul></li>
-      <li>
-    pyscf.pbc.mpitools.mpi_helper
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_helper">module</a>
-</li>
-      </ul></li>
-      <li>
-    pyscf.pbc.mpitools.mpi_load_balancer
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_load_balancer">module</a>
-</li>
-      </ul></li>
-      <li>
-    pyscf.pbc.mpitools.mpi_pool
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#module-pyscf.pbc.mpitools.mpi_pool">module</a>
 </li>
       </ul></li>
       <li>
@@ -14769,12 +14782,6 @@
         <li><a href="pyscf_api_docs/pyscf.x2c.html#module-pyscf.x2c.x2c">module</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.geometric_solver.PySCFEngine">PySCFEngine (class in pyscf.geomopt.geometric_solver)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.geomopt.html#pyscf.pbc.geomopt.geometric_solver.PySCFEngine">(class in pyscf.pbc.geomopt.geometric_solver)</a>
-</li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -14799,16 +14806,20 @@
         <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.qcisd_slow.QCISD.qcisd">(pyscf.cc.qcisd_slow.QCISD method)</a>
 </li>
       </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.SCF.QCISD">QCISD() (pyscf.scf.hf.SCF method)</a>
+</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.qcisd.QCISD.qcisd_t">qcisd_t() (pyscf.cc.qcisd.QCISD method)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.qcisd_slow.QCISD.qcisd_t">(pyscf.cc.qcisd_slow.QCISD method)</a>
 </li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.qmmm.html#pyscf.qmmm.itrf.qmmm_for_scf">qmmm_for_scf() (in module pyscf.qmmm.itrf)</a>
+      <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.SCF.QMMM">QMMM() (pyscf.scf.hf.SCF method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pyscf_api_docs/pyscf.qmmm.html#pyscf.qmmm.itrf.qmmm_for_scf">qmmm_for_scf() (in module pyscf.qmmm.itrf)</a>
+</li>
       <li><a href="pyscf_api_docs/pyscf.qmmm.html#pyscf.qmmm.itrf.qmmm_grad_for_scf">qmmm_grad_for_scf() (in module pyscf.qmmm.itrf)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.ragf2.RAGF2.qmo_coeff">qmo_coeff (pyscf.agf2.ragf2.RAGF2 property)</a>
@@ -14958,16 +14969,10 @@
       <li><a href="pyscf_api_docs/pyscf.pbc.gto.html#pyscf.pbc.gto.cell.Cell.reciprocal_vectors">reciprocal_vectors() (pyscf.pbc.gto.cell.Cell method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.mpi_helper.reduce">reduce() (in module pyscf.agf2.mpi_helper)</a>
-
-      <ul>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.reduce">(in module pyscf.pbc.mpitools.mpi)</a>
 </li>
-      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.lo.html#pyscf.lo.iao.reference_mol">reference_mol() (in module pyscf.lo.iao)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.cistring.reform_linkstr_index">reform_linkstr_index() (in module pyscf.fci.cistring)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.register_for">register_for() (in module pyscf.pbc.mpitools.mpi)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.solvent.html#pyscf.solvent.ddcosmo.regularize_xt">regularize_xt() (in module pyscf.solvent.ddcosmo)</a>
 
@@ -15335,12 +15340,6 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.linalg_helper.safe_eigh">safe_eigh() (in module pyscf.lib.linalg_helper)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_helper.safeAllreduceInPlace">safeAllreduceInPlace() (in module pyscf.pbc.mpitools.mpi_helper)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_helper.safeBcastInPlace">safeBcastInPlace() (in module pyscf.pbc.mpitools.mpi_helper)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_helper.safeNormDiff">safeNormDiff() (in module pyscf.pbc.mpitools.mpi_helper)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.same_basis_set">same_basis_set() (in module pyscf.gto.mole)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.same_mol">same_mol() (in module pyscf.gto.mole)</a>
@@ -15485,8 +15484,6 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.PiOS.SemiCanonicalize">SemiCanonicalize() (in module pyscf.mcscf.PiOS)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.sendrecv">sendrecv() (in module pyscf.pbc.mpitools.mpi)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.misc.StreamObject.set">set() (pyscf.lib.misc.StreamObject method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.lo.html#pyscf.lo.nao.set_atom_conf">set_atom_conf() (in module pyscf.lo.nao)</a>
@@ -15510,8 +15507,6 @@
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.Mole.set_range_coulomb">set_range_coulomb() (pyscf.gto.mole.Mole method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.Mole.set_range_coulomb_">set_range_coulomb_() (pyscf.gto.mole.Mole method)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.set_ranges">set_ranges() (pyscf.pbc.mpitools.mpi_load_balancer.load_balancer method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.gto.html#pyscf.gto.mole.Mole.set_rinv_orig">set_rinv_orig() (pyscf.gto.mole.Mole method)</a>
 </li>
@@ -15580,10 +15575,6 @@
       <li><a href="pyscf_api_docs/pyscf.mrpt.html#pyscf.mrpt.nevpt2.Sir">Sir() (in module pyscf.mrpt.nevpt2)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.gen_grid.Grids.size">size (pyscf.dft.gen_grid.Grids property)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.slave_finished">slave_finished() (pyscf.pbc.mpitools.mpi_load_balancer.load_balancer method)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.slave_set">slave_set() (pyscf.pbc.mpitools.mpi_load_balancer.load_balancer method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.direct_ep.slices_for">slices_for() (in module pyscf.fci.direct_ep)</a>
 </li>
@@ -15683,12 +15674,12 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.lib.html#pyscf.pbc.lib.linalg_helper.Arnoldi.solveSubspace">(pyscf.pbc.lib.linalg_helper.Arnoldi method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.agf2.html#pyscf.agf2.aux.AuxiliarySpace.sort">sort() (pyscf.agf2.aux.AuxiliarySpace method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.symm.html#pyscf.symm.geom.sort_coords">sort_coords() (in module pyscf.symm.geom)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.addons.sort_mo">sort_mo() (in module pyscf.mcscf.addons)</a>
 
       <ul>
@@ -15929,8 +15920,6 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.mcscf.html#pyscf.mcscf.addons.StateSpecificFCISolver">StateSpecificFCISolver (class in pyscf.mcscf.addons)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.static_partition">static_partition() (in module pyscf.pbc.mpitools.mpi)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.symm.html#pyscf.symm.addons.std_symb">std_symb() (in module pyscf.symm.addons)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.misc.StreamObject.stdout">stdout (pyscf.lib.misc.StreamObject attribute)</a>
@@ -16035,8 +16024,6 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.numpy_helper.tag_array">tag_array() (in module pyscf.lib.numpy_helper)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_load_balancer.tags">tags (in module pyscf.pbc.mpitools.mpi_load_balancer)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.numpy_helper.take_2d">take_2d() (in module pyscf.lib.numpy_helper)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.numpy_helper.takebak_2d">takebak_2d() (in module pyscf.lib.numpy_helper)</a>
@@ -16060,11 +16047,43 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.TDA">(class in pyscf.tdscf.uks)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.TDA">(pyscf.dft.rks_symm.SymAdaptedROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.TDA">(pyscf.dft.roks.ROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.krohf.KROHF.TDA">(pyscf.pbc.scf.krohf.KROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.rohf.ROHF.TDA">(pyscf.pbc.scf.rohf.ROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf_symm.SymAdaptedROHF.TDA">(pyscf.scf.hf_symm.SymAdaptedROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.TDA">(pyscf.scf.rohf.ROHF attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.tdscf.html#pyscf.pbc.tdscf.TDA">TDA() (in module pyscf.pbc.tdscf)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.TDA">(in module pyscf.tdscf)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.TDA">(pyscf.dft.rks.RKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.TDA">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.TDA">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.TDA">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.hf.RHF.TDA">(pyscf.pbc.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.khf.KRHF.TDA">(pyscf.pbc.scf.khf.KRHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kuhf.KUHF.TDA">(pyscf.pbc.scf.kuhf.KUHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.uhf.UHF.TDA">(pyscf.pbc.scf.uhf.UHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.TDA">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.TDA">(pyscf.scf.uhf.UHF method)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.common_slow.TDBase">TDBase (class in pyscf.tdscf.common_slow)</a>
@@ -16073,6 +16092,10 @@
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.TDDFT">(class in pyscf.tdscf.uks)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.TDDFT">(pyscf.dft.rks_symm.SymAdaptedROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.TDDFT">(pyscf.dft.roks.ROKS attribute)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.tdscf.html#pyscf.pbc.tdscf.TDDFT">TDDFT() (in module pyscf.pbc.tdscf)</a>
@@ -16095,6 +16118,16 @@
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.tddft">(in module pyscf.tdscf.uks)</a>
 </li>
       </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.TDDFT">TDDFT() (pyscf.dft.rks.RKS method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.TDDFT">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.TDDFT">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.TDDFT">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
+</li>
+      </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.tdscf.html#pyscf.pbc.tdscf.rks.TDDFTNoHybrid">TDDFTNoHybrid (class in pyscf.pbc.tdscf.rks)</a>
 
       <ul>
@@ -16103,6 +16136,20 @@
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.rks.TDDFTNoHybrid">(class in pyscf.tdscf.rks)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uks.TDDFTNoHybrid">(class in pyscf.tdscf.uks)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.TDDFTNoHybrid">(pyscf.dft.rks_symm.SymAdaptedROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.TDDFTNoHybrid">(pyscf.dft.roks.ROKS attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.TDDFTNoHybrid">TDDFTNoHybrid() (pyscf.dft.rks.RKS method)</a>
+
+      <ul>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.TDDFTNoHybrid">(pyscf.dft.rks_symm.SymAdaptedRKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.TDDFTNoHybrid">(pyscf.dft.uks.UKS method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.TDDFTNoHybrid">(pyscf.dft.uks_symm.SymAdaptedUKS method)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.common_slow.TDERIMatrixBlocks">TDERIMatrixBlocks (class in pyscf.tdscf.common_slow)</a>
@@ -16126,11 +16173,43 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.uhf.TDHF">(class in pyscf.tdscf.uhf)</a>
 </li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.RKS.TDHF">(pyscf.dft.rks.RKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedRKS.TDHF">(pyscf.dft.rks_symm.SymAdaptedRKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks_symm.SymAdaptedROKS.TDHF">(pyscf.dft.rks_symm.SymAdaptedROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.roks.ROKS.TDHF">(pyscf.dft.roks.ROKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks.UKS.TDHF">(pyscf.dft.uks.UKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.uks_symm.SymAdaptedUKS.TDHF">(pyscf.dft.uks_symm.SymAdaptedUKS attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.krohf.KROHF.TDHF">(pyscf.pbc.scf.krohf.KROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.rohf.ROHF.TDHF">(pyscf.pbc.scf.rohf.ROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf_symm.SymAdaptedROHF.TDHF">(pyscf.scf.hf_symm.SymAdaptedROHF attribute)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.rohf.ROHF.TDHF">(pyscf.scf.rohf.ROHF attribute)</a>
+</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.tdscf.html#pyscf.pbc.tdscf.TDHF">TDHF() (in module pyscf.pbc.tdscf)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.TDHF">(in module pyscf.tdscf)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.hf.RHF.TDHF">(pyscf.pbc.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.khf.KRHF.TDHF">(pyscf.pbc.scf.khf.KRHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.kuhf.KUHF.TDHF">(pyscf.pbc.scf.kuhf.KUHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.pbc.scf.html#pyscf.pbc.scf.uhf.UHF.TDHF">(pyscf.pbc.scf.uhf.UHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.RHF.TDHF">(pyscf.scf.hf.RHF method)</a>
+</li>
+        <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.uhf.UHF.TDHF">(pyscf.scf.uhf.UHF method)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.tdscf.html#pyscf.tdscf.common_slow.TDMatrixBlocks.tdhf_ab_form">tdhf_ab_form() (pyscf.tdscf.common_slow.TDMatrixBlocks method)</a>
@@ -16257,6 +16336,8 @@
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.dhf.time_reversal_matrix">time_reversal_matrix() (in module pyscf.scf.dhf)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.logger.timer">timer() (in module pyscf.lib.logger)</a>
 
       <ul>
@@ -16274,10 +16355,6 @@
       <li><a href="pyscf_api_docs/pyscf.ci.html#pyscf.ci.cisd.tn_addrs_signs">tn_addrs_signs() (in module pyscf.ci.cisd)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.cistring.tn_strs">tn_strs() (in module pyscf.fci.cistring)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.to_berny_geom">to_berny_geom() (in module pyscf.geomopt.berny_solver)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.geomopt.html#pyscf.geomopt.berny_solver.to_berny_log">to_berny_log() (in module pyscf.geomopt.berny_solver)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.fci.html#pyscf.fci.selected_ci.to_fci">to_fci() (in module pyscf.fci.selected_ci)</a>
 </li>
@@ -16313,8 +16390,6 @@
         <li><a href="pyscf_api_docs/pyscf.scf.html#pyscf.scf.hf.SCF.to_gks">(pyscf.scf.hf.SCF method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pyscf_api_docs/pyscf.pbc.gto.html#pyscf.pbc.gto.cell.Cell.to_mol">to_mol() (pyscf.pbc.gto.cell.Cell method)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.dft.html#pyscf.dft.rks.KohnShamDFT.to_rhf">to_rhf() (pyscf.dft.rks.KohnShamDFT method)</a>
@@ -17262,19 +17337,13 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.W1ovov">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.W1ovov">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.rintermediates.W1ovvo">W1ovvo() (in module pyscf.cc.rintermediates)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.W1ovvo">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.W1ovvo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.W1voov">W1voov() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.W2oovv">W2oovv() (in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.rintermediates.W2ovov">W2ovov() (in module pyscf.cc.rintermediates)</a>
@@ -17282,21 +17351,13 @@
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.W2ovov">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.W2ovov">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.rintermediates.W2ovvo">W2ovvo() (in module pyscf.cc.rintermediates)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.W2ovvo">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.W2ovvo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.W2voov">W2voov() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi_pool.MPIPool.wait">wait() (pyscf.pbc.mpitools.mpi_pool.MPIPool method)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.lib.html#pyscf.lib.logger.warn">warn() (in module pyscf.lib.logger)</a>
 
       <ul>
@@ -17388,11 +17449,7 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.Woooo">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Woooo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.WooooS">WooooS() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.Wooov">Wooov() (in module pyscf.cc.gintermediates)</a>
 
       <ul>
@@ -17408,8 +17465,6 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.Wooov">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wooov">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -17420,12 +17475,6 @@
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.Woovv">Woovv() (in module pyscf.pbc.cc.kintermediates_uhf)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.work_balanced_partition">work_balanced_partition() (in module pyscf.pbc.mpitools.mpi)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.work_share_partition">work_share_partition() (in module pyscf.pbc.mpitools.mpi)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpitools.html#pyscf.pbc.mpitools.mpi.work_stealing_partition">work_stealing_partition() (in module pyscf.pbc.mpitools.mpi)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.Wovoo">Wovoo() (in module pyscf.cc.gintermediates)</a>
 
@@ -17438,19 +17487,13 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Wovoo">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wovoo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.rintermediates.Wovov">Wovov() (in module pyscf.cc.rintermediates)</a>
 
       <ul>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Wovov">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wovov">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.WovovRev">WovovRev() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.Wovvo">Wovvo() (in module pyscf.cc.gintermediates)</a>
 
       <ul>
@@ -17465,8 +17508,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Wovvo">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.Wovvo">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wovvo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.pbc.df.html#pyscf.pbc.df.incore.wrap_int3c">wrap_int3c() (in module pyscf.pbc.df.incore)</a>
@@ -17489,10 +17530,6 @@
 </li>
       <li><a href="pyscf_api_docs/pyscf.tools.html#pyscf.tools.wfn_format.write_mo">write_mo() (in module pyscf.tools.wfn_format)</a>
 </li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wvoov">Wvoov() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.WvoovR1">WvoovR1() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.Wvovv">Wvovv() (in module pyscf.cc.gintermediates)</a>
 
       <ul>
@@ -17503,8 +17540,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates.Wvovv">(in module pyscf.pbc.cc.kintermediates)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Wvovv">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wvovv">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.uintermediates.Wvvov">Wvvov() (in module pyscf.cc.uintermediates)</a>
@@ -17528,12 +17563,8 @@
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.Wvvvo">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
 </li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wvvvo">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
-</li>
       </ul></li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.uintermediates_slow.Wvvvo_incore">Wvvvo_incore() (in module pyscf.cc.uintermediates_slow)</a>
-</li>
-      <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.WvvvoR1">WvvvoR1() (in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       <li><a href="pyscf_api_docs/pyscf.cc.html#pyscf.cc.gintermediates.Wvvvv">Wvvvv() (in module pyscf.cc.gintermediates)</a>
 
@@ -17547,8 +17578,6 @@
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_rhf.Wvvvv">(in module pyscf.pbc.cc.kintermediates_rhf)</a>
 </li>
         <li><a href="pyscf_api_docs/pyscf.pbc.cc.html#pyscf.pbc.cc.kintermediates_uhf.Wvvvv">(in module pyscf.pbc.cc.kintermediates_uhf)</a>
-</li>
-        <li><a href="pyscf_api_docs/pyscf.pbc.mpicc.html#pyscf.pbc.mpicc.kintermediates_rhf.Wvvvv">(in module pyscf.pbc.mpicc.kintermediates_rhf)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -17692,7 +17721,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

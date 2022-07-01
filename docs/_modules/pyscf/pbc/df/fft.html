@@ -53,9 +53,9 @@
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../../about.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -375,7 +375,7 @@
     <span class="k">def</span> <span class="nf">vppnl_by_k</span><span class="p">(</span><span class="n">kpt</span><span class="p">):</span>
         <span class="n">Gk</span> <span class="o">=</span> <span class="n">Gv</span> <span class="o">+</span> <span class="n">kpt</span>
         <span class="n">G_rad</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">Gk</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">aokG</span> <span class="o">=</span> <span class="n">ft_ao</span><span class="o">.</span><span class="n">ft_ao</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">Gv</span><span class="p">,</span> <span class="n">kpt</span><span class="o">=</span><span class="n">kpt</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">cell</span><span class="o">.</span><span class="n">vol</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span>
+        <span class="n">aokG</span> <span class="o">=</span> <span class="n">ft_ao</span><span class="o">.</span><span class="n">ft_ao</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">Gv</span><span class="p">,</span> <span class="n">kpt</span><span class="o">=</span><span class="n">kpt</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">cell</span><span class="o">.</span><span class="n">vol</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span>
         <span class="n">vppnl</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">natm</span><span class="p">):</span>
             <span class="n">symb</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">atom_symbol</span><span class="p">(</span><span class="n">ia</span><span class="p">)</span>
@@ -387,7 +387,7 @@
                 <span class="n">rl</span><span class="p">,</span> <span class="n">nl</span><span class="p">,</span> <span class="n">hl</span> <span class="o">=</span> <span class="n">proj</span>
                 <span class="k">if</span> <span class="n">nl</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">fakemol</span><span class="o">.</span><span class="n">_bas</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">gto</span><span class="o">.</span><span class="n">ANG_OF</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span>
-                    <span class="n">fakemol</span><span class="o">.</span><span class="n">_env</span><span class="p">[</span><span class="n">ptr</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">.5</span><span class="o">*</span><span class="n">rl</span><span class="o">**</span><span class="mi">2</span>
+                    <span class="n">fakemol</span><span class="o">.</span><span class="n">_env</span><span class="p">[</span><span class="n">ptr</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">*</span><span class="n">rl</span><span class="o">**</span><span class="mi">2</span>
                     <span class="n">fakemol</span><span class="o">.</span><span class="n">_env</span><span class="p">[</span><span class="n">ptr</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">rl</span><span class="o">**</span><span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="mf">1.5</span><span class="p">)</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mf">1.25</span>
                     <span class="n">pYlm_part</span> <span class="o">=</span> <span class="n">fakemol</span><span class="o">.</span><span class="n">eval_gto</span><span class="p">(</span><span class="s1">'GTOval'</span><span class="p">,</span> <span class="n">Gk</span><span class="p">)</span>
 
@@ -658,7 +658,7 @@
     <span class="n">cell</span><span class="o">.</span><span class="n">pseudo</span> <span class="o">=</span> <span class="s1">'gth-pade'</span>
     <span class="n">cell</span><span class="o">.</span><span class="n">mesh</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
     <span class="n">cell</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mf">.25</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*.</span><span class="mi">25</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">FFTDF</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
     <span class="n">v1</span> <span class="o">=</span> <span class="n">get_pp</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">finger</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mf">1.8428463642697195</span><span class="o">-</span><span class="mf">0.10478381725330854</span><span class="n">j</span><span class="p">))</span>
@@ -688,7 +688,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

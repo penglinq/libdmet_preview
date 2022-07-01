@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -328,7 +328,7 @@
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nocc</span><span class="p">):</span>
         <span class="n">gi</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">eris</span><span class="o">.</span><span class="n">oovv</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">nocc</span><span class="p">,</span><span class="n">nvir</span><span class="p">,</span><span class="n">nvir</span><span class="p">)</span>
         <span class="n">t2i</span> <span class="o">=</span> <span class="n">gi</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">/</span><span class="n">lib</span><span class="o">.</span><span class="n">direct_sum</span><span class="p">(</span><span class="s1">'jb+a-&gt;jba'</span><span class="p">,</span> <span class="n">eia</span><span class="p">,</span> <span class="n">eia</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">emp2</span> <span class="o">+=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'jab,jab'</span><span class="p">,</span> <span class="n">t2i</span><span class="p">,</span> <span class="n">gi</span><span class="p">)</span> <span class="o">*</span> <span class="mf">.25</span>
+        <span class="n">emp2</span> <span class="o">+=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'jab,jab'</span><span class="p">,</span> <span class="n">t2i</span><span class="p">,</span> <span class="n">gi</span><span class="p">)</span> <span class="o">*</span> <span class="o">.</span><span class="mi">25</span>
         <span class="k">if</span> <span class="n">with_t2</span><span class="p">:</span>
             <span class="n">t2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">t2i</span>
 
@@ -383,8 +383,8 @@
     <span class="k">return</span> <span class="n">gccsd_rdm</span><span class="o">.</span><span class="n">_make_rdm1</span><span class="p">(</span><span class="n">mp</span><span class="p">,</span> <span class="n">d1</span><span class="p">,</span> <span class="n">with_frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ao_repr</span><span class="o">=</span><span class="n">ao_repr</span><span class="p">)</span></div>
 
 <span class="k">def</span> <span class="nf">_gamma1_intermediates</span><span class="p">(</span><span class="n">mp</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
-    <span class="n">doo</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'imef,jmef-&gt;ij'</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">t2</span><span class="p">)</span> <span class="o">*-</span><span class="mf">.5</span>
-    <span class="n">dvv</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'mnea,mneb-&gt;ab'</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">conj</span><span class="p">())</span> <span class="o">*</span> <span class="mf">.5</span>
+    <span class="n">doo</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'imef,jmef-&gt;ij'</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">t2</span><span class="p">)</span> <span class="o">*-.</span><span class="mi">5</span>
+    <span class="n">dvv</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'mnea,mneb-&gt;ab'</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">conj</span><span class="p">())</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span>
     <span class="k">return</span> <span class="n">doo</span><span class="p">,</span> <span class="n">dvv</span>
 
 <span class="c1"># spin-orbital rdm2 in Chemist's notation</span>
@@ -684,7 +684,7 @@
     <span class="n">h1</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">,</span> <span class="p">(</span><span class="n">mo_a</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">hcore</span><span class="p">,</span> <span class="n">mo_a</span><span class="p">))</span>
     <span class="n">h1</span><span class="o">+=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">,</span> <span class="p">(</span><span class="n">mo_b</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">hcore</span><span class="p">,</span> <span class="n">mo_b</span><span class="p">))</span>
     <span class="n">e1</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ji'</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">dm1</span><span class="p">)</span>
-    <span class="n">e1</span><span class="o">+=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ijkl'</span><span class="p">,</span> <span class="n">eri</span><span class="p">,</span> <span class="n">dm2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">.5</span>
+    <span class="n">e1</span><span class="o">+=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ijkl'</span><span class="p">,</span> <span class="n">eri</span><span class="p">,</span> <span class="n">dm2</span><span class="p">)</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span>
     <span class="n">e1</span><span class="o">+=</span> <span class="n">mol</span><span class="o">.</span><span class="n">energy_nuc</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">e1</span> <span class="o">-</span> <span class="n">pt</span><span class="o">.</span><span class="n">e_tot</span><span class="p">)</span>
 
@@ -716,7 +716,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,9 +54,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -287,16 +287,16 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="pyscf-pbc-lib-package">
-<h1 id="pyscf-api-docs-pyscf-pbc-lib--page-root">pyscf.pbc.lib package<a class="headerlink" href="#pyscf-api-docs-pyscf-pbc-lib--page-root" title="Permalink to this headline">¶</a></h1>
+<h1 id="pyscf-api-docs-pyscf-pbc-lib--page-root">pyscf.pbc.lib package<a class="headerlink" href="#pyscf-api-docs-pyscf-pbc-lib--page-root" title="Permalink to this heading">¶</a></h1>
 <section id="submodules">
-<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
 </section>
 <section id="module-pyscf.pbc.lib.arnoldi">
-<span id="pyscf-pbc-lib-arnoldi-module"></span><h2 id="module-pyscf.pbc.lib.arnoldi">pyscf.pbc.lib.arnoldi module<a class="headerlink" href="#module-pyscf.pbc.lib.arnoldi" title="Permalink to this headline">¶</a></h2>
+<span id="pyscf-pbc-lib-arnoldi-module"></span><h2 id="module-pyscf.pbc.lib.arnoldi">pyscf.pbc.lib.arnoldi module<a class="headerlink" href="#module-pyscf.pbc.lib.arnoldi" title="Permalink to this heading">¶</a></h2>
 <p>Extension to scipy.linalg module developed for PBC branch.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.arnoldi.Arnoldi">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.arnoldi.</span></span><span class="sig-name descname"><span class="pre">Arnoldi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matr_multiply</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inPreCon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nroots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/arnoldi.html#Arnoldi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.arnoldi.Arnoldi" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.arnoldi.</span></span><span class="sig-name descname"><span class="pre">Arnoldi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matr_multiply</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inPreCon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nroots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/arnoldi.html#Arnoldi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.arnoldi.Arnoldi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.arnoldi.Arnoldi.allocateVecs">
@@ -375,7 +375,7 @@ when A is not Hermitian.</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.pbc.lib.chkfile">
-<span id="pyscf-pbc-lib-chkfile-module"></span><h2 id="module-pyscf.pbc.lib.chkfile">pyscf.pbc.lib.chkfile module<a class="headerlink" href="#module-pyscf.pbc.lib.chkfile" title="Permalink to this headline">¶</a></h2>
+<span id="pyscf-pbc-lib-chkfile-module"></span><h2 id="module-pyscf.pbc.lib.chkfile">pyscf.pbc.lib.chkfile module<a class="headerlink" href="#module-pyscf.pbc.lib.chkfile" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.chkfile.load_cell">
 <span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.chkfile.</span></span><span class="sig-name descname"><span class="pre">load_cell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chkfile</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/chkfile.html#load_cell"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.chkfile.load_cell" title="Permalink to this definition">¶</a></dt>
@@ -401,16 +401,16 @@ when A is not Hermitian.</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.pbc.lib.kpts_helper">
-<span id="pyscf-pbc-lib-kpts-helper-module"></span><h2 id="module-pyscf.pbc.lib.kpts_helper">pyscf.pbc.lib.kpts_helper module<a class="headerlink" href="#module-pyscf.pbc.lib.kpts_helper" title="Permalink to this headline">¶</a></h2>
+<span id="pyscf-pbc-lib-kpts-helper-module"></span><h2 id="module-pyscf.pbc.lib.kpts_helper">pyscf.pbc.lib.kpts_helper module<a class="headerlink" href="#module-pyscf.pbc.lib.kpts_helper" title="Permalink to this heading">¶</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.KPointSymmetryError">
-<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">KPointSymmetryError</span></span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#KPointSymmetryError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.KPointSymmetryError" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">KPointSymmetryError</span></span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#KPointSymmetryError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.KPointSymmetryError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.KptsHelper">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">KptsHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kpts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#KptsHelper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.KptsHelper" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.lib.misc.StreamObject</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">KptsHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kpts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#KptsHelper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.KptsHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamObject</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.KptsHelper.transform_symm">
 <span class="sig-name descname"><span class="pre">transform_symm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eri_kpt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#KptsHelper.transform_symm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.KptsHelper.transform_symm" title="Permalink to this definition">¶</a></dt>
@@ -428,7 +428,7 @@ when A is not Hermitian.</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.VectorComposer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">VectorComposer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#VectorComposer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.VectorComposer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">VectorComposer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#VectorComposer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.VectorComposer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.VectorComposer.flush">
@@ -451,7 +451,7 @@ Args:</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.VectorSplitter">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">VectorSplitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#VectorSplitter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.VectorSplitter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.kpts_helper.</span></span><span class="sig-name descname"><span class="pre">VectorSplitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/kpts_helper.html#VectorSplitter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.kpts_helper.VectorSplitter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.kpts_helper.VectorSplitter.get">
@@ -563,11 +563,11 @@ that satisfies momentum conservation for 5 k-points,</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.pbc.lib.linalg_helper">
-<span id="pyscf-pbc-lib-linalg-helper-module"></span><h2 id="module-pyscf.pbc.lib.linalg_helper">pyscf.pbc.lib.linalg_helper module<a class="headerlink" href="#module-pyscf.pbc.lib.linalg_helper" title="Permalink to this headline">¶</a></h2>
+<span id="pyscf-pbc-lib-linalg-helper-module"></span><h2 id="module-pyscf.pbc.lib.linalg_helper">pyscf.pbc.lib.linalg_helper module<a class="headerlink" href="#module-pyscf.pbc.lib.linalg_helper" title="Permalink to this heading">¶</a></h2>
 <p>Extension to scipy.linalg module developed for PBC branch.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.linalg_helper.Arnoldi">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.linalg_helper.</span></span><span class="sig-name descname"><span class="pre">Arnoldi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matr_multiply</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inPreCon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nroots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/linalg_helper.html#Arnoldi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.linalg_helper.Arnoldi" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.linalg_helper.</span></span><span class="sig-name descname"><span class="pre">Arnoldi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matr_multiply</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inPreCon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nroots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/lib/linalg_helper.html#Arnoldi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.linalg_helper.Arnoldi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.linalg_helper.Arnoldi.allocateVecs">
@@ -640,7 +640,7 @@ that satisfies momentum conservation for 5 k-points,</p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.linalg_helper.DavidsonZL">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.linalg_helper.</span></span><span class="sig-name descname"><span class="pre">DavidsonZL</span></span><a class="reference internal" href="../_modules/pyscf/pbc/lib/linalg_helper.html#DavidsonZL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.linalg_helper.DavidsonZL" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.lib.linalg_helper.</span></span><span class="sig-name descname"><span class="pre">DavidsonZL</span></span><a class="reference internal" href="../_modules/pyscf/pbc/lib/linalg_helper.html#DavidsonZL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.lib.linalg_helper.DavidsonZL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.pbc.lib.linalg_helper.DavidsonZL.genMatrix">
@@ -716,7 +716,7 @@ when A is not Hermitian.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.pbc.lib">
-<span id="module-contents"></span><h2 id="module-pyscf.pbc.lib">Module contents<a class="headerlink" href="#module-pyscf.pbc.lib" title="Permalink to this headline">¶</a></h2>
+<span id="module-contents"></span><h2 id="module-pyscf.pbc.lib">Module contents<a class="headerlink" href="#module-pyscf.pbc.lib" title="Permalink to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -743,7 +743,7 @@ when A is not Hermitian.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

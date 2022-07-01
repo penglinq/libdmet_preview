@@ -53,9 +53,9 @@
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../../about.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -343,7 +343,7 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dm</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
         <span class="n">dm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">dm</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">dm</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># RHF DM</span>
-        <span class="n">dm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">((</span><span class="n">dm</span><span class="o">*</span><span class="mf">.5</span><span class="p">,</span><span class="n">dm</span><span class="o">*</span><span class="mf">.5</span><span class="p">))</span>
+        <span class="n">dm</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">((</span><span class="n">dm</span><span class="o">*.</span><span class="mi">5</span><span class="p">,</span><span class="n">dm</span><span class="o">*.</span><span class="mi">5</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">hermi</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># because rho = 0</span>
         <span class="n">n</span><span class="p">,</span> <span class="n">exc</span><span class="p">,</span> <span class="n">vxc</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
@@ -370,10 +370,10 @@
 
         <span class="k">if</span> <span class="n">ground_state</span><span class="p">:</span>
             <span class="n">exc</span> <span class="o">-=</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ji'</span><span class="p">,</span> <span class="n">dm</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vk</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span>
-                   <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ji'</span><span class="p">,</span> <span class="n">dm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vk</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">.5</span>
+                   <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ji'</span><span class="p">,</span> <span class="n">dm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vk</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span>
 
     <span class="k">if</span> <span class="n">ground_state</span><span class="p">:</span>
-        <span class="n">ecoul</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ji'</span><span class="p">,</span> <span class="n">dm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">dm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vj</span><span class="p">)</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="mf">.5</span>
+        <span class="n">ecoul</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ji'</span><span class="p">,</span> <span class="n">dm</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">dm</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vj</span><span class="p">)</span><span class="o">.</span><span class="n">real</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">ecoul</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -451,7 +451,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

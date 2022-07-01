@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -461,9 +461,9 @@
         <span class="n">h2ao</span><span class="p">[:,:,:</span><span class="n">nao</span><span class="p">,:</span><span class="n">nao</span><span class="p">]</span> <span class="o">=</span> <span class="n">v2cc</span>
         <span class="n">h2ao</span><span class="p">[:,:,:</span><span class="n">nao</span><span class="p">,</span><span class="n">nao</span><span class="p">:]</span> <span class="o">=</span> <span class="n">t2cc</span>
         <span class="n">h2ao</span><span class="p">[:,:,</span><span class="n">nao</span><span class="p">:,:</span><span class="n">nao</span><span class="p">]</span> <span class="o">=</span> <span class="n">t2cc</span>
-        <span class="n">h2ao</span><span class="p">[:,:,</span><span class="n">nao</span><span class="p">:,</span><span class="n">nao</span><span class="p">:]</span> <span class="o">=</span> <span class="n">w2cc</span> <span class="o">*</span> <span class="p">(</span><span class="mf">.25</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">t2cc</span>
+        <span class="n">h2ao</span><span class="p">[:,:,</span><span class="n">nao</span><span class="p">:,</span><span class="n">nao</span><span class="p">:]</span> <span class="o">=</span> <span class="n">w2cc</span> <span class="o">*</span> <span class="p">(</span><span class="o">.</span><span class="mi">25</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">t2cc</span>
         <span class="n">s2ao</span><span class="p">[:,:,:</span><span class="n">nao</span><span class="p">,:</span><span class="n">nao</span><span class="p">]</span> <span class="o">=</span> <span class="n">s2cc</span>
-        <span class="n">s2ao</span><span class="p">[:,:,</span><span class="n">nao</span><span class="p">:,</span><span class="n">nao</span><span class="p">:]</span> <span class="o">=</span> <span class="n">t2cc</span> <span class="o">*</span> <span class="p">(</span><span class="mf">.5</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">s2ao</span><span class="p">[:,:,</span><span class="n">nao</span><span class="p">:,</span><span class="n">nao</span><span class="p">:]</span> <span class="o">=</span> <span class="n">t2cc</span> <span class="o">*</span> <span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
         <span class="n">h1i</span><span class="p">,</span> <span class="n">s1i</span><span class="p">,</span> <span class="n">e1i</span><span class="p">,</span> <span class="n">c1i</span><span class="p">,</span> <span class="n">x1i</span><span class="p">,</span> <span class="n">s_nesc1i</span><span class="p">,</span> <span class="n">R1i</span><span class="p">,</span> <span class="n">c_fw1i</span> <span class="o">=</span> <span class="n">get_h1_etc</span><span class="p">(</span><span class="n">ia</span><span class="p">)</span>
         <span class="n">h1j</span><span class="p">,</span> <span class="n">s1j</span><span class="p">,</span> <span class="n">e1j</span><span class="p">,</span> <span class="n">c1j</span><span class="p">,</span> <span class="n">x1j</span><span class="p">,</span> <span class="n">s_nesc1j</span><span class="p">,</span> <span class="n">R1j</span><span class="p">,</span> <span class="n">c_fw1j</span> <span class="o">=</span> <span class="n">get_h1_etc</span><span class="p">(</span><span class="n">ja</span><span class="p">)</span>
@@ -669,7 +669,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

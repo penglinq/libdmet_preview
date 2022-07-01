@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,9 +54,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -262,9 +262,9 @@
         </li>
         <li class="md-nav__item"><a href="#module-pyscf.geomopt.addons" class="md-nav__link">pyscf.geomopt.addons module</a>
         </li>
-        <li class="md-nav__item"><a href="#module-pyscf.geomopt.berny_solver" class="md-nav__link">pyscf.geomopt.berny_solver module</a>
+        <li class="md-nav__item"><a href="#pyscf-geomopt-berny-solver-module" class="md-nav__link">pyscf.geomopt.berny_solver module</a>
         </li>
-        <li class="md-nav__item"><a href="#module-pyscf.geomopt.geometric_solver" class="md-nav__link">pyscf.geomopt.geometric_solver module</a>
+        <li class="md-nav__item"><a href="#pyscf-geomopt-geometric-solver-module" class="md-nav__link">pyscf.geomopt.geometric_solver module</a>
         </li>
         <li class="md-nav__item"><a href="#module-pyscf.geomopt" class="md-nav__link">Module contents</a>
         </li></ul>
@@ -285,12 +285,12 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="pyscf-geomopt-package">
-<h1 id="pyscf-api-docs-pyscf-geomopt--page-root">pyscf.geomopt package<a class="headerlink" href="#pyscf-api-docs-pyscf-geomopt--page-root" title="Permalink to this headline">¶</a></h1>
+<h1 id="pyscf-api-docs-pyscf-geomopt--page-root">pyscf.geomopt package<a class="headerlink" href="#pyscf-api-docs-pyscf-geomopt--page-root" title="Permalink to this heading">¶</a></h1>
 <section id="submodules">
-<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
 </section>
 <section id="module-pyscf.geomopt.addons">
-<span id="pyscf-geomopt-addons-module"></span><h2 id="module-pyscf.geomopt.addons">pyscf.geomopt.addons module<a class="headerlink" href="#module-pyscf.geomopt.addons" title="Permalink to this headline">¶</a></h2>
+<span id="pyscf-geomopt-addons-module"></span><h2 id="module-pyscf.geomopt.addons">pyscf.geomopt.addons module<a class="headerlink" href="#module-pyscf.geomopt.addons" title="Permalink to this heading">¶</a></h2>
 <p>Helper functions for geometry optimizer</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.geomopt.addons.as_pyscf_method">
@@ -323,125 +323,14 @@ geometry.</p>
 <dd><p>Symmetrize the structure of a molecule.</p>
 </dd></dl>
 </section>
-<section id="module-pyscf.geomopt.berny_solver">
-<span id="pyscf-geomopt-berny-solver-module"></span><h2 id="module-pyscf.geomopt.berny_solver">pyscf.geomopt.berny_solver module<a class="headerlink" href="#module-pyscf.geomopt.berny_solver" title="Permalink to this headline">¶</a></h2>
-<p>Interface to geometry optimizer pyberny <a class="reference external" href="https://github.com/jhrmnn/pyberny">https://github.com/jhrmnn/pyberny</a></p>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.GeometryOptimizer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.berny_solver.</span></span><span class="sig-name descname"><span class="pre">GeometryOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/berny_solver.html#GeometryOptimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.berny_solver.GeometryOptimizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.lib.misc.StreamObject</span></code></a></p>
-<p>Optimize the molecular geometry for the input method.</p>
-<p>Note the method.mol will be changed after calling .kernel() method.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.GeometryOptimizer.kernel">
-<span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/berny_solver.html#GeometryOptimizer.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.berny_solver.GeometryOptimizer.kernel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kernel function is the main driver of a method.  Every method should
-define the kernel function as the entry of the calculation.  Note the
-return value of kernel function is not strictly defined.  It can be
-anything related to the method (such as the energy, the wave-function,
-the DFT mesh grids etc.).</p>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.GeometryOptimizer.mol">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mol</span></span><a class="headerlink" href="#pyscf.geomopt.berny_solver.GeometryOptimizer.mol" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.GeometryOptimizer.optimize">
-<span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.geomopt.berny_solver.GeometryOptimizer.optimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kernel function is the main driver of a method.  Every method should
-define the kernel function as the entry of the calculation.  Note the
-return value of kernel function is not strictly defined.  It can be
-anything related to the method (such as the energy, the wave-function,
-the DFT mesh grids etc.).</p>
-</dd></dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.kernel">
-<span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.berny_solver.</span></span><span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assert_convergence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_ghost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/berny_solver.html#kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.berny_solver.kernel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optimize geometry with pyberny for the given method.</p>
-<p>To adjust the convergence threshold, parameters can be set in kwargs as
-below:</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.optimize">
-<span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.berny_solver.</span></span><span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assert_convergence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_ghost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/berny_solver.html#optimize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.berny_solver.optimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optimize geometry with pyberny for the given method.</p>
-<p>To adjust the convergence threshold, parameters can be set in kwargs as
-below:</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.to_berny_geom">
-<span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.berny_solver.</span></span><span class="sig-name descname"><span class="pre">to_berny_geom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_ghost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/berny_solver.html#to_berny_geom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.berny_solver.to_berny_geom" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyscf.geomopt.berny_solver.to_berny_log">
-<span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.berny_solver.</span></span><span class="sig-name descname"><span class="pre">to_berny_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pyscf_log</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/berny_solver.html#to_berny_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.berny_solver.to_berny_log" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adapter to allow pyberny to use pyscf.logger</p>
-</dd></dl>
+<section id="pyscf-geomopt-berny-solver-module">
+<h2 id="pyscf-geomopt-berny-solver-module">pyscf.geomopt.berny_solver module<a class="headerlink" href="#pyscf-geomopt-berny-solver-module" title="Permalink to this heading">¶</a></h2>
 </section>
-<section id="module-pyscf.geomopt.geometric_solver">
-<span id="pyscf-geomopt-geometric-solver-module"></span><h2 id="module-pyscf.geomopt.geometric_solver">pyscf.geomopt.geometric_solver module<a class="headerlink" href="#module-pyscf.geomopt.geometric_solver" title="Permalink to this headline">¶</a></h2>
-<p>Interface to geomeTRIC library <a class="reference external" href="https://github.com/leeping/geomeTRIC">https://github.com/leeping/geomeTRIC</a></p>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.GeometryOptimizer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.geometric_solver.</span></span><span class="sig-name descname"><span class="pre">GeometryOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#GeometryOptimizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.GeometryOptimizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.lib.misc.StreamObject</span></code></a></p>
-<p>Optimize the molecular geometry for the input method.</p>
-<p>Note the method.mol will be changed after calling .kernel() method.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.GeometryOptimizer.kernel">
-<span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#GeometryOptimizer.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.GeometryOptimizer.kernel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kernel function is the main driver of a method.  Every method should
-define the kernel function as the entry of the calculation.  Note the
-return value of kernel function is not strictly defined.  It can be
-anything related to the method (such as the energy, the wave-function,
-the DFT mesh grids etc.).</p>
-</dd></dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.GeometryOptimizer.mol">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">mol</span></span><a class="headerlink" href="#pyscf.geomopt.geometric_solver.GeometryOptimizer.mol" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.GeometryOptimizer.optimize">
-<span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.geomopt.geometric_solver.GeometryOptimizer.optimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kernel function is the main driver of a method.  Every method should
-define the kernel function as the entry of the calculation.  Note the
-return value of kernel function is not strictly defined.  It can be
-anything related to the method (such as the energy, the wave-function,
-the DFT mesh grids etc.).</p>
-</dd></dl>
-</dd></dl>
-<dl class="py exception">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.NotConvergedError">
-<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.geometric_solver.</span></span><span class="sig-name descname"><span class="pre">NotConvergedError</span></span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#NotConvergedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.NotConvergedError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
-</dd></dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.PySCFEngine">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.geometric_solver.</span></span><span class="sig-name descname"><span class="pre">PySCFEngine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scanner</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#PySCFEngine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.PySCFEngine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">geometric.engine.Engine</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.PySCFEngine.calc_new">
-<span class="sig-name descname"><span class="pre">calc_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dirname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#PySCFEngine.calc_new"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.PySCFEngine.calc_new" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.kernel">
-<span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.geometric_solver.</span></span><span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assert_convergence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_ghost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.kernel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optimize geometry with geomeTRIC library for the given method.</p>
-<p>To adjust the convergence threshold, parameters can be set in kwargs as
-below:</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyscf.geomopt.geometric_solver.optimize">
-<span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.geometric_solver.</span></span><span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assert_convergence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_ghost</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsteps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt/geometric_solver.html#optimize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.geometric_solver.optimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Optimize geometry with geomeTRIC library for the given method.</p>
-<p>To adjust the convergence threshold, parameters can be set in kwargs as
-below:</p>
-</dd></dl>
+<section id="pyscf-geomopt-geometric-solver-module">
+<h2 id="pyscf-geomopt-geometric-solver-module">pyscf.geomopt.geometric_solver module<a class="headerlink" href="#pyscf-geomopt-geometric-solver-module" title="Permalink to this heading">¶</a></h2>
 </section>
 <section id="module-pyscf.geomopt">
-<span id="module-contents"></span><h2 id="module-pyscf.geomopt">Module contents<a class="headerlink" href="#module-pyscf.geomopt" title="Permalink to this headline">¶</a></h2>
+<span id="module-contents"></span><h2 id="module-pyscf.geomopt">Module contents<a class="headerlink" href="#module-pyscf.geomopt" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.geomopt.optimize">
 <span class="sig-prename descclassname"><span class="pre">pyscf.geomopt.</span></span><span class="sig-name descname"><span class="pre">optimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/geomopt.html#optimize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.geomopt.optimize" title="Permalink to this definition">¶</a></dt>
@@ -472,7 +361,7 @@ below:</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

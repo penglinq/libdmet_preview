@@ -15,9 +15,13 @@ The following sections provide more detailed explanation on each step.
 
 
 .. _INPUT:
-
-Input: Lattice
+Input
 =============
+
+.. _Lattice:
+
+Lattice
+--------------------------------------
 For periodic embedding calculations, the system to study is defined using an instance of the Lattice class in libDMET.
 The Lattice is instantiated from a PySCF cell object that defines the unit cell and a kmesh that defines the supercell. 
 
@@ -33,8 +37,8 @@ The Lattice is instantiated from a PySCF cell object that defines the unit cell 
   >>> lat = lattice.Lattice(cell, kmesh) 
 
 
-Input: Low-level calculation
-=============
+Low-level calculation
+--------------------------------------
 A low-level calculation obtains an approximated wave function of the whole lattice using an economic solver such as kHF, kDFT. Only mean-field methods in PySCF are supported by the current bath construction methods. 
 
   >>> gdf = df.GDF(cell, kpts)
