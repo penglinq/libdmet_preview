@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,11 +54,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -317,12 +317,12 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="pyscf-mcscf-package">
-<h1 id="pyscf-api-docs-pyscf-mcscf--page-root">pyscf.mcscf package<a class="headerlink" href="#pyscf-api-docs-pyscf-mcscf--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="pyscf-api-docs-pyscf-mcscf--page-root">pyscf.mcscf package<a class="headerlink" href="#pyscf-api-docs-pyscf-mcscf--page-root" title="Permalink to this headline">¶</a></h1>
 <section id="submodules">
-<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </section>
 <section id="module-pyscf.mcscf.PiOS">
-<span id="pyscf-mcscf-pios-module"></span><h2 id="module-pyscf.mcscf.PiOS">pyscf.mcscf.PiOS module<a class="headerlink" href="#module-pyscf.mcscf.PiOS" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-pios-module"></span><h2 id="module-pyscf.mcscf.PiOS">pyscf.mcscf.PiOS module<a class="headerlink" href="#module-pyscf.mcscf.PiOS" title="Permalink to this headline">¶</a></h2>
 <p>When using results of this code for publications, please cite the following paper:
 “Constructing molecular pi-orbital active spaces for multireference calculations of conjugated systems”</p>
 <blockquote>
@@ -404,39 +404,35 @@ No attempt is made to optimize the contraction order.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.addons">
-<span id="pyscf-mcscf-addons-module"></span><h2 id="module-pyscf.mcscf.addons">pyscf.mcscf.addons module<a class="headerlink" href="#module-pyscf.mcscf.addons" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-addons-module"></span><h2 id="module-pyscf.mcscf.addons">pyscf.mcscf.addons module<a class="headerlink" href="#module-pyscf.mcscf.addons" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.addons.StateAverageFCISolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageFCISolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageFCISolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageFCISolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageFCISolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageFCISolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageFCISolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.addons.StateAverageMCSCFSolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMCSCFSolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMCSCFSolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMCSCFSolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMCSCFSolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMCSCFSolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMCSCFSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.mcscf.addons.StateAverageMCSCFSolver.Gradients">
-<span class="sig-name descname"><span class="pre">Gradients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMCSCFSolver.Gradients" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.addons.StateAverageMixFCISolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMixFCISolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMixFCISolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMixFCISolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.addons.StateAverageFCISolver" title="pyscf.mcscf.addons.StateAverageFCISolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">StateAverageFCISolver</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMixFCISolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMixFCISolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMixFCISolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.addons.StateAverageFCISolver" title="pyscf.mcscf.addons.StateAverageFCISolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.addons.StateAverageFCISolver</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMixFCISolver_solver_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMixFCISolver_solver_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMixFCISolver_solver_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMixFCISolver_solver_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.addons.StateAverageMixFCISolver_state_args">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMixFCISolver_state_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMixFCISolver_state_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMixFCISolver_state_args" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args" title="pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args"><code class="xref py py-class docutils literal notranslate"><span class="pre">StateAverageMixFCISolver_solver_args</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateAverageMixFCISolver_state_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateAverageMixFCISolver_state_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateAverageMixFCISolver_state_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args" title="pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.addons.StateAverageMixFCISolver_solver_args</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.addons.StateSpecificFCISolver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateSpecificFCISolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateSpecificFCISolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateSpecificFCISolver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.addons.</span></span><span class="sig-name descname"><span class="pre">StateSpecificFCISolver</span></span><a class="reference internal" href="../_modules/pyscf/mcscf/addons.html#StateSpecificFCISolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.addons.StateSpecificFCISolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 <dl class="py function">
@@ -640,7 +636,7 @@ guess orbitals</p>
 <span class="n">mo</span> <span class="o">=</span> <span class="n">mcscf</span><span class="o">.</span><span class="n">sort_mo</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">mf</span><span class="o">.</span><span class="n">mo_coeff</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'E(0.8) = </span><span class="si">%.12f</span><span class="s1">'</span> <span class="o">%</span> <span class="n">mc</span><span class="o">.</span><span class="n">kernel</span><span class="p">(</span><span class="n">mo</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">init_mo</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">mo_coeff</span>
-<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">.2</span><span class="p">):</span>
     <span class="n">mol</span><span class="o">.</span><span class="n">atom</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'H'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="p">[</span><span class="s1">'F'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">)]]</span>
     <span class="n">mol</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">mf</span> <span class="o">=</span> <span class="n">scf</span><span class="o">.</span><span class="n">RHF</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
@@ -816,13 +812,13 @@ of the SA-CASSCF method; see: Mol. Phys. 99, 103 (2001).</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.mcscf.avas">
-<span id="pyscf-mcscf-avas-module"></span><h2 id="module-pyscf.mcscf.avas">pyscf.mcscf.avas module<a class="headerlink" href="#module-pyscf.mcscf.avas" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-avas-module"></span><h2 id="module-pyscf.mcscf.avas">pyscf.mcscf.avas module<a class="headerlink" href="#module-pyscf.mcscf.avas" title="Permalink to this headline">¶</a></h2>
 <p>Automated construction of molecular active spaces from atomic valence orbitals.
 Ref. arXiv:1701.07862 [physics.chem-ph]</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.avas.AVAS">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.avas.</span></span><span class="sig-name descname"><span class="pre">AVAS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aolabels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minao</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'minao'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_iao</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">openshell_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canonicalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/avas.html#AVAS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.avas.AVAS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamObject</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.avas.</span></span><span class="sig-name descname"><span class="pre">AVAS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aolabels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minao</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'minao'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_iao</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">openshell_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canonicalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/avas.html#AVAS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.avas.AVAS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.lib.misc.StreamObject</span></code></a></p>
 <p>AVAS method to construct mcscf active space.
 Ref. arXiv:1701.07862 [physics.chem-ph]</p>
 <dl>
@@ -973,11 +969,11 @@ the core, active and virtual space.</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.mcscf.casci">
-<span id="pyscf-mcscf-casci-module"></span><h2 id="module-pyscf.mcscf.casci">pyscf.mcscf.casci module<a class="headerlink" href="#module-pyscf.mcscf.casci" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-casci-module"></span><h2 id="module-pyscf.mcscf.casci">pyscf.mcscf.casci module<a class="headerlink" href="#module-pyscf.mcscf.casci" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.casci.</span></span><span class="sig-name descname"><span class="pre">CASCI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/casci.html#CASCI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.casci.CASCI" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamObject</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.casci.</span></span><span class="sig-name descname"><span class="pre">CASCI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/casci.html#CASCI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.casci.CASCI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pyscf.lib.html#pyscf.lib.misc.StreamObject" title="pyscf.lib.misc.StreamObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.lib.misc.StreamObject</span></code></a></p>
 <dl>
 <dt>Args:</dt><dd><dl class="simple">
 <dt>mf_or_mol<span class="classifier">SCF object or Mole object</span></dt><dd><p>SCF or Mole to define the problem size.</p>
@@ -1075,11 +1071,6 @@ representation).</p>
 </pre></div>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.Gradients">
-<span class="sig-name descname"><span class="pre">Gradients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.Gradients" title="Permalink to this definition">¶</a></dt>
-<dd><p>Non-relativistic restricted Hartree-Fock gradients</p>
-</dd></dl>
-<dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.analyze">
 <span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mo_coeff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">large_ci_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_meta_lowdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.analyze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1110,7 +1101,7 @@ are automatically applied in the solver.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.canonicalization">
-<span class="sig-name descname"><span class="pre">canonicalization</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.canonicalization" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">canonicalization</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.canonicalization" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.canonicalize">
@@ -1490,11 +1481,11 @@ the MCSCF canonical orbital coefficients.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.natorb">
-<span class="sig-name descname"><span class="pre">natorb</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.natorb" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">natorb</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.natorb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.ncore">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ncore</span></span><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.ncore" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ncore</span></span><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.ncore" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.nuc_grad_method">
@@ -1546,7 +1537,7 @@ it’s consist of two lists, for alpha and beta spin.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.sorting_mo_energy">
-<span class="sig-name descname"><span class="pre">sorting_mo_energy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.sorting_mo_energy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sorting_mo_energy</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.casci.CASCI.sorting_mo_energy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci.CASCI.state_average">
@@ -1757,16 +1748,16 @@ the second is the electronic energy from core.</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.mcscf.casci_symm">
-<span id="pyscf-mcscf-casci-symm-module"></span><h2 id="module-pyscf.mcscf.casci_symm">pyscf.mcscf.casci_symm module<a class="headerlink" href="#module-pyscf.mcscf.casci_symm" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-casci-symm-module"></span><h2 id="module-pyscf.mcscf.casci_symm">pyscf.mcscf.casci_symm module<a class="headerlink" href="#module-pyscf.mcscf.casci_symm" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci_symm.CASCI">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.casci_symm.</span></span><span class="sig-name descname"><span class="pre">CASCI</span></span><a class="headerlink" href="#pyscf.mcscf.casci_symm.CASCI" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI" title="pyscf.mcscf.casci_symm.SymAdaptedCASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymAdaptedCASCI</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI" title="pyscf.mcscf.casci_symm.SymAdaptedCASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.casci_symm.SymAdaptedCASCI</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci_symm.SymAdaptedCASCI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.casci_symm.</span></span><span class="sig-name descname"><span class="pre">SymAdaptedCASCI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/casci_symm.html#SymAdaptedCASCI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.casci.CASCI" title="pyscf.mcscf.casci.CASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">CASCI</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.casci_symm.</span></span><span class="sig-name descname"><span class="pre">SymAdaptedCASCI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/casci_symm.html#SymAdaptedCASCI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.casci.CASCI" title="pyscf.mcscf.casci.CASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.casci.CASCI</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci_symm.SymAdaptedCASCI.kernel">
 <span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mo_coeff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/casci_symm.html#SymAdaptedCASCI.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI.kernel" title="Permalink to this definition">¶</a></dt>
@@ -1790,7 +1781,7 @@ See also <a class="reference internal" href="#pyscf.mcscf.addons.sort_mo_by_irre
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.casci_symm.SymAdaptedCASCI.wfnsym">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wfnsym</span></span><a class="headerlink" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI.wfnsym" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">wfnsym</span></span><a class="headerlink" href="#pyscf.mcscf.casci_symm.SymAdaptedCASCI.wfnsym" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
 <dl class="py function">
@@ -1803,7 +1794,7 @@ See also <a class="reference internal" href="#pyscf.mcscf.addons.sort_mo_by_irre
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.chkfile">
-<span id="pyscf-mcscf-chkfile-module"></span><h2 id="module-pyscf.mcscf.chkfile">pyscf.mcscf.chkfile module<a class="headerlink" href="#module-pyscf.mcscf.chkfile" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-chkfile-module"></span><h2 id="module-pyscf.mcscf.chkfile">pyscf.mcscf.chkfile module<a class="headerlink" href="#module-pyscf.mcscf.chkfile" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.mcscf.chkfile.dump_mcscf">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.chkfile.</span></span><span class="sig-name descname"><span class="pre">dump_mcscf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chkfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mcscf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e_tot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mo_coeff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mo_occ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mo_energy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e_cas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci_vector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">casdm1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite_mol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/chkfile.html#dump_mcscf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.chkfile.dump_mcscf" title="Permalink to this definition">¶</a></dt>
@@ -1815,7 +1806,7 @@ See also <a class="reference internal" href="#pyscf.mcscf.addons.sort_mo_by_irre
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.df">
-<span id="pyscf-mcscf-df-module"></span><h2 id="module-pyscf.mcscf.df">pyscf.mcscf.df module<a class="headerlink" href="#module-pyscf.mcscf.df" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-df-module"></span><h2 id="module-pyscf.mcscf.df">pyscf.mcscf.df module<a class="headerlink" href="#module-pyscf.mcscf.df" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.mcscf.df.approx_hessian">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.df.</span></span><span class="sig-name descname"><span class="pre">approx_hessian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">casscf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auxbasis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/df.html#approx_hessian"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.df.approx_hessian" title="Permalink to this definition">¶</a></dt>
@@ -1885,7 +1876,7 @@ fitting integrals to compute J and K</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.dmet_cas">
-<span id="pyscf-mcscf-dmet-cas-module"></span><h2 id="module-pyscf.mcscf.dmet_cas">pyscf.mcscf.dmet_cas module<a class="headerlink" href="#module-pyscf.mcscf.dmet_cas" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-dmet-cas-module"></span><h2 id="module-pyscf.mcscf.dmet_cas">pyscf.mcscf.dmet_cas module<a class="headerlink" href="#module-pyscf.mcscf.dmet_cas" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.mcscf.dmet_cas.dmet_cas">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.dmet_cas.</span></span><span class="sig-name descname"><span class="pre">dmet_cas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aolabels_or_baslst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">occ_cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orth_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'meta_lowdin'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canonicalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeze_imp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.mcscf.dmet_cas.dmet_cas" title="Permalink to this definition">¶</a></dt>
@@ -2031,11 +2022,11 @@ the core, active and virtual space.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.mc1step">
-<span id="pyscf-mcscf-mc1step-module"></span><h2 id="module-pyscf.mcscf.mc1step">pyscf.mcscf.mc1step module<a class="headerlink" href="#module-pyscf.mcscf.mc1step" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-mc1step-module"></span><h2 id="module-pyscf.mcscf.mc1step">pyscf.mcscf.mc1step module<a class="headerlink" href="#module-pyscf.mcscf.mc1step" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc1step.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc1step.html#CASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.casci.CASCI" title="pyscf.mcscf.casci.CASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">CASCI</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc1step.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc1step.html#CASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.casci.CASCI" title="pyscf.mcscf.casci.CASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.casci.CASCI</span></code></a></p>
 <dl>
 <dt>Args:</dt><dd><dl class="simple">
 <dt>mf_or_mol<span class="classifier">SCF object or Mole object</span></dt><dd><p>SCF or Mole to define the problem size.</p>
@@ -2230,30 +2221,25 @@ representation).</p>
 <span class="go">-109.044401882238134</span>
 </pre></div>
 </div>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.Gradients">
-<span class="sig-name descname"><span class="pre">Gradients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.Gradients" title="Permalink to this definition">¶</a></dt>
-<dd><p>Non-relativistic restricted Hartree-Fock gradients</p>
-</dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_conv_tol">
-<span class="sig-name descname"><span class="pre">ah_conv_tol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-12</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_conv_tol" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_conv_tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-12</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_conv_tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_grad_trust_region">
-<span class="sig-name descname"><span class="pre">ah_grad_trust_region</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_grad_trust_region" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_grad_trust_region</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_grad_trust_region" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_level_shift">
-<span class="sig-name descname"><span class="pre">ah_level_shift</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-08</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_level_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_level_shift</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-08</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_level_shift" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_lindep">
-<span class="sig-name descname"><span class="pre">ah_lindep</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-14</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_lindep" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_lindep</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-14</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_lindep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_max_cycle">
-<span class="sig-name descname"><span class="pre">ah_max_cycle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_max_cycle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_max_cycle</span></span><em class="property"> <span class="pre">=</span> <span class="pre">30</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_max_cycle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_scheduler">
@@ -2261,11 +2247,11 @@ representation).</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_start_cycle">
-<span class="sig-name descname"><span class="pre">ah_start_cycle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_start_cycle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_start_cycle</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_start_cycle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ah_start_tol">
-<span class="sig-name descname"><span class="pre">ah_start_tol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2.5</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_start_tol" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_start_tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2.5</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ah_start_tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ao2mo">
@@ -2274,7 +2260,7 @@ representation).</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ao2mo_level">
-<span class="sig-name descname"><span class="pre">ao2mo_level</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ao2mo_level" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ao2mo_level</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ao2mo_level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.approx_hessian">
@@ -2302,7 +2288,7 @@ initial guess of the new calculation.  All parameters of MCSCF object
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.canonicalization">
-<span class="sig-name descname"><span class="pre">canonicalization</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.canonicalization" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">canonicalization</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.canonicalization" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.casci">
@@ -2310,27 +2296,27 @@ initial guess of the new calculation.  All parameters of MCSCF object
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.chk_ci">
-<span class="sig-name descname"><span class="pre">chk_ci</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.chk_ci" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">chk_ci</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.chk_ci" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ci_grad_trust_region">
-<span class="sig-name descname"><span class="pre">ci_grad_trust_region</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ci_grad_trust_region" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ci_grad_trust_region</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ci_grad_trust_region" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ci_response_space">
-<span class="sig-name descname"><span class="pre">ci_response_space</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ci_response_space" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ci_response_space</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ci_response_space" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.ci_update_dep">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ci_update_dep</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ci_update_dep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ci_update_dep</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.ci_update_dep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.conv_tol">
-<span class="sig-name descname"><span class="pre">conv_tol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-07</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.conv_tol" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">conv_tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-07</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.conv_tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.conv_tol_grad">
-<span class="sig-name descname"><span class="pre">conv_tol_grad</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.conv_tol_grad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">conv_tol_grad</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.conv_tol_grad" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.dump_chk">
@@ -2367,15 +2353,15 @@ returns the regular 2-electron integrals.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.grad_update_dep">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grad_update_dep</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.grad_update_dep" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">grad_update_dep</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.grad_update_dep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.internal_rotation">
-<span class="sig-name descname"><span class="pre">internal_rotation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.internal_rotation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">internal_rotation</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.internal_rotation" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.kernel">
-<span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mo_coeff=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci0=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_kern=&lt;function</span> <span class="pre">kernel&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc1step.html#CASSCF.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.kernel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mo_coeff=None</span></em>, <em class="sig-param"><span class="pre">ci0=None</span></em>, <em class="sig-param"><span class="pre">callback=None</span></em>, <em class="sig-param"><span class="pre">_kern=&lt;function</span> <span class="pre">kernel&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc1step.html#CASSCF.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.kernel" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Returns:</dt><dd><p>Five elements, they are
 total energy,
@@ -2390,31 +2376,31 @@ the MCSCF canonical orbital coefficients.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.kf_interval">
-<span class="sig-name descname"><span class="pre">kf_interval</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.kf_interval" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">kf_interval</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.kf_interval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.kf_trust_region">
-<span class="sig-name descname"><span class="pre">kf_trust_region</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.kf_trust_region" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">kf_trust_region</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.kf_trust_region" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.max_cycle">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_cycle</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_cycle" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_cycle</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_cycle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.max_cycle_macro">
-<span class="sig-name descname"><span class="pre">max_cycle_macro</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_cycle_macro" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">max_cycle_macro</span></span><em class="property"> <span class="pre">=</span> <span class="pre">50</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_cycle_macro" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.max_cycle_micro">
-<span class="sig-name descname"><span class="pre">max_cycle_micro</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_cycle_micro" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">max_cycle_micro</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_cycle_micro" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.max_orb_stepsize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_orb_stepsize</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_orb_stepsize" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_orb_stepsize</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_orb_stepsize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.max_stepsize">
-<span class="sig-name descname"><span class="pre">max_stepsize</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.02</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_stepsize" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">max_stepsize</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0.02</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.max_stepsize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.max_stepsize_scheduler">
@@ -2434,7 +2420,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.natorb">
-<span class="sig-name descname"><span class="pre">natorb</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.natorb" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">natorb</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.natorb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.newton">
@@ -2459,7 +2445,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.scale_restoration">
-<span class="sig-name descname"><span class="pre">scale_restoration</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.scale_restoration" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">scale_restoration</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0.5</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.scale_restoration" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.solve_approx_ci">
@@ -2468,7 +2454,7 @@ the MCSCF canonical orbital coefficients.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.sorting_mo_energy">
-<span class="sig-name descname"><span class="pre">sorting_mo_energy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.sorting_mo_energy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sorting_mo_energy</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.sorting_mo_energy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.uniq_var_indices">
@@ -2504,7 +2490,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step.CASSCF.with_dep4">
-<span class="sig-name descname"><span class="pre">with_dep4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.with_dep4" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">with_dep4</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.mc1step.CASSCF.with_dep4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
 <dl class="py function">
@@ -2546,16 +2532,16 @@ initial guess of the new calculation.  All parameters of MCSCF object
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.mc1step_symm">
-<span id="pyscf-mcscf-mc1step-symm-module"></span><h2 id="module-pyscf.mcscf.mc1step_symm">pyscf.mcscf.mc1step_symm module<a class="headerlink" href="#module-pyscf.mcscf.mc1step_symm" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-mc1step-symm-module"></span><h2 id="module-pyscf.mcscf.mc1step_symm">pyscf.mcscf.mc1step_symm module<a class="headerlink" href="#module-pyscf.mcscf.mc1step_symm" title="Permalink to this headline">¶</a></h2>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step_symm.CASSCF">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc1step_symm.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step_symm.CASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF" title="pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymAdaptedCASSCF</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF" title="pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc1step_symm.</span></span><span class="sig-name descname"><span class="pre">SymAdaptedCASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc1step_symm.html#SymAdaptedCASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.mc1step.CASSCF" title="pyscf.mcscf.mc1step.CASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CASSCF</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc1step_symm.</span></span><span class="sig-name descname"><span class="pre">SymAdaptedCASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc1step_symm.html#SymAdaptedCASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.mc1step.CASSCF" title="pyscf.mcscf.mc1step.CASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.mc1step.CASSCF</span></code></a></p>
 <dl>
 <dt>Args:</dt><dd><dl class="simple">
 <dt>mf_or_mol<span class="classifier">SCF object or Mole object</span></dt><dd><p>SCF or Mole to define the problem size.</p>
@@ -2794,19 +2780,19 @@ See also <a class="reference internal" href="#pyscf.mcscf.addons.sort_mo_by_irre
 <dd></dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF.wfnsym">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wfnsym</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF.wfnsym" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">wfnsym</span></span><a class="headerlink" href="#pyscf.mcscf.mc1step_symm.SymAdaptedCASSCF.wfnsym" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
 </section>
 <section id="module-pyscf.mcscf.mc2step">
-<span id="pyscf-mcscf-mc2step-module"></span><h2 id="module-pyscf.mcscf.mc2step">pyscf.mcscf.mc2step module<a class="headerlink" href="#module-pyscf.mcscf.mc2step" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-mc2step-module"></span><h2 id="module-pyscf.mcscf.mc2step">pyscf.mcscf.mc2step module<a class="headerlink" href="#module-pyscf.mcscf.mc2step" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc2step.kernel">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc2step.</span></span><span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">casscf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mo_coeff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-07</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv_tol_grad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dump_chk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc2step.html#kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc2step.kernel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.mc_ao2mo">
-<span id="pyscf-mcscf-mc-ao2mo-module"></span><h2 id="module-pyscf.mcscf.mc_ao2mo">pyscf.mcscf.mc_ao2mo module<a class="headerlink" href="#module-pyscf.mcscf.mc_ao2mo" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-mc-ao2mo-module"></span><h2 id="module-pyscf.mcscf.mc_ao2mo">pyscf.mcscf.mc_ao2mo module<a class="headerlink" href="#module-pyscf.mcscf.mc_ao2mo" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.mcscf.mc_ao2mo.prange">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.mc_ao2mo.</span></span><span class="sig-name descname"><span class="pre">prange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/mc_ao2mo.html#prange"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.mc_ao2mo.prange" title="Permalink to this definition">¶</a></dt>
@@ -2821,12 +2807,12 @@ See also <a class="reference internal" href="#pyscf.mcscf.addons.sort_mo_by_irre
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.newton_casscf">
-<span id="pyscf-mcscf-newton-casscf-module"></span><h2 id="module-pyscf.mcscf.newton_casscf">pyscf.mcscf.newton_casscf module<a class="headerlink" href="#module-pyscf.mcscf.newton_casscf" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-newton-casscf-module"></span><h2 id="module-pyscf.mcscf.newton_casscf">pyscf.mcscf.newton_casscf module<a class="headerlink" href="#module-pyscf.mcscf.newton_casscf" title="Permalink to this headline">¶</a></h2>
 <p>Second order CASSCF</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.newton_casscf.CASSCF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.newton_casscf.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/newton_casscf.html#CASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.newton_casscf.CASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.mc1step.CASSCF" title="pyscf.mcscf.mc1step.CASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CASSCF</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.newton_casscf.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/newton_casscf.html#CASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.newton_casscf.CASSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.mc1step.CASSCF" title="pyscf.mcscf.mc1step.CASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.mc1step.CASSCF</span></code></a></p>
 <dl>
 <dt>Args:</dt><dd><dl class="simple">
 <dt>mf_or_mol<span class="classifier">SCF object or Mole object</span></dt><dd><p>SCF or Mole to define the problem size.</p>
@@ -3068,11 +3054,11 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.newton_casscf_symm">
-<span id="pyscf-mcscf-newton-casscf-symm-module"></span><h2 id="module-pyscf.mcscf.newton_casscf_symm">pyscf.mcscf.newton_casscf_symm module<a class="headerlink" href="#module-pyscf.mcscf.newton_casscf_symm" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-newton-casscf-symm-module"></span><h2 id="module-pyscf.mcscf.newton_casscf_symm">pyscf.mcscf.newton_casscf_symm module<a class="headerlink" href="#module-pyscf.mcscf.newton_casscf_symm" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.newton_casscf_symm.CASSCF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.newton_casscf_symm.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/newton_casscf_symm.html#CASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.newton_casscf_symm.CASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.newton_casscf.CASSCF" title="pyscf.mcscf.newton_casscf.CASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">CASSCF</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.newton_casscf_symm.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/newton_casscf_symm.html#CASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.newton_casscf_symm.CASSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.newton_casscf.CASSCF" title="pyscf.mcscf.newton_casscf.CASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.newton_casscf.CASSCF</span></code></a></p>
 <dl>
 <dt>Args:</dt><dd><dl class="simple">
 <dt>mf_or_mol<span class="classifier">SCF object or Mole object</span></dt><dd><p>SCF or Mole to define the problem size.</p>
@@ -3278,18 +3264,18 @@ the MCSCF canonical orbital coefficients.</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.mcscf.ucasci">
-<span id="pyscf-mcscf-ucasci-module"></span><h2 id="module-pyscf.mcscf.ucasci">pyscf.mcscf.ucasci module<a class="headerlink" href="#module-pyscf.mcscf.ucasci" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-ucasci-module"></span><h2 id="module-pyscf.mcscf.ucasci">pyscf.mcscf.ucasci module<a class="headerlink" href="#module-pyscf.mcscf.ucasci" title="Permalink to this headline">¶</a></h2>
 <p>UCASCI (CASCI with non-degenerated alpha and beta orbitals, typically UHF
 orbitals)</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.CASCI">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.ucasci.</span></span><span class="sig-name descname"><span class="pre">CASCI</span></span><a class="headerlink" href="#pyscf.mcscf.ucasci.CASCI" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.ucasci.UCASCI" title="pyscf.mcscf.ucasci.UCASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">UCASCI</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.ucasci.UCASCI" title="pyscf.mcscf.ucasci.UCASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.ucasci.UCASCI</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.ucasci.</span></span><span class="sig-name descname"><span class="pre">UCASCI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/ucasci.html#UCASCI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.casci.CASCI" title="pyscf.mcscf.casci.CASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">CASCI</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.ucasci.</span></span><span class="sig-name descname"><span class="pre">UCASCI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/ucasci.html#UCASCI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.casci.CASCI" title="pyscf.mcscf.casci.CASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.casci.CASCI</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI.analyze">
 <span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mo_coeff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">large_ci_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_meta_lowdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/ucasci.html#UCASCI.analyze"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.analyze" title="Permalink to this definition">¶</a></dt>
@@ -3356,11 +3342,11 @@ of functions/methods to be executed in pipe.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI.fix_spin">
-<span class="sig-name descname"><span class="pre">fix_spin</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.fix_spin" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fix_spin</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.fix_spin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI.fix_spin_">
-<span class="sig-name descname"><span class="pre">fix_spin_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.fix_spin_" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fix_spin_</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.fix_spin_" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI.get_h1cas">
@@ -3484,7 +3470,7 @@ the MCSCF canonical orbital coefficients.</p>
 </dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI.ncore">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ncore</span></span><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.ncore" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ncore</span></span><a class="headerlink" href="#pyscf.mcscf.ucasci.UCASCI.ncore" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.ucasci.UCASCI.sort_mo">
@@ -3547,45 +3533,45 @@ it’s consist of two lists, for alpha and beta spin.</p>
 </dd></dl>
 </section>
 <section id="module-pyscf.mcscf.umc1step">
-<span id="pyscf-mcscf-umc1step-module"></span><h2 id="module-pyscf.mcscf.umc1step">pyscf.mcscf.umc1step module<a class="headerlink" href="#module-pyscf.mcscf.umc1step" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-umc1step-module"></span><h2 id="module-pyscf.mcscf.umc1step">pyscf.mcscf.umc1step module<a class="headerlink" href="#module-pyscf.mcscf.umc1step" title="Permalink to this headline">¶</a></h2>
 <p>UCASSCF (CASSCF without spin-degeneracy between alpha and beta orbitals)
 1-step optimization algorithm</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.CASSCF">
 <span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.umc1step.</span></span><span class="sig-name descname"><span class="pre">CASSCF</span></span><a class="headerlink" href="#pyscf.mcscf.umc1step.CASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.umc1step.UCASSCF" title="pyscf.mcscf.umc1step.UCASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">UCASSCF</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pyscf.mcscf.umc1step.UCASSCF" title="pyscf.mcscf.umc1step.UCASSCF"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.umc1step.UCASSCF</span></code></a></p>
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.umc1step.</span></span><span class="sig-name descname"><span class="pre">UCASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/umc1step.html#UCASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.ucasci.UCASCI" title="pyscf.mcscf.ucasci.UCASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">UCASCI</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.mcscf.umc1step.</span></span><span class="sig-name descname"><span class="pre">UCASSCF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mf_or_mol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nelecas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/umc1step.html#UCASSCF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscf.mcscf.ucasci.UCASCI" title="pyscf.mcscf.ucasci.UCASCI"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.mcscf.ucasci.UCASCI</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_conv_tol">
-<span class="sig-name descname"><span class="pre">ah_conv_tol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-12</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_conv_tol" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_conv_tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-12</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_conv_tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_grad_trust_region">
-<span class="sig-name descname"><span class="pre">ah_grad_trust_region</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_grad_trust_region" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_grad_trust_region</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_grad_trust_region" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_level_shift">
-<span class="sig-name descname"><span class="pre">ah_level_shift</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-08</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_level_shift" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_level_shift</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-08</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_level_shift" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_lindep">
-<span class="sig-name descname"><span class="pre">ah_lindep</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-14</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_lindep" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_lindep</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-14</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_lindep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_max_cycle">
-<span class="sig-name descname"><span class="pre">ah_max_cycle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_max_cycle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_max_cycle</span></span><em class="property"> <span class="pre">=</span> <span class="pre">30</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_max_cycle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_start_cycle">
-<span class="sig-name descname"><span class="pre">ah_start_cycle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_start_cycle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_start_cycle</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_start_cycle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ah_start_tol">
-<span class="sig-name descname"><span class="pre">ah_start_tol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2.5</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_start_tol" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ah_start_tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2.5</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ah_start_tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ao2mo">
@@ -3602,19 +3588,19 @@ it’s consist of two lists, for alpha and beta spin.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.chk_ci">
-<span class="sig-name descname"><span class="pre">chk_ci</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.chk_ci" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">chk_ci</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.chk_ci" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.ci_response_space">
-<span class="sig-name descname"><span class="pre">ci_response_space</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ci_response_space" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ci_response_space</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.ci_response_space" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.conv_tol">
-<span class="sig-name descname"><span class="pre">conv_tol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-07</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.conv_tol" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">conv_tol</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-07</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.conv_tol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.conv_tol_grad">
-<span class="sig-name descname"><span class="pre">conv_tol_grad</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.conv_tol_grad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">conv_tol_grad</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.conv_tol_grad" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.dump_chk">
@@ -3643,11 +3629,11 @@ returns the regular 2-electron integrals.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.internal_rotation">
-<span class="sig-name descname"><span class="pre">internal_rotation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.internal_rotation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">internal_rotation</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.internal_rotation" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.kernel">
-<span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mo_coeff=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci0=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_kern=&lt;function</span> <span class="pre">kernel&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/umc1step.html#UCASSCF.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.kernel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">mo_coeff=None</span></em>, <em class="sig-param"><span class="pre">ci0=None</span></em>, <em class="sig-param"><span class="pre">callback=None</span></em>, <em class="sig-param"><span class="pre">_kern=&lt;function</span> <span class="pre">kernel&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/mcscf/umc1step.html#UCASSCF.kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.kernel" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Returns:</dt><dd><p>Five elements, they are
 total energy,
@@ -3662,27 +3648,27 @@ the MCSCF canonical orbital coefficients.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.kf_interval">
-<span class="sig-name descname"><span class="pre">kf_interval</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.kf_interval" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">kf_interval</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.kf_interval" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.kf_trust_region">
-<span class="sig-name descname"><span class="pre">kf_trust_region</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.kf_trust_region" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">kf_trust_region</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3.0</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.kf_trust_region" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.max_cycle_macro">
-<span class="sig-name descname"><span class="pre">max_cycle_macro</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_cycle_macro" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">max_cycle_macro</span></span><em class="property"> <span class="pre">=</span> <span class="pre">50</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_cycle_macro" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.max_cycle_micro">
-<span class="sig-name descname"><span class="pre">max_cycle_micro</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_cycle_micro" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">max_cycle_micro</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_cycle_micro" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.max_orb_stepsize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_orb_stepsize</span></span><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_orb_stepsize" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_orb_stepsize</span></span><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_orb_stepsize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.max_stepsize">
-<span class="sig-name descname"><span class="pre">max_stepsize</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.02</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_stepsize" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">max_stepsize</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0.02</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.max_stepsize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.max_stepsize_scheduler">
@@ -3702,7 +3688,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.natorb">
-<span class="sig-name descname"><span class="pre">natorb</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.natorb" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">natorb</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.natorb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.pack_uniq_var">
@@ -3744,7 +3730,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc1step.UCASSCF.with_dep4">
-<span class="sig-name descname"><span class="pre">with_dep4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.with_dep4" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">with_dep4</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#pyscf.mcscf.umc1step.UCASSCF.with_dep4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
 <dl class="py function">
@@ -3757,7 +3743,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.umc2step">
-<span id="pyscf-mcscf-umc2step-module"></span><h2 id="module-pyscf.mcscf.umc2step">pyscf.mcscf.umc2step module<a class="headerlink" href="#module-pyscf.mcscf.umc2step" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-umc2step-module"></span><h2 id="module-pyscf.mcscf.umc2step">pyscf.mcscf.umc2step module<a class="headerlink" href="#module-pyscf.mcscf.umc2step" title="Permalink to this headline">¶</a></h2>
 <p>UCASSCF (CASSCF without spin-degeneracy between alpha and beta orbitals)
 2-step optimization algorithm</p>
 <dl class="py function">
@@ -3766,7 +3752,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf.umc_ao2mo">
-<span id="pyscf-mcscf-umc-ao2mo-module"></span><h2 id="module-pyscf.mcscf.umc_ao2mo">pyscf.mcscf.umc_ao2mo module<a class="headerlink" href="#module-pyscf.mcscf.umc_ao2mo" title="Permalink to this heading">¶</a></h2>
+<span id="pyscf-mcscf-umc-ao2mo-module"></span><h2 id="module-pyscf.mcscf.umc_ao2mo">pyscf.mcscf.umc_ao2mo module<a class="headerlink" href="#module-pyscf.mcscf.umc_ao2mo" title="Permalink to this headline">¶</a></h2>
 <p>MO integrals for UCASSCF methods</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyscf.mcscf.umc_ao2mo.trans_e1_incore">
@@ -3778,7 +3764,7 @@ the MCSCF canonical orbital coefficients.</p>
 <dd></dd></dl>
 </section>
 <section id="module-pyscf.mcscf">
-<span id="module-contents"></span><h2 id="module-pyscf.mcscf">Module contents<a class="headerlink" href="#module-pyscf.mcscf" title="Permalink to this heading">¶</a></h2>
+<span id="module-contents"></span><h2 id="module-pyscf.mcscf">Module contents<a class="headerlink" href="#module-pyscf.mcscf" title="Permalink to this headline">¶</a></h2>
 <p>CASCI and CASSCF</p>
 <p>When using results of this code for publications, please cite the following paper:
 “A general second order complete active space self-consistent-field solver for large-scale systems”, Q. Sun, J. Yang, and G. K.-L. Chan, Chem. Phys. Lett. 683, 291 (2017).</p>
@@ -3857,7 +3843,7 @@ C2H4 in the test files.  In these systems, adjusting max_stepsize,
 max_ci_stepsize and max_cycle_micro, max_cycle_micro_inner and
 ah_start_tol may be helpful)</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span> <span class="o">=</span> <span class="n">mcscf</span><span class="o">.</span><span class="n">CASSCF</span><span class="p">(</span><span class="n">mf</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">max_stepsize</span> <span class="o">=</span> <span class="o">.</span><span class="mi">01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">max_stepsize</span> <span class="o">=</span> <span class="mf">.01</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">max_cycle_micro</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">max_cycle_macro</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mc</span><span class="o">.</span><span class="n">max_cycle_micro_inner</span> <span class="o">=</span> <span class="mi">1</span>
@@ -4009,7 +3995,7 @@ inbuilt methods to convert the mo_coeff to natural orbitals.
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

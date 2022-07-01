@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,9 +54,9 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -357,7 +357,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="quickstart">
-<h1 id="quickstart--page-root">Quickstart<a class="headerlink" href="#quickstart--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="quickstart--page-root">Quickstart<a class="headerlink" href="#quickstart--page-root" title="Permalink to this headline">¶</a></h1>
 <p>This quickstart provides a brief introduction to the use of libDMET in common periodic embedding calculations from a PySCF style user interface. Completed DMET examples with detailed guidance can be found within the dedicated <a class="reference external" href="https://github.com/penglinq/libdmet_preview/tree/cookiecutter/examples/run">run</a> directory. For more advanced usage, please see the detailed user documentation.
 Running a general DMET calculation can be divided into the following steps:</p>
 <ol class="arabic simple">
@@ -369,7 +369,7 @@ Running a general DMET calculation can be divided into the following steps:</p>
 </ol>
 <p>The following sections provide more detailed explanation on each step.</p>
 <section id="input-lattice">
-<span id="input"></span><h2 id="input-lattice">Input: Lattice<a class="headerlink" href="#input-lattice" title="Permalink to this heading">¶</a></h2>
+<span id="input"></span><h2 id="input-lattice">Input: Lattice<a class="headerlink" href="#input-lattice" title="Permalink to this headline">¶</a></h2>
 <p>For periodic embedding calculations, the system to study is defined using an instance of the Lattice class in libDMET.
 The Lattice is instantiated from a PySCF cell object that defines the unit cell and a kmesh that defines the supercell.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cell</span> <span class="o">=</span> <span class="n">gto</span><span class="o">.</span><span class="n">Cell</span><span class="p">()</span>
@@ -386,7 +386,7 @@ The Lattice is instantiated from a PySCF cell object that defines the unit cell 
 </div>
 </section>
 <section id="input-low-level-calculation">
-<h2 id="input-low-level-calculation">Input: Low-level calculation<a class="headerlink" href="#input-low-level-calculation" title="Permalink to this heading">¶</a></h2>
+<h2 id="input-low-level-calculation">Input: Low-level calculation<a class="headerlink" href="#input-low-level-calculation" title="Permalink to this headline">¶</a></h2>
 <p>A low-level calculation obtains an approximated wave function of the whole lattice using an economic solver such as kHF, kDFT. Only mean-field methods in PySCF are supported by the current bath construction methods.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">GDF</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">kpts</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gdf</span><span class="o">.</span><span class="n">_cderi_to_save</span> <span class="o">=</span> <span class="n">gdf_fname</span>
@@ -399,7 +399,7 @@ The Lattice is instantiated from a PySCF cell object that defines the unit cell 
 </div>
 </section>
 <section id="input-high-level-solver">
-<h2 id="input-high-level-solver">Input: High-level solver<a class="headerlink" href="#input-high-level-solver" title="Permalink to this heading">¶</a></h2>
+<h2 id="input-high-level-solver">Input: High-level solver<a class="headerlink" href="#input-high-level-solver" title="Permalink to this headline">¶</a></h2>
 <p>The high-level solver solves an embedding Hamiltonian accurately in a small embedded space derived from Schmidt decomposition. Solving the embedding problem is normally the computational time bottleneck, so the high-level solver should be chosen based on both the accuracy and the amount of computational resource. Common solvers include FCI for small embedded space and CCSD which can treat hundreds of orbitals.
 Here, the solver could be an object of the built-in solver under the sovler folder, an object of a child of the dmetsolvermixin class or a string of one of the following: “ccsd” or “fci”. Customization of solver should be passed through solver’s attributes.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">libdmet.solver</span> <span class="kn">import</span> <span class="n">impurity_solver</span>
@@ -412,7 +412,7 @@ Here, the solver could be an object of the built-in solver under the sovler fold
 </div>
 </section>
 <section id="run-dmet-calculation">
-<h2 id="run-dmet-calculation">Run DMET calculation<a class="headerlink" href="#run-dmet-calculation" title="Permalink to this heading">¶</a></h2>
+<h2 id="run-dmet-calculation">Run DMET calculation<a class="headerlink" href="#run-dmet-calculation" title="Permalink to this headline">¶</a></h2>
 <p>Similar to a solver call in PySCF, a DMET calculation can be performed by first instantiating a dmet object with
 previously defined low-level calculation, lattice, and high-level solver and then running with .kernel().</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mydmet</span> <span class="o">=</span> <span class="n">dmet</span><span class="o">.</span><span class="n">dmet</span><span class="p">(</span><span class="n">kmf</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">solver</span><span class="p">)</span>
@@ -421,10 +421,10 @@ previously defined low-level calculation, lattice, and high-level solver and the
 </div>
 </section>
 <section id="localization">
-<span id="local"></span><h2 id="localization">Localization<a class="headerlink" href="#localization" title="Permalink to this heading">¶</a></h2>
+<span id="local"></span><h2 id="localization">Localization<a class="headerlink" href="#localization" title="Permalink to this headline">¶</a></h2>
 <p>By default DMET uses Intrinsic Atomic Orbital (IAO) to localize atomic orbitals. One can specify the minimal basis for IAO construction by setting mydmet.minao. For localization scheme other than IAO, input a predetermined set of localized orbitals (LO) by setting mydmet.C_ao_lo to be the basis transformation matrix from AO to LO.</p>
 <section id="built-in-localization">
-<span id="loc"></span><h3 id="built-in-localization">Built-in localization<a class="headerlink" href="#built-in-localization" title="Permalink to this heading">¶</a></h3>
+<span id="loc"></span><h3 id="built-in-localization">Built-in localization<a class="headerlink" href="#built-in-localization" title="Permalink to this headline">¶</a></h3>
 <p>libDMET by default uses Intrinsic Atomic Orbitals (IAO) from PySCF to localize the core and valence atomic orbitals. (cf. <a class="reference external" href="https://github.com/pyscf/pyscf/blob/master/examples/local_orb/03-split_localization.py">local_orb/03-split_localization.py</a>) Projected Atomic Orbitals (PAO) are used to generate localized virtual orbitals.
 Another commonly used localization scheme is the Maximal Localized Wannier functions. One can generate Wannier functions using built-in interface as below and directly passing in the basis transformation matrix through attribute C_ao_lo.</p>
 <p>Wannier orbitals can be computed as (cf. <a class="reference external" href="https://github.com/pyscf/pyscf/blob/master/examples/local_orb/04-ibo_benzene_cubegen.py">local_orb/04-ibo_benzene_cubegen.py</a>):</p>
@@ -484,7 +484,7 @@ Another commonly used localization scheme is the Maximal Localized Wannier funct
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

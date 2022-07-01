@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -520,15 +520,15 @@
     <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
     <span class="n">strs</span> <span class="o">=</span> <span class="n">cistring</span><span class="o">.</span><span class="n">gen_strings4orblist</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">norb</span><span class="p">),</span> <span class="n">nelec</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">))</span> <span class="o">&gt;</span> <span class="o">.</span><span class="mi">3</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mf">.3</span>
     <span class="n">strsa</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">))</span> <span class="o">&gt;</span> <span class="o">.</span><span class="mi">2</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">strs</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mf">.2</span>
     <span class="n">strsb</span> <span class="o">=</span> <span class="n">strs</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
     <span class="n">ci_strs</span> <span class="o">=</span> <span class="p">(</span><span class="n">strsa</span><span class="p">,</span> <span class="n">strsb</span><span class="p">)</span>
     <span class="n">civec_strs</span> <span class="o">=</span> <span class="n">selected_ci</span><span class="o">.</span><span class="n">_as_SCIvector</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">strsa</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">strsb</span><span class="p">))),</span> <span class="n">ci_strs</span><span class="p">)</span>
     <span class="n">orbsym</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">norb</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
     <span class="n">nn</span> <span class="o">=</span> <span class="n">norb</span><span class="o">*</span><span class="p">(</span><span class="n">norb</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
-    <span class="n">eri</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">nn</span><span class="o">*</span><span class="p">(</span><span class="n">nn</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">-.</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+    <span class="n">eri</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">nn</span><span class="o">*</span><span class="p">(</span><span class="n">nn</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mf">.2</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
 
     <span class="n">ci0</span> <span class="o">=</span> <span class="n">selected_ci</span><span class="o">.</span><span class="n">to_fci</span><span class="p">(</span><span class="n">civec_strs</span><span class="p">,</span> <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span><span class="p">)</span>
     <span class="n">ci0</span> <span class="o">=</span> <span class="n">addons</span><span class="o">.</span><span class="n">symmetrize_wfn</span><span class="p">(</span><span class="n">ci0</span><span class="p">,</span> <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span><span class="p">,</span> <span class="n">orbsym</span><span class="p">)</span>
@@ -585,7 +585,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

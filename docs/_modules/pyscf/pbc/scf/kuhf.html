@@ -53,9 +53,9 @@
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../../about.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -862,13 +862,13 @@
 
         <span class="n">nelec_a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">mo_a</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nkpts</span><span class="p">)])</span>
         <span class="n">nelec_b</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">mo_b</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nkpts</span><span class="p">)])</span>
-        <span class="n">ssxy</span> <span class="o">=</span> <span class="p">(</span><span class="n">nelec_a</span> <span class="o">+</span> <span class="n">nelec_b</span><span class="p">)</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span>
+        <span class="n">ssxy</span> <span class="o">=</span> <span class="p">(</span><span class="n">nelec_a</span> <span class="o">+</span> <span class="n">nelec_b</span><span class="p">)</span> <span class="o">*</span> <span class="mf">.5</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nkpts</span><span class="p">):</span>
             <span class="n">sij</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">,</span> <span class="p">(</span><span class="n">mo_a</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">mo_b</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
             <span class="n">ssxy</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ij-&gt;'</span><span class="p">,</span> <span class="n">sij</span><span class="o">.</span><span class="n">conj</span><span class="p">(),</span> <span class="n">sij</span><span class="p">)</span><span class="o">.</span><span class="n">real</span>
-        <span class="n">ssz</span> <span class="o">=</span> <span class="p">(</span><span class="n">nelec_b</span><span class="o">-</span><span class="n">nelec_a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="o">.</span><span class="mi">25</span>
+        <span class="n">ssz</span> <span class="o">=</span> <span class="p">(</span><span class="n">nelec_b</span><span class="o">-</span><span class="n">nelec_a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">.25</span>
         <span class="n">ss</span> <span class="o">=</span> <span class="n">ssxy</span> <span class="o">+</span> <span class="n">ssz</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ss</span><span class="o">+.</span><span class="mi">25</span><span class="p">)</span> <span class="o">-</span> <span class="o">.</span><span class="mi">5</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ss</span><span class="o">+</span><span class="mf">.25</span><span class="p">)</span> <span class="o">-</span> <span class="mf">.5</span>
         <span class="k">return</span> <span class="n">ss</span><span class="p">,</span> <span class="n">s</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span></div>
 
     <span class="n">canonicalize</span> <span class="o">=</span> <span class="n">canonicalize</span>
@@ -931,7 +931,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

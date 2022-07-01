@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -529,7 +529,7 @@
             <span class="n">e2</span> <span class="o">=</span> <span class="n">diagj</span><span class="p">[</span><span class="n">aocc</span><span class="p">][:,</span><span class="n">aocc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">diagj</span><span class="p">[</span><span class="n">aocc</span><span class="p">][:,</span><span class="n">bocc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> \
                <span class="o">+</span> <span class="n">diagj</span><span class="p">[</span><span class="n">bocc</span><span class="p">][:,</span><span class="n">aocc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">diagj</span><span class="p">[</span><span class="n">bocc</span><span class="p">][:,</span><span class="n">bocc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> \
                <span class="o">-</span> <span class="n">diagk</span><span class="p">[</span><span class="n">aocc</span><span class="p">][:,</span><span class="n">aocc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">diagk</span><span class="p">[</span><span class="n">bocc</span><span class="p">][:,</span><span class="n">bocc</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-            <span class="n">hdiag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e1</span> <span class="o">+</span> <span class="n">e2</span><span class="o">*.</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">hdiag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e1</span> <span class="o">+</span> <span class="n">e2</span><span class="o">*</span><span class="mf">.5</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hdiag</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="kernel"><a class="viewcode-back" href="../../../pyscf_api_docs/pyscf.fci.html#pyscf.fci.selected_ci_slow.kernel">[docs]</a><span class="k">def</span> <span class="nf">kernel</span><span class="p">(</span><span class="n">h1e</span><span class="p">,</span> <span class="n">eri</span><span class="p">,</span> <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span><span class="p">,</span> <span class="n">ecore</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">logger</span><span class="o">.</span><span class="n">NOTE</span><span class="p">):</span>
@@ -538,7 +538,7 @@
         <span class="n">neleca</span> <span class="o">=</span> <span class="n">nelec</span> <span class="o">-</span> <span class="n">nelecb</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">neleca</span><span class="p">,</span> <span class="n">nelecb</span> <span class="o">=</span> <span class="n">nelec</span>
-    <span class="n">h2e</span> <span class="o">=</span> <span class="n">direct_spin1</span><span class="o">.</span><span class="n">absorb_h1e</span><span class="p">(</span><span class="n">h1e</span><span class="p">,</span> <span class="n">eri</span><span class="p">,</span> <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">h2e</span> <span class="o">=</span> <span class="n">direct_spin1</span><span class="o">.</span><span class="n">absorb_h1e</span><span class="p">(</span><span class="n">h1e</span><span class="p">,</span> <span class="n">eri</span><span class="p">,</span> <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span><span class="p">,</span> <span class="mf">.5</span><span class="p">)</span>
     <span class="n">namax</span> <span class="o">=</span> <span class="n">cistring</span><span class="o">.</span><span class="n">num_strings</span><span class="p">(</span><span class="n">norb</span><span class="p">,</span> <span class="n">neleca</span><span class="p">)</span>
     <span class="n">nbmax</span> <span class="o">=</span> <span class="n">cistring</span><span class="o">.</span><span class="n">num_strings</span><span class="p">(</span><span class="n">norb</span><span class="p">,</span> <span class="n">nelecb</span><span class="p">)</span>
 
@@ -753,7 +753,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

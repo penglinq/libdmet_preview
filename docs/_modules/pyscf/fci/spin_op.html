@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -365,19 +365,19 @@
     <span class="n">ssz</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2aa</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">)</span> <span class="o">-</span>
            <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2ab</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">)</span> <span class="o">+</span>
            <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2bb</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">)</span> <span class="o">-</span>
-           <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2ab</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">))</span> <span class="o">*</span> <span class="o">.</span><span class="mi">25</span>
+           <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2ab</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">))</span> <span class="o">*</span> <span class="mf">.25</span>
     <span class="n">ssz</span> <span class="o">+=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ji,ij-&gt;'</span><span class="p">,</span> <span class="n">dm1a</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">)</span> <span class="o">+</span>
-            <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ji,ij-&gt;'</span><span class="p">,</span> <span class="n">dm1b</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">))</span> <span class="o">*.</span><span class="mi">25</span>
+            <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ji,ij-&gt;'</span><span class="p">,</span> <span class="n">dm1b</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">))</span> <span class="o">*</span><span class="mf">.25</span>
 
     <span class="n">dm2abba</span> <span class="o">=</span> <span class="o">-</span><span class="n">dm2ab</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># alpha^+ beta^+ alpha beta</span>
     <span class="n">dm2baab</span> <span class="o">=</span> <span class="o">-</span><span class="n">dm2ab</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># beta^+ alpha^+ beta alpha</span>
     <span class="n">ssxy</span> <span class="o">=</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2baab</span><span class="p">,</span> <span class="n">ovlpba</span><span class="p">,</span> <span class="n">ovlpab</span><span class="p">)</span> <span class="o">+</span>
            <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ijkl,ij,kl-&gt;'</span><span class="p">,</span> <span class="n">dm2abba</span><span class="p">,</span> <span class="n">ovlpab</span><span class="p">,</span> <span class="n">ovlpba</span><span class="p">)</span> <span class="o">+</span>
            <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ji,ij-&gt;'</span><span class="p">,</span> <span class="n">dm1a</span><span class="p">,</span> <span class="n">ovlpaa</span><span class="p">)</span> <span class="o">+</span>
-           <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ji,ij-&gt;'</span><span class="p">,</span> <span class="n">dm1b</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">))</span> <span class="o">*</span> <span class="o">.</span><span class="mi">5</span>
+           <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ji,ij-&gt;'</span><span class="p">,</span> <span class="n">dm1b</span><span class="p">,</span> <span class="n">ovlpbb</span><span class="p">))</span> <span class="o">*</span> <span class="mf">.5</span>
     <span class="n">ss</span> <span class="o">=</span> <span class="n">ssxy</span> <span class="o">+</span> <span class="n">ssz</span>
 
-    <span class="n">s</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ss</span><span class="o">+.</span><span class="mi">25</span><span class="p">)</span> <span class="o">-</span> <span class="o">.</span><span class="mi">5</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ss</span><span class="o">+</span><span class="mf">.25</span><span class="p">)</span> <span class="o">-</span> <span class="mf">.5</span>
     <span class="n">multip</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">ss</span><span class="p">,</span> <span class="n">multip</span></div>
 
@@ -397,7 +397,7 @@
 <span class="sd">    Hamiltonian)'''</span>
     <span class="n">ci1</span> <span class="o">=</span> <span class="n">contract_ss</span><span class="p">(</span><span class="n">fcivec</span><span class="p">,</span> <span class="n">norb</span><span class="p">,</span> <span class="n">nelec</span><span class="p">)</span>
     <span class="n">ss</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">'ij,ij-&gt;'</span><span class="p">,</span> <span class="n">fcivec</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">ci1</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">ci1</span><span class="p">)</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ss</span><span class="o">+.</span><span class="mi">25</span><span class="p">)</span> <span class="o">-</span> <span class="o">.</span><span class="mi">5</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ss</span><span class="o">+</span><span class="mf">.25</span><span class="p">)</span> <span class="o">-</span> <span class="mf">.5</span>
     <span class="n">multip</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">ss</span><span class="p">,</span> <span class="n">multip</span></div>
 
@@ -523,8 +523,8 @@
     <span class="n">ci1</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">na</span><span class="p">,</span><span class="n">nb</span><span class="p">))</span>
     <span class="n">trans</span><span class="p">(</span><span class="n">ci1</span><span class="p">,</span> <span class="n">ades</span><span class="p">,</span> <span class="n">bcre</span><span class="p">,</span> <span class="n">neleca</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">nelecb</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># S+*S-</span>
     <span class="n">trans</span><span class="p">(</span><span class="n">ci1</span><span class="p">,</span> <span class="n">acre</span><span class="p">,</span> <span class="n">bdes</span><span class="p">,</span> <span class="n">neleca</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">nelecb</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># S-*S+</span>
-    <span class="n">ci1</span> <span class="o">*=</span> <span class="o">.</span><span class="mi">5</span>
-    <span class="n">ci1</span> <span class="o">+=</span> <span class="p">(</span><span class="n">neleca</span><span class="o">-</span><span class="n">nelecb</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*.</span><span class="mi">25</span><span class="o">*</span><span class="n">fcivec</span>
+    <span class="n">ci1</span> <span class="o">*=</span> <span class="mf">.5</span>
+    <span class="n">ci1</span> <span class="o">+=</span> <span class="p">(</span><span class="n">neleca</span><span class="o">-</span><span class="n">nelecb</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="mf">.25</span><span class="o">*</span><span class="n">fcivec</span>
     <span class="k">return</span> <span class="n">ci1</span></div>
 
 
@@ -600,7 +600,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

@@ -53,9 +53,9 @@
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../../about.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -333,7 +333,7 @@
     <span class="c1"># GTO(eta, k) = Fourier transform of Gaussian e^{-eta r^2}</span>
 
     <span class="n">lmax</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">_bas</span><span class="p">[:,</span><span class="n">gto</span><span class="o">.</span><span class="n">ANG_OF</span><span class="p">])</span>
-    <span class="n">kmax</span> <span class="o">=</span> <span class="p">(</span><span class="n">ke_cutoff</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">**.</span><span class="mi">5</span>
+    <span class="n">kmax</span> <span class="o">=</span> <span class="p">(</span><span class="n">ke_cutoff</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span>
     <span class="c1"># The interaction between two s-type density distributions should be</span>
     <span class="c1"># enough for the error estimation.  Put lmax here to increate Ecut for</span>
     <span class="c1"># slightly better accuracy</span>
@@ -362,7 +362,7 @@
     <span class="c1"># slightly better accuracy</span>
     <span class="n">lmax</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">_bas</span><span class="p">[:,</span><span class="n">gto</span><span class="o">.</span><span class="n">ANG_OF</span><span class="p">])</span>
     <span class="n">Ecut</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">eta</span> <span class="o">*</span> <span class="p">(</span><span class="n">log_k0</span><span class="o">*</span><span class="p">(</span><span class="n">lmax</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">log_rest</span><span class="p">)</span>
-    <span class="n">Ecut</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">Ecut</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">Ecut</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">Ecut</span><span class="p">,</span> <span class="mf">.5</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Ecut</span></div>
 
 <span class="c1"># \sum_{k^2/2 &gt; ke_cutoff} weight*4*pi/k^2 exp(-k^2/(4 omega^2)) rho(k) &lt; precision</span>
@@ -382,7 +382,7 @@
 <span class="sd">    '''</span>
     <span class="k">if</span> <span class="n">precision</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">precision</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">precision</span>
-    <span class="n">omega</span> <span class="o">=</span> <span class="p">(</span><span class="o">-.</span><span class="mi">5</span> <span class="o">*</span> <span class="n">ke_cutoff</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">precision</span> <span class="o">/</span> <span class="p">(</span><span class="mi">32</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span><span class="o">**.</span><span class="mi">5</span>
+    <span class="n">omega</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">.5</span> <span class="o">*</span> <span class="n">ke_cutoff</span> <span class="o">/</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">precision</span> <span class="o">/</span> <span class="p">(</span><span class="mi">32</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span><span class="o">**</span><span class="mf">.5</span>
     <span class="k">return</span> <span class="n">omega</span></div>
 
 <div class="viewcode-block" id="get_nuc"><a class="viewcode-back" href="../../../../pyscf_api_docs/pyscf.pbc.df.html#pyscf.pbc.df.aft.get_nuc">[docs]</a><span class="k">def</span> <span class="nf">get_nuc</span><span class="p">(</span><span class="n">mydf</span><span class="p">,</span> <span class="n">kpts</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -414,7 +414,7 @@
         <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">dimension</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">ke_guess</span> <span class="o">=</span> <span class="n">estimate_ke_cutoff</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">precision</span><span class="p">)</span>
             <span class="n">mesh_guess</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">cutoff_to_mesh</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">lattice_vectors</span><span class="p">(),</span> <span class="n">ke_guess</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mesh</span><span class="p">[:</span><span class="n">cell</span><span class="o">.</span><span class="n">dimension</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">mesh_guess</span><span class="p">[:</span><span class="n">cell</span><span class="o">.</span><span class="n">dimension</span><span class="p">]</span><span class="o">*.</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mesh</span><span class="p">[:</span><span class="n">cell</span><span class="o">.</span><span class="n">dimension</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">mesh_guess</span><span class="p">[:</span><span class="n">cell</span><span class="o">.</span><span class="n">dimension</span><span class="p">]</span><span class="o">*</span><span class="mf">.8</span><span class="p">):</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">mydf</span><span class="p">,</span> <span class="s1">'mesh </span><span class="si">%s</span><span class="s1"> is not enough for AFTDF.get_nuc function '</span>
                             <span class="s1">'to get integral accuracy </span><span class="si">%g</span><span class="s1">.</span><span class="se">\n</span><span class="s1">Recommended mesh is </span><span class="si">%s</span><span class="s1">.'</span><span class="p">,</span>
                             <span class="n">mesh</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">precision</span><span class="p">,</span> <span class="n">mesh_guess</span><span class="p">)</span>
@@ -431,7 +431,7 @@
         <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">dimension</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">ke_guess</span> <span class="o">=</span> <span class="n">estimate_ke_cutoff_for_eta</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">mydf</span><span class="o">.</span><span class="n">eta</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">precision</span><span class="p">)</span>
             <span class="n">mesh_guess</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">cutoff_to_mesh</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">lattice_vectors</span><span class="p">(),</span> <span class="n">ke_guess</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mesh</span> <span class="o">&lt;</span> <span class="n">mesh_guess</span><span class="o">*.</span><span class="mi">8</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mesh</span> <span class="o">&lt;</span> <span class="n">mesh_guess</span><span class="o">*</span><span class="mf">.8</span><span class="p">):</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">mydf</span><span class="p">,</span> <span class="s1">'mesh </span><span class="si">%s</span><span class="s1"> is not enough for AFTDF.get_nuc function '</span>
                             <span class="s1">'to get integral accuracy </span><span class="si">%g</span><span class="s1">.</span><span class="se">\n</span><span class="s1">Recommended mesh is </span><span class="si">%s</span><span class="s1">.'</span><span class="p">,</span>
                             <span class="n">mesh</span><span class="p">,</span> <span class="n">cell</span><span class="o">.</span><span class="n">precision</span><span class="p">,</span> <span class="n">mesh_guess</span><span class="p">)</span>
@@ -687,7 +687,7 @@
             <span class="n">nij</span> <span class="o">=</span> <span class="n">ni</span><span class="o">*</span><span class="n">nj</span>
 
         <span class="k">if</span> <span class="n">blksize</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">blksize</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_memory</span><span class="o">*</span><span class="mf">1e6</span><span class="o">*.</span><span class="mi">75</span><span class="o">/</span><span class="p">(</span><span class="n">nij</span><span class="o">*</span><span class="mi">16</span><span class="o">*</span><span class="n">comp</span><span class="p">))),</span> <span class="mi">16384</span><span class="p">)</span>
+            <span class="n">blksize</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_memory</span><span class="o">*</span><span class="mf">1e6</span><span class="o">*</span><span class="mf">.75</span><span class="o">/</span><span class="p">(</span><span class="n">nij</span><span class="o">*</span><span class="mi">16</span><span class="o">*</span><span class="n">comp</span><span class="p">))),</span> <span class="mi">16384</span><span class="p">)</span>
             <span class="n">sublk</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">blksize</span><span class="o">//</span><span class="mi">4</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">sublk</span> <span class="o">=</span> <span class="n">blksize</span>
@@ -752,7 +752,7 @@
             <span class="n">nj</span> <span class="o">=</span> <span class="n">ao_loc</span><span class="p">[</span><span class="n">shls_slice</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span> <span class="o">-</span> <span class="n">ao_loc</span><span class="p">[</span><span class="n">shls_slice</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
             <span class="n">nij</span> <span class="o">=</span> <span class="n">ni</span><span class="o">*</span><span class="n">nj</span>
 
-        <span class="n">blksize</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_memory</span><span class="o">*.</span><span class="mf">9e6</span><span class="o">/</span><span class="p">(</span><span class="n">nij</span><span class="o">*</span><span class="n">nkpts</span><span class="o">*</span><span class="mi">16</span><span class="o">*</span><span class="n">comp</span><span class="p">)))</span>
+        <span class="n">blksize</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_memory</span><span class="o">*</span><span class="mf">.9e6</span><span class="o">/</span><span class="p">(</span><span class="n">nij</span><span class="o">*</span><span class="n">nkpts</span><span class="o">*</span><span class="mi">16</span><span class="o">*</span><span class="n">comp</span><span class="p">)))</span>
         <span class="n">blksize</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">blksize</span><span class="p">,</span> <span class="n">ngrids</span><span class="p">,</span> <span class="mi">16384</span><span class="p">)</span>
         <span class="n">buf</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">nkpts</span><span class="o">*</span><span class="n">nij</span><span class="o">*</span><span class="n">blksize</span><span class="o">*</span><span class="n">comp</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">complex128</span><span class="p">)</span>
 
@@ -854,13 +854,13 @@
     <span class="n">_bas</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">_env</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">gto</span><span class="o">.</span><span class="n">PTR_ENV_START</span> <span class="o">+</span> <span class="p">[</span><span class="n">cell</span><span class="o">.</span><span class="n">atom_coords</span><span class="p">()</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
     <span class="n">ptr</span> <span class="o">=</span> <span class="n">gto</span><span class="o">.</span><span class="n">PTR_ENV_START</span> <span class="o">+</span> <span class="n">cell</span><span class="o">.</span><span class="n">natm</span> <span class="o">*</span> <span class="mi">3</span>
-    <span class="n">half_sph_norm</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">half_sph_norm</span> <span class="o">=</span> <span class="mf">.5</span><span class="o">/</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">natm</span><span class="p">):</span>
         <span class="n">symb</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">atom_symbol</span><span class="p">(</span><span class="n">ia</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">symb</span> <span class="ow">in</span> <span class="n">cell</span><span class="o">.</span><span class="n">_pseudo</span><span class="p">:</span>
             <span class="n">pp</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">_pseudo</span><span class="p">[</span><span class="n">symb</span><span class="p">]</span>
             <span class="n">rloc</span><span class="p">,</span> <span class="n">nexp</span><span class="p">,</span> <span class="n">cexp</span> <span class="o">=</span> <span class="n">pp</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">eta</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span> <span class="o">/</span> <span class="n">rloc</span><span class="o">**</span><span class="mi">2</span>
+            <span class="n">eta</span> <span class="o">=</span> <span class="mf">.5</span> <span class="o">/</span> <span class="n">rloc</span><span class="o">**</span><span class="mi">2</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">eta</span> <span class="o">=</span> <span class="mf">1e16</span>
         <span class="n">norm</span> <span class="o">=</span> <span class="n">half_sph_norm</span><span class="o">/</span><span class="n">gto</span><span class="o">.</span><span class="n">gaussian_int</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">eta</span><span class="p">)</span>
@@ -876,7 +876,7 @@
     <span class="sd">'''A cell of the compensated Gaussian charges for nucleus'''</span>
     <span class="n">cell</span> <span class="o">=</span> <span class="n">mydf</span><span class="o">.</span><span class="n">cell</span>
     <span class="n">nuccell</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
-    <span class="n">half_sph_norm</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">half_sph_norm</span> <span class="o">=</span> <span class="mf">.5</span><span class="o">/</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
     <span class="n">norm</span> <span class="o">=</span> <span class="n">half_sph_norm</span><span class="o">/</span><span class="n">gto</span><span class="o">.</span><span class="n">gaussian_int</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">mydf</span><span class="o">.</span><span class="n">eta</span><span class="p">)</span>
     <span class="n">chg_env</span> <span class="o">=</span> <span class="p">[</span><span class="n">mydf</span><span class="o">.</span><span class="n">eta</span><span class="p">,</span> <span class="n">norm</span><span class="p">]</span>
     <span class="n">ptr_eta</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">_env</span><span class="o">.</span><span class="n">size</span>
@@ -912,7 +912,7 @@
     <span class="n">cell</span><span class="o">.</span><span class="n">pseudo</span> <span class="o">=</span> <span class="s1">'gth-pade'</span>
     <span class="n">cell</span><span class="o">.</span><span class="n">mesh</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
     <span class="n">cell</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*.</span><span class="mi">25</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mf">.25</span>
     <span class="n">v1</span> <span class="o">=</span> <span class="n">AFTDF</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span><span class="o">.</span><span class="n">get_pp</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mf">21.7504294462</span><span class="p">)</span>
 </pre></div>
@@ -939,7 +939,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

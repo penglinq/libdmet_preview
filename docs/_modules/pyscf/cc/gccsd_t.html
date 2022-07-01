@@ -53,9 +53,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -349,8 +349,8 @@
     <span class="n">mol</span> <span class="o">=</span> <span class="n">gto</span><span class="o">.</span><span class="n">Mole</span><span class="p">()</span>
     <span class="n">mol</span><span class="o">.</span><span class="n">atom</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">[</span><span class="mi">8</span> <span class="p">,</span> <span class="p">(</span><span class="mf">0.</span> <span class="p">,</span> <span class="mf">0.</span>     <span class="p">,</span> <span class="mf">0.</span><span class="p">)],</span>
-        <span class="p">[</span><span class="mi">1</span> <span class="p">,</span> <span class="p">(</span><span class="mf">0.</span> <span class="p">,</span> <span class="o">-.</span><span class="mi">957</span> <span class="p">,</span> <span class="o">.</span><span class="mi">587</span><span class="p">)],</span>
-        <span class="p">[</span><span class="mi">1</span> <span class="p">,</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span>  <span class="o">.</span><span class="mi">757</span> <span class="p">,</span> <span class="o">.</span><span class="mi">487</span><span class="p">)]]</span>
+        <span class="p">[</span><span class="mi">1</span> <span class="p">,</span> <span class="p">(</span><span class="mf">0.</span> <span class="p">,</span> <span class="o">-</span><span class="mf">.957</span> <span class="p">,</span> <span class="mf">.587</span><span class="p">)],</span>
+        <span class="p">[</span><span class="mi">1</span> <span class="p">,</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span>  <span class="mf">.757</span> <span class="p">,</span> <span class="mf">.487</span><span class="p">)]]</span>
 
     <span class="n">mol</span><span class="o">.</span><span class="n">basis</span> <span class="o">=</span> <span class="s1">'631g'</span>
     <span class="n">mol</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
@@ -363,13 +363,13 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">kernel</span><span class="p">(</span><span class="n">mycc</span><span class="p">,</span> <span class="n">eris</span><span class="p">)</span> <span class="o">-</span> <span class="n">et</span><span class="p">)</span>
 
     <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">mf</span><span class="o">.</span><span class="n">mo_coeff</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">mf</span><span class="o">.</span><span class="n">mo_coeff</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">-</span> <span class="o">.</span><span class="mi">9</span>
+    <span class="n">mf</span><span class="o">.</span><span class="n">mo_coeff</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">mf</span><span class="o">.</span><span class="n">mo_coeff</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">-</span> <span class="mf">.9</span>
     <span class="n">mycc</span> <span class="o">=</span> <span class="n">cc</span><span class="o">.</span><span class="n">GCCSD</span><span class="p">(</span><span class="n">scf</span><span class="o">.</span><span class="n">addons</span><span class="o">.</span><span class="n">convert_to_ghf</span><span class="p">(</span><span class="n">mf</span><span class="p">))</span>
     <span class="n">eris</span> <span class="o">=</span> <span class="n">mycc</span><span class="o">.</span><span class="n">ao2mo</span><span class="p">()</span>
     <span class="n">nocc</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="n">nvir</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">nao_nr</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">nocc</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">nocc</span><span class="p">,</span><span class="n">nvir</span><span class="p">))</span><span class="o">*.</span><span class="mi">1</span> <span class="o">-</span> <span class="o">.</span><span class="mi">2</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">nocc</span><span class="p">,</span><span class="n">nocc</span><span class="p">,</span><span class="n">nvir</span><span class="p">,</span><span class="n">nvir</span><span class="p">))</span><span class="o">*.</span><span class="mi">1</span> <span class="o">-</span> <span class="o">.</span><span class="mi">2</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">nocc</span><span class="p">,</span><span class="n">nvir</span><span class="p">))</span><span class="o">*</span><span class="mf">.1</span> <span class="o">-</span> <span class="mf">.2</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">nocc</span><span class="p">,</span><span class="n">nocc</span><span class="p">,</span><span class="n">nvir</span><span class="p">,</span><span class="n">nvir</span><span class="p">))</span><span class="o">*</span><span class="mf">.1</span> <span class="o">-</span> <span class="mf">.2</span>
     <span class="n">t2</span> <span class="o">=</span> <span class="n">t2</span> <span class="o">-</span> <span class="n">t2</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">t2</span> <span class="o">=</span> <span class="n">t2</span> <span class="o">-</span> <span class="n">t2</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">kernel</span><span class="p">(</span><span class="n">mycc</span><span class="p">,</span> <span class="n">eris</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">263713.3945021223</span><span class="p">)</span>
@@ -397,7 +397,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

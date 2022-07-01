@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,9 +54,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -260,15 +260,15 @@
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#submodules" class="md-nav__link">Submodules</a>
         </li>
-        <li class="md-nav__item"><a href="#pyscf-pbc-mpitools-mpi-module" class="md-nav__link">pyscf.pbc.mpitools.mpi module</a>
+        <li class="md-nav__item"><a href="#module-pyscf.pbc.mpitools.mpi" class="md-nav__link">pyscf.pbc.mpitools.mpi module</a>
         </li>
-        <li class="md-nav__item"><a href="#pyscf-pbc-mpitools-mpi-blksize-module" class="md-nav__link">pyscf.pbc.mpitools.mpi_blksize module</a>
+        <li class="md-nav__item"><a href="#module-pyscf.pbc.mpitools.mpi_blksize" class="md-nav__link">pyscf.pbc.mpitools.mpi_blksize module</a>
         </li>
-        <li class="md-nav__item"><a href="#pyscf-pbc-mpitools-mpi-helper-module" class="md-nav__link">pyscf.pbc.mpitools.mpi_helper module</a>
+        <li class="md-nav__item"><a href="#module-pyscf.pbc.mpitools.mpi_helper" class="md-nav__link">pyscf.pbc.mpitools.mpi_helper module</a>
         </li>
-        <li class="md-nav__item"><a href="#pyscf-pbc-mpitools-mpi-load-balancer-module" class="md-nav__link">pyscf.pbc.mpitools.mpi_load_balancer module</a>
+        <li class="md-nav__item"><a href="#module-pyscf.pbc.mpitools.mpi_load_balancer" class="md-nav__link">pyscf.pbc.mpitools.mpi_load_balancer module</a>
         </li>
-        <li class="md-nav__item"><a href="#pyscf-pbc-mpitools-mpi-pool-module" class="md-nav__link">pyscf.pbc.mpitools.mpi_pool module</a>
+        <li class="md-nav__item"><a href="#module-pyscf.pbc.mpitools.mpi_pool" class="md-nav__link">pyscf.pbc.mpitools.mpi_pool module</a>
         </li>
         <li class="md-nav__item"><a href="#module-pyscf.pbc.mpitools" class="md-nav__link">Module contents</a>
         </li></ul>
@@ -289,27 +289,190 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="pyscf-pbc-mpitools-package">
-<h1 id="pyscf-api-docs-pyscf-pbc-mpitools--page-root">pyscf.pbc.mpitools package<a class="headerlink" href="#pyscf-api-docs-pyscf-pbc-mpitools--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="pyscf-api-docs-pyscf-pbc-mpitools--page-root">pyscf.pbc.mpitools package<a class="headerlink" href="#pyscf-api-docs-pyscf-pbc-mpitools--page-root" title="Permalink to this headline">¶</a></h1>
 <section id="submodules">
-<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<h2 id="submodules">Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="pyscf-pbc-mpitools-mpi-module">
-<h2 id="pyscf-pbc-mpitools-mpi-module">pyscf.pbc.mpitools.mpi module<a class="headerlink" href="#pyscf-pbc-mpitools-mpi-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-pyscf.pbc.mpitools.mpi">
+<span id="pyscf-pbc-mpitools-mpi-module"></span><h2 id="module-pyscf.pbc.mpitools.mpi">pyscf.pbc.mpitools.mpi module<a class="headerlink" href="#module-pyscf.pbc.mpitools.mpi" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.allgather">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">allgather</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sendbuf</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#allgather"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.allgather" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.allreduce">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">allreduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sendbuf</span></em>, <em class="sig-param"><span class="pre">op=&lt;mpi4py.MPI.Op</span> <span class="pre">object&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#allreduce"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.allreduce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.alltoall">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">alltoall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sendbuf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_recvbuf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#alltoall"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.alltoall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.bcast">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">bcast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#bcast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.bcast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.del_registry">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">del_registry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reg_keys</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#del_registry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.del_registry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.gather">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">gather</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sendbuf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#gather"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.gather" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.reduce">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sendbuf</span></em>, <em class="sig-param"><span class="pre">op=&lt;mpi4py.MPI.Op</span> <span class="pre">object&gt;</span></em>, <em class="sig-param"><span class="pre">root=0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#reduce"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.reduce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.register_for">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">register_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#register_for"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.register_for" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.sendrecv">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">sendrecv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sendbuf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#sendrecv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.sendrecv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.static_partition">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">static_partition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tasks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#static_partition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.static_partition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.work_balanced_partition">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">work_balanced_partition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">costs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#work_balanced_partition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.work_balanced_partition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.work_share_partition">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">work_share_partition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loadmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#work_share_partition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.work_share_partition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi.work_stealing_partition">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi.</span></span><span class="sig-name descname"><span class="pre">work_stealing_partition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi.html#work_stealing_partition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi.work_stealing_partition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 </section>
-<section id="pyscf-pbc-mpitools-mpi-blksize-module">
-<h2 id="pyscf-pbc-mpitools-mpi-blksize-module">pyscf.pbc.mpitools.mpi_blksize module<a class="headerlink" href="#pyscf-pbc-mpitools-mpi-blksize-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-pyscf.pbc.mpitools.mpi_blksize">
+<span id="pyscf-pbc-mpitools-mpi-blksize-module"></span><h2 id="module-pyscf.pbc.mpitools.mpi_blksize">pyscf.pbc.mpitools.mpi_blksize module<a class="headerlink" href="#module-pyscf.pbc.mpitools.mpi_blksize" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_blksize.get_max_blocksize_from_mem">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_blksize.</span></span><span class="sig-name descname"><span class="pre">get_max_blocksize_from_mem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mem_per_block</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_blksize.html#get_max_blocksize_from_mem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_blksize.get_max_blocksize_from_mem" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>priority_list<span class="classifier">list of importance of indices for the blocksizes,</span></dt><dd><p>i.e. an index with priority 1 will be made to be the
+maximum it can be (according to array_size and mem),
+afterwhich an index with priority 2 will be made the maximum size
+it can be.  If two priorities are the same, the block size
+for those indices will be forced to be equal.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
 </section>
-<section id="pyscf-pbc-mpitools-mpi-helper-module">
-<h2 id="pyscf-pbc-mpitools-mpi-helper-module">pyscf.pbc.mpitools.mpi_helper module<a class="headerlink" href="#pyscf-pbc-mpitools-mpi-helper-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-pyscf.pbc.mpitools.mpi_helper">
+<span id="pyscf-pbc-mpitools-mpi-helper-module"></span><h2 id="module-pyscf.pbc.mpitools.mpi_helper">pyscf.pbc.mpitools.mpi_helper module<a class="headerlink" href="#module-pyscf.pbc.mpitools.mpi_helper" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_helper.generate_max_task_list">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_helper.</span></span><span class="sig-name descname"><span class="pre">generate_max_task_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blk_mem_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_helper.html#generate_max_task_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_helper.generate_max_task_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_helper.generate_task_list">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_helper.</span></span><span class="sig-name descname"><span class="pre">generate_task_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_helper.html#generate_task_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_helper.generate_task_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_helper.safeAllreduceInPlace">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_helper.</span></span><span class="sig-name descname"><span class="pre">safeAllreduceInPlace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_helper.html#safeAllreduceInPlace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_helper.safeAllreduceInPlace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_helper.safeBcastInPlace">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_helper.</span></span><span class="sig-name descname"><span class="pre">safeBcastInPlace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_helper.html#safeBcastInPlace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_helper.safeBcastInPlace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_helper.safeNormDiff">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_helper.</span></span><span class="sig-name descname"><span class="pre">safeNormDiff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_array1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_array2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_helper.html#safeNormDiff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_helper.safeNormDiff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 </section>
-<section id="pyscf-pbc-mpitools-mpi-load-balancer-module">
-<h2 id="pyscf-pbc-mpitools-mpi-load-balancer-module">pyscf.pbc.mpitools.mpi_load_balancer module<a class="headerlink" href="#pyscf-pbc-mpitools-mpi-load-balancer-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-pyscf.pbc.mpitools.mpi_load_balancer">
+<span id="pyscf-pbc-mpitools-mpi-load-balancer-module"></span><h2 id="module-pyscf.pbc.mpitools.mpi_load_balancer">pyscf.pbc.mpitools.mpi_load_balancer module<a class="headerlink" href="#module-pyscf.pbc.mpitools.mpi_load_balancer" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.enum">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_load_balancer.</span></span><span class="sig-name descname"><span class="pre">enum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">enums</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#enum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.enum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.load_balancer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_load_balancer.</span></span><span class="sig-name descname"><span class="pre">load_balancer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">BLKSIZE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#load_balancer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.get_blocks_from_data">
+<span class="sig-name descname"><span class="pre">get_blocks_from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#load_balancer.get_blocks_from_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.get_blocks_from_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.master">
+<span class="sig-name descname"><span class="pre">master</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#load_balancer.master"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.master" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.set_ranges">
+<span class="sig-name descname"><span class="pre">set_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inindices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BLKSIZE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#load_balancer.set_ranges"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.set_ranges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.slave_finished">
+<span class="sig-name descname"><span class="pre">slave_finished</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#load_balancer.slave_finished"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.slave_finished" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.slave_set">
+<span class="sig-name descname"><span class="pre">slave_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_load_balancer.html#load_balancer.slave_set"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.load_balancer.slave_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_load_balancer.tags">
+<span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_load_balancer.</span></span><span class="sig-name descname"><span class="pre">tags</span></span><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_load_balancer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">pyscf.pbc.mpitools.mpi_load_balancer.Enum</span></code></p>
+</dd></dl>
 </section>
-<section id="pyscf-pbc-mpitools-mpi-pool-module">
-<h2 id="pyscf-pbc-mpitools-mpi-pool-module">pyscf.pbc.mpitools.mpi_pool module<a class="headerlink" href="#pyscf-pbc-mpitools-mpi-pool-module" title="Permalink to this heading">¶</a></h2>
+<section id="module-pyscf.pbc.mpitools.mpi_pool">
+<span id="pyscf-pbc-mpitools-mpi-pool-module"></span><h2 id="module-pyscf.pbc.mpitools.mpi_pool">pyscf.pbc.mpitools.mpi_pool module<a class="headerlink" href="#module-pyscf.pbc.mpitools.mpi_pool" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_pool.MPIPool">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_pool.</span></span><span class="sig-name descname"><span class="pre">MPIPool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_pool.html#MPIPool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_pool.MPIPool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A pool that distributes tasks over a set of MPI processes using
+mpi4py. MPI is an API for distributed memory parallelism, used
+by large cluster computers. This class provides a similar interface
+to Python’s multiprocessing Pool, but currently only supports the
+<code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code> method.</p>
+<p>Contributed initially by <a class="reference external" href="https://github.com/joezuntz">Joe Zuntz</a>.</p>
+<dl class="simple">
+<dt>comm<span class="classifier">(optional)</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> communicator.</p>
+</dd>
+<dt>debug<span class="classifier">bool (optional)</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, print out a lot of status updates at each step.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_pool.MPIPool.apply">
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">worker_args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_pool.html#MPIPool.apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_pool.MPIPool.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_pool.MPIPool.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_pool.html#MPIPool.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_pool.MPIPool.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just send a message off to all the pool members which contains
+the special <code class="xref py py-class docutils literal notranslate"><span class="pre">_close_pool_message</span></code> sentinel.</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_pool.MPIPool.is_master">
+<span class="sig-name descname"><span class="pre">is_master</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_pool.html#MPIPool.is_master"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_pool.MPIPool.is_master" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the current process the master?</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_pool.MPIPool.wait">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_pool.html#MPIPool.wait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_pool.MPIPool.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this isn’t the master process, wait for instructions.</p>
+</dd></dl>
+</dd></dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyscf.pbc.mpitools.mpi_pool.MPIPoolException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">pyscf.pbc.mpitools.mpi_pool.</span></span><span class="sig-name descname"><span class="pre">MPIPoolException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tb</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyscf/pbc/mpitools/mpi_pool.html#MPIPoolException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyscf.pbc.mpitools.mpi_pool.MPIPoolException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
 </section>
 <section id="module-pyscf.pbc.mpitools">
-<span id="module-contents"></span><h2 id="module-pyscf.pbc.mpitools">Module contents<a class="headerlink" href="#module-pyscf.pbc.mpitools" title="Permalink to this heading">¶</a></h2>
+<span id="module-contents"></span><h2 id="module-pyscf.pbc.mpitools">Module contents<a class="headerlink" href="#module-pyscf.pbc.mpitools" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
@@ -336,7 +499,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
