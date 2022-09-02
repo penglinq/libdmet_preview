@@ -17,50 +17,50 @@ from libdmet.utils import logger as log
 log.verbose = "DEBUG2"
 np.set_printoptions(4, linewidth=1000, suppress=True)
 
-class DMET():
+class DMET(): # RDMET, UDMET, GDMET
     def __init__(self, kmf, lat, solver=None):
         # system
-        self._scf = kmf
+        self._scf = kmf # assert R/U/G compatible with DMET type
         self.lat = lat
-        self.filling = lat.cell.nelectron / (lat.nscsites*2.0)
+        #self.filling = lat.cell.nelectron / (lat.nscsites*2.0) # TODO delete
         self.restricted = True
-        self.bogoliubov = False
+        #self.bogoliubov = False  # TODO delete in RDMET
         self.int_bath = True
-        self.add_vcor = False
-        self.mu = 0
-        self.last_dmu = 0.0
+        #self.add_vcor = False Delete
+        self.mu_imp = 0 # chemical potential TODO rename mu_imp
+        #self.last_dmu = 0.0 #delete
         self.beta = np.inf
-        self.minao = 'minao'
+        #self.minao = 'minao'  # in Lat
         self.max_memory = lat.cell.max_memory
-        self.C_ao_lo = None
-        self.update_ham = True
+        self.c_ao_lo = Lat.c_ao_lo
+        self.charge_scf = False
         
         # DMET SCF control
-        self.MaxIter = 100
-        self.u_tol = 5.0e-5
-        self.E_tol = 5.0e-6 # energy diff per orbital
-        self.iter_tol = 4
+        self.max_cycle = 100
+        self.conv_tol_u = 5.0e-5
+        self.conv_tol_e = 5.0e-6 # energy diff per orbital
+        self.min_cycle = 4
         
         # DIIS
-        self.adiis = lib.diis.DIIS()
-        self.adiis.space = 4
+        self.diis = lib.diis.DIIS() #TODO rename adiis to diis
+        self.diis.space = 4
         self.diis_start = 4
         self.trace_start = 3
         self.dc = None
         
-        # solver and mu fit
-        self.ncas = lat.nscsites + lat.nval
-        self.nelecas = (lat.ncore + lat.nval)*2
-        self.solver = solver
-        self.nelec_tol = 5.0e-6 # per orbital
+        # solver and mu fit  #TODO move to lattice #REWRITE mf solver
+        self.neo = lat.nscsites + lat.nval
+        self.nelec_emb = (lat.ncore + lat.nval)*2
+        self.solver = solver 
+        self.nelec_tol = 5.0e-6 # per orbital #keep in DMET
         self.delta = 0.01
         self.step = 0.1
         self.load_frecord = False
         self.restart = False
         
-        # vcor fit
+        # vcor fit #Junjie
         self.imp_fit = False
-        self.emb_fit_iter = 200 # embedding fitting
+        self.emb_fit_iter = 200 # embedding fitting 
         self.full_fit_iter = 0
         self.ytol = 1e-8
         self.gtol = 1e-4 
@@ -94,6 +94,7 @@ class DMET():
 
     def make_rdm1(self, AO_repr=False):
         '''
+            Return global RDM1.
             1-particle reduced density matrix in LO basis.
 
             rdm1[p,q] = <q^\dagger p> 
@@ -191,7 +192,7 @@ def kernel(mydmet, kmf=None, Lat=None, solver=None):
         log.result("Vcor =\n%s", vcor.get())
         log.result("Mu (guess) = %20.12f", Mu)
         rho, Mu, res = Hubbard.RHartreeFock(Lat, vcor, Filling, Mu, beta=mydmet.beta, ires=True)
-        if mydmet.update_ham:
+        if mydmet.charge_scf:
             Lat.update_Ham(rho*2.0, rdm1_lo_k=res["rho_k"]*2.0) 
     
         log.section("\nconstructing impurity problem\n")
