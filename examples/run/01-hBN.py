@@ -110,6 +110,9 @@ else:
 
 log.result("kmf electronic energy per unit cell: %20.12f", 
         (kmf.e_tot - kmf.energy_nuc()) / lat.ncell_sc)
+#Lat.set_C_ao_lo( --> get_C_ao_lo_iao --> auto val and virt 
+Lat.pseudo = True
+Lat, kmf = Lat.build(kmf, ...)
 
 ### ************************************************************
 ### DMET embedding calculatiun
@@ -132,7 +135,7 @@ log.result("kmf electronic energy per unit cell: %20.12f",
 
     By default the DMET calculation runs self-consistently. For the single-shot DMET, 
     set dmet.max_iter = 1.
-'''
+'''k
 # Initialize a CCSD solver 
 solver = impurity_solver.CCSD()
 solver.restricted = True
@@ -141,7 +144,7 @@ solver.conv_tol_normt = cell.natm * 1e-6
 solver.max_memory = max_memory                                    
 
 # Run DMET
-mydmet = dmet.DMET(kmf, lat, solver)
+mydmet = dmet.DMET(kmf, lat, solver)   # TODO: support list of lat and solver for mpi 
 mydmet.minao = minao # to construct IAO localization 
 e_dmet, conv = mydmet.kernel() # e_dmet = energy per cell
 
